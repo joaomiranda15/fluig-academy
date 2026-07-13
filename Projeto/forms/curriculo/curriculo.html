@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+    <script src="/portal/resources/js/jquery/jquery.js"></script>
+    <script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script src="/portal/resources/js/mustache/mustache-min.js"></script>
+    <script src="/style-guide/js/fluig-style-guide.min.js"></script>
+</head>
+
+<body>
+    <div class="fluig-style-guide">
+        <form name="form" role="form">
+            <div id="mensagemInteracao">
+
+            </div>
+            <div id="formPrincipal">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Currículo</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group col-md-6">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="linkedin">Linkedin</label>
+                            <input type="text" id="linkedin" name="linkedin" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" mask="(00) 00000-0000"
+                                class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="login">Login</label>
+                            <input type="text" id="login" name="login" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="senha">Senha</label>
+                            <input type="text" id="senha" name="senha" class="form-control">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-info" id="criaUser">Criar Usuário</button>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-warning" id="adicionarComunidade">Adicionar à
+                                comunidade</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script type="text/javascript" src="criaUser.js"></script>
+    <script type="text/javascript" src="../vcXMLRPC.js"></script>
+</body>
+
+</html>

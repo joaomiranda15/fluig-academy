@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide-flat.min.css" />
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+    <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="fluig-style-guide">
+        <form name="form" role="form">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="flaticon flaticon-person icon-md" aria-hidden="true"></i> i18n.translate("dadosUsuario")</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="nome">i18n.translate("nome")</label>
+                            <input type="text" name="nome" class="form-control" id="nome" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="email">i18n.translate("email")</label>
+                            <input type="email" name="email" class="form-control" id="email" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="telefone">i18n.translate("telefone")</label>
+                            <input type="text" name="telefone" class="form-control" id="telefone" mask="(00) 00000-0000"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <label for="dataNascimento">i18n.translate("dataNascimento")</label>
+                            <input type="text" name="dataNascimento" class="form-control" id="dataNascimento"/>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="documentoIdentidade">i18n.translate("documentoIdentidade")</label>
+                            <input type="text" name="documentoIdentidade" class="form-control"
+                                id="documentoIdentidade" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="animaliaicon animaliaicon-users icon-md"
+                            aria-hidden="true"></i> i18n.translate("responsaveis")</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group col-md-6">
+                        <table tablename="responsaveisTabela" class="table table-hover" addbuttonlabel="Adicionar novo responsável" addbuttonclass="btn btn-info">
+                            <thead>
+                                <tr>
+                                    <td>Responsáveis</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="zoom" class="form-control" id="responsavel" name="responsavel" data-zoom="{
+                                            'displayKey':'colleagueName',
+                                            'placeholder': 'Escolha o usuário',
+                                            'datasetId':'dsResponsaveis',
+                                            'maximumSelectionLength': '2',
+                                            'fields':[
+                                            {
+                                                'field':'login',
+                                                'label':'ID'
+                                            },{
+                                                'field':'nome',
+                                                'label':'Name',
+                                                'standard':true
+                                            },
+                                        ]
+                                        }">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>                          
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="animaliaicon animaliaicon-map-pin icon-md" aria-hidden="true"></i>
+                        Ponto comercial</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <label for="tipoPonto">i18n.translate("tipoPonto")</label>
+                            <div class="radio">
+                                <label><input type="radio" name="tipoPonto" id="tipoPonto"
+                                        value="quiosque" />i18n.translate("quiosque")</label>
+                                <label><input type="radio" name="tipoPonto" id="tipoPonto" value="loja" />Loja</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>i18n.translate("diasdefunc")</label>
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="domingo" />
+                                    i18n.translate("domingo")</label>
+                                <label><input type="checkbox" name="segunda" />
+                                    i18n.translate("segunda")</label>
+                                <label><input type="checkbox" name="terca" />
+                                    i18n.translate("terca")</label>
+                                <label><input type="checkbox" name="quarta" />
+                                    i18n.translate("quarta")</label>
+                                <label><input type="checkbox" name="quinta" />
+                                    i18n.translate("quinta")</label>
+                                <label><input type="checkbox" name="sexta" />
+                                    i18n.translate("sexta")</label>
+                                <label><input type="checkbox" name="sabado" />
+                                    i18n.translate("sabado")</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" id="cep" class="form-control" mask="00000-000" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="logradouro">i18n.translate("logradouro")</label>
+                            <input type="text" name="logradouro" id="logradouro" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-1">
+                            <label for="numero">i18n.translate("numero")</label>
+                            <input type="text" name="numero" id="numero" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="bairro">i18n.translate("bairro")</label>
+                            <input type="text" name="bairro" id="bairro" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="cidade">i18n.translate("cidade")</label>
+                            <input type="text" name="cidade" id="cidade" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="estado">i18n.translate("estado")</label>
+                            <input type="text" name="estado" id="estado" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="informacoes">i18n.translate("informacoes")</label>
+                            <textarea rows="5" name="informacoes" id="informacoes" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="animaliaicon animaliaicon-money icon-md" aria-hidden="true"></i>
+                        i18n.translate("financeiro")</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <label for="moeda">i18n.translate("moeda")</label>
+                            <select name="moeda" id="moeda" class="form-control" dataset="dsFormMoedas" datasetkey="moeda" datasetvalue="simbolo"></select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="valor">i18n.translate("valor")</label>
+                            <input type="number" name="valor" id="valor" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="cep.js"></script>
+<script type="text/javascript">
+    var calendarioDataNascimento = FLUIGC.calendar("#dataNascimento");
+</script>
+
+</html>
