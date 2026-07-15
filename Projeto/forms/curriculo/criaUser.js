@@ -1,10 +1,11 @@
 $("#criaUser").click(function(){
-    var c1 = DatasetFactory.createConstraint("colleagueName", $("#nome").val(), $("#nome").val, ConstraintType.MUST);
+    var c1 = DatasetFactory.createConstraint("colleagueName", $("#nome").val(), $("#nome").val(), ConstraintType.MUST);
     var c2 = DatasetFactory.createConstraint("colleagueId", $("#login").val(), $("#login").val(), ConstraintType.MUST);
     var c3 = DatasetFactory.createConstraint("passwd", $("#senha").val(), $("#senha").val(), ConstraintType.MUST);
     var c4 = DatasetFactory.createConstraint("mail", $("#email").val(), $("#email").val(), ConstraintType.MUST);
+    var c5 = DatasetFactory.createConstraint("login", $("#login").val(), $("#login").val(), ConstraintType.MUST);
 
-    var contraints = new Array (c1,c2,c3,c4);
+    var contraints = new Array (c1,c2,c3,c4,c5);
 
     // Criando a lista (Array) com os valores das variáveis que são filtros de valores do usuário.
 
@@ -17,7 +18,7 @@ $("#criaUser").click(function(){
     });
 });
 
-$("#adicionaComunidade").click(function(){
+$("#adicionarComunidade").click(function(){
     var dados = { "communityAlias" : "fluig-jpm", userAliases : [$("#login").val()]}; /* declarando qual o Alias da comunidade no server fluig */
 
     $.ajax({

@@ -30,7 +30,7 @@ function callService(fields, constraints, sortFields) {
 		else if(constraints[i]['fieldName'] == "mail") {
 			params.colleagues[0].mail = constraints[i]['finalValue'];
 		}
-		else if(constraints[i]['fieldName'] == "psswd") {
+		else if(constraints[i]['fieldName'] == "passwd") {
 			params.colleagues[0].psswd = constraints[i]['finalValue'];
 		}
 
