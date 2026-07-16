@@ -1,0 +1,163 @@
+/* Banner NetLex — exibido na task 17 quando documento foi criado */
+
+#bannerNetlex {
+  display: none;
+  width: 100%;
+  padding: 0 12px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+}
+
+.bn-card {
+  background: linear-gradient(90deg, rgba(172,0,255,1) 8%, rgba(55,20,255,1) 71%);
+  border-radius: 14px;
+  padding: 22px 26px;
+  color: #fff;
+  box-shadow: 0 6px 28px rgba(55, 20, 255, 0.28);
+}
+
+/* Cabeçalho */
+.bn-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.bn-icon {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.bn-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  opacity: 0.7;
+  font-weight: 700;
+}
+
+.bn-nome {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 3px;
+  word-break: break-word;
+}
+
+/* Card ID */
+.bn-id-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bn-id-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  opacity: 0.7;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.bn-id-value {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Ações */
+.bn-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bn-btn-open {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.bn-btn-open:hover {
+  background: rgba(255, 255, 255, 0.24);
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.bn-btn-copy {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.2s;
+}
+
+.bn-btn-copy:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.bn-copiado {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.35s;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Modal de contrato criado (envio do processo) — mesmo visual do banner */
+
+#modalNetlexCriado .bn-card-modal {
+  margin: 0;
+}
+
+#modalNetlexCriado .bn-modal-msg {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+#modalNetlexCriado .modal-footer [data-netlex-enviar] {
+  background: linear-gradient(90deg, rgba(172, 0, 255, 1) 8%, rgba(55, 20, 255, 1) 71%);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#modalNetlexCriado .modal-footer [data-netlex-enviar]:hover {
+  opacity: 0.88;
+}

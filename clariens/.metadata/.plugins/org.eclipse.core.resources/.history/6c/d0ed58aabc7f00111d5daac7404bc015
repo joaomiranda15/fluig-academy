@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/style-guide/css/fluig-style-guide-flat.min.css">
+	<link rel="stylesheet" type="text/css" href="https://style.fluig.com/css/fluig-style-guide-flat.min.css">
+
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Estilos -->
+	<link href="/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<script type="text/javascript" src="widget_code_repository.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide-richeditor.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="banner-netlex.css">
+	<script type="text/javascript" src="custom.js"></script>
+	<script type="text/javascript" src="zoom.js"></script>
+	<script type="text/javascript" src="custom_valida.js"></script>
+
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form" autocomplete="off" novalidate>
+
+			<div class="page-header">
+				<header class="main-header clearfix">
+					<div class="wrapper">
+						<div class="row">
+							<div class="col-md-3 text-left"></div>
+							<div class="col-md-6 title">
+								<h1 class="text-center" style="color: #3714FF;">Processo de Elaboração de Contratos</h1>
+							</div>
+							<div class="col-md-3 text-right">
+								<img class="company-logo imagem-reduzida"
+									src="/widget_code_repository/resources/images/LogoClariens2.png"
+									style="max-width: 150px; height: auto;">
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<input type="hidden" name="netlex_document_id" id="netlex_document_id">
+			<input type="hidden" name="netlex_document_name" id="netlex_document_name">
+			<input type="hidden" name="netlex_document_url" id="netlex_document_url">
+
+			<div class="panel panel-default" id="dadosColaborador">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Dados do Colaborador</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-3">
+							<label for="dataSolicitacao">Data Solicitação</label>
+							<input type="text" class="form-control" id="dataSolicitacao" name="dataSolicitacao"
+								readonly>
+						</div>
+						<div class="form-group col-md-5 ">
+							<label for="empresa">Empresa</label>
+							<input type="text" class="form-control" name="empresa" id="empresa" readonly>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="departamento">Departamento</label>
+							<input type="text" class="form-control" name="departamento" id="departamento" readonly>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="nomeCompleto">Nome completo</label>
+							<input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" readonly>
+						</div>
+						<div class="form-group col-md-6 ">
+							<label>E-mail Corporativo</label>
+							<input type="text" class="form-control" name="email" id="email" readonly>
+						</div>
+					</div>
+					<div class='row'>
+						<div class="form-group col-md-6">
+							<label for="cargo">Cargo</label>
+							<input type="text" class="form-control" name="cargo" id="cargo" readonly>
+							<input type="hidden" name="matricula" id="matricula" value="" readonly>
+							<input type="hidden" name="emailsolicitante" id="emailsolicitante" readonly>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="matricula1">Matrícula</label>
+							<input type="text" class="form-control" name="matricula1" id="matricula1" readonly>
+						</div>
+						<div class="form-group col-md-3" id="div_tel">
+							<label for="telefone" class="obrigatorio">Telefone</label>
+							<input type="text" class="form-control required masktelefone" name="telefone" id="telefone">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default" id="formSolicitacao">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Dados da Solicitação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class='row'>
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Empresa/Filial</label>
+							<input type="zoom" id="zoomEmpresa" name="zoomEmpresa" class="form-control" data-zoom="{
+								'displayKey':'NOMECOLIGADA',
+								'datasetId':'ds_empresaSync',
+							
+								'placeholder':' ',
+								'filterValues':' ',
+								'fields':[
+									{
+										'field':'NOMECOLIGADA',
+										'label':'Empresa'
+									},{
+										'field':'CODCOLIGADA',
+										'label':'CODCOLIGADA',
+										'visible':'false'
+									},{
+										'field':'FILIALPROTHEUS',
+										'label':'Fil. Protheus',
+										'visible':'false'
+									}
+									]
+					                      }" />
+
+
+						</div>
+						<input type="hidden" class="form-control" name="codColigada" id="codColigada">
+						<input type="hidden" class="form-control" name="filialProtheus" id="filialProtheus">
+
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Centro de Custo</label>
+							<input type="zoom" id="zoomcCusto" name="zoomcCusto" class="form-control" data-zoom="{
+								'displayKey':'CODDESCCUSTO',
+								'datasetId':'ds_aprovadorCCusto',
+								'placeholder':' ',
+								'filterValues':' ',
+								'fields':[
+									{
+										'field':'CODDESCCUSTO',
+										'label':' '
+									},{
+										'field':'CODCUSTO',
+										'label':'CODCUSTO',
+										'visible':'false'
+									},{
+										'field':'EMAILAPROV',
+										'label':'EMAILAPROV',
+										'visible':'false'
+									},{
+										'field':'NOMEAPROV',
+										'label':'NOMEAPROV',
+										'visible':'false'
+									},{
+										'field':'CODAPROV',
+										'label':'CODAPROV',
+										'visible':'false'
+									}
+									]
+					                      }" />
+
+							<input type="hidden" class="form-control" name="codCusto" id="codCusto">
+							<input type="hidden" class="form-control" name="codAprov" id="codAprov">
+							<input type="hidden" class="form-control" name="emailAprov" id="emailAprov">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="gestorContrato" class="obrigatorio">Gestor do Contrato</label>
+							<input type="text" class="form-control" name="gestorContrato" id="gestorContrato" readonly>
+							<input type="hidden" class="form-control" name="idFlgGestCC" id="idFlgGestCC">
+						</div>
+					</div>
+					<div class='row'>
+						<div class="form-group col-md-4">
+							<label class="obrigatorio" for="template">Template</label>
+							<input type="zoom" class="form-control" id="zoomTemplate" name="zoomTemplate" data-zoom="{
+										'displayKey':'NOME_TEMPLATE',
+										'datasetId':'ds_templates_netlex',
+										'placeholder':' ',
+										'filterValues':' ',
+										'fields':[
+                                               {
+                                                   'field':'NOME_TEMPLATE',
+                                                   'label':'Template'
+                                               },
+                                               {
+                                                   'field':'ID_TEMPLATE',
+                                                   'label':'ID',
+                                                   'formField':'idTemplate'
+                                               }
+											]
+								}" />
+							<input type="hidden" name="idTemplate" id="idTemplate">
+						</div>
+
+					</div>
+
+					<!-- Banner NetLex — exibido na task 17 quando documento foi criado -->
+					<div id="bannerNetlex">
+						<div class="bn-card">
+							<div class="bn-header">
+								<div class="bn-icon">📄</div>
+								<div>
+									<div class="bn-label">Documento criado no NetLex</div>
+									<div id="bannerNetlexNome" class="bn-nome">—</div>
+								</div>
+							</div>
+
+							<div class="bn-id-card">
+								<span class="bn-id-label">ID do Documento:</span>
+								<span id="bannerNetlexId" class="bn-id-value">—</span>
+							</div>
+
+							<div class="bn-actions">
+								<a id="bannerNetlexBtn" class="bn-btn-open" href="#" target="_blank" rel="noopener">
+									<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff"
+										stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+										<polyline points="15 3 21 3 21 9" />
+										<line x1="10" y1="14" x2="21" y2="3" />
+									</svg>
+									Abrir no NetLex
+								</a>
+								<button type="button" class="bn-btn-copy" onclick="copiarLinkNetlex()">
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff"
+										stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+										<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+									</svg>
+									Copiar link
+								</button>
+								<span id="bannerNetlexCopiado" class="bn-copiado">✓ Link copiado!</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- DIV ANALISAR SOLICITAÇÃO- Solicitação que volta as informações -->
+			<div class="panel panel-default" id="formPreencherContrato">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Jurídico</strong>
+					</h3>
+				</div>
+
+				<div class="panel-body">
+
+					<div class="form-group col-md-4">
+						<label class="obrigatorio">Produto/Serviço</label>
+						<input type="text" class="form-control" name="Produto" id="Produto">
+						<!-- 						<input type="zoom" id="zoomProduto" name="zoomProduto" class="form-control" data-zoom="{
+								'displayKey':'CODNOMPROD',
+								'datasetId':'ds_produtos',
+								'placeholder':' ',
+								'filterValues':' ',
+								'fields':[
+									{
+										'field':'CODNOMPROD',
+										'label':'Produto'
+									}
+							]
+						}" /> -->
+
+					</div>
+					<div class="form-group col-md-3">
+						<label>Contratante</label>
+						<input type="text" class="form-control required contratante" id="contratante"
+							name="contratante">
+					</div>
+					<div class="form-group col-md-3">
+						<label>Contratado</label>
+						<input type="text" class="form-control required contratado" id="contratado" name="contratado">
+					</div>
+					<div class="form-group col-md-3">
+						<label>Vigência</label>
+						<input type="date" class="form-control required vigencia" id="vigencia" name="vigencia">
+					</div>
+					<div class="form-group col-md-3">
+						<label>Tipo de contrato netlex</label> <select class="form-control" id="tipoDeContratoNetlex"
+							name="tipoDeContratoNetlex">
+							<option value=""></option>
+							<option value="tipoCompras">Compra</option>
+
+						</select>
+					</div>
+					<div class="form-group col-md-3">
+						<label>Duração</label> <select class="form-control" id="tipoDeDuracao" name="tipoDeDuracao">
+							<option value=""></option>
+							<option value="indeterminado">Indeterminado</option>
+							<option value="determinado">Determinado</option>
+
+						</select>
+					</div>
+					<div class="row" id="containerObsBackground">
+						<div class="form-group col-md-12">
+							<label class="control-label obrigatorio" id="labelCheck">Observação</label>
+							<textarea rows="10" class="form-control " name="obsContrato" id="obsContrato"></textarea>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- DIV CADASTRAR CONTRATO -->
+			<div class="panel panel-default" id="formCadastrarContrato">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Compras</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+
+					<div class="row">
+						<div class="form-group col-md-3">
+							<label class="obrigatorio">Tipo de Planilha</label>
+							<input type="zoom" class="form-control required" id="zoomPlanilha" name="zoomPlanilha" data-zoom="{
+									'displayKey':'CODDESCR',
+									'datasetId':'ds_cns_tipo_planilha',
+									'placeholder':' ',
+									'filterValues':' ',
+									'fields':[
+										{
+											'field':'CODDESCR',
+											'label':'Tipo de planilha'
+										},{
+											'field':'CODIGO',
+											'label':'CODIGO',
+											'visible':'false'
+										}
+									]
+								}">
+							<input type="hidden" class="form-control" name="idTipPlanilha" id="idTipPlanilha">
+						</div>
+						<div class="form-group col-md-3">
+							<label class="obrigatorio">Tipo de Contrato</label>
+							<input type="zoom" id="zoomContrato" name="zoomContrato" class="form-control" data-zoom="{
+									'displayKey':'CODDESCR',
+									'datasetId':'ds_cns_tipo_contrato',
+									'placeholder':' ',
+									'filterValues':' ',
+									'fields':[
+										{
+											'field':'CODDESCR',
+											'label':'Tipo de Contrato'
+										},{
+											'field':'CODIGO',
+											'label':'CODIGO',
+											'visible':'false'
+										}
+									]
+								}" />
+							<input type="hidden" class="form-control" name="idTipContrato" id="idTipContrato">
+						</div>
+						<div class="form-group col-md-3">
+							<label class="obrigatorio">Condição de Pagamento</label>
+							<input type="zoom" id="zoomCondpgto" name="zoomCondpgto" class="form-control" data-zoom="{
+									'displayKey':'DESCRICAO',
+									'datasetId':'ds_cns_cond_pagamento',
+									'placeholder':' ',
+									'filterValues':' ',
+									'fields':[
+										{
+											'field':'DESCRICAO',
+											'label':'COND.PAGTO'
+										},{
+											'field':'CODIGO',
+											'label':'CODIGO',
+											'visible':'false'
+										}
+									]
+								}" />
+							<input type="hidden" class="form-control" name="codCondpgto" id="codCondpgto">
+						</div>
+						<div class="form-group col-md-3">
+							<label>Forma de Pagamento</label>
+							<select class="form-control" id="formaPagamento" name="formaPagamento">
+								<option value=""></option>
+								<option value="condicaoPix">Pix</option>
+								<option value="condicaoBoleto">Boleto</option>
+								<option value="condicaoTransferencia">Transferência</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-3">
+							<label class="obrigatorio">Data de Início do Contrato</label>
+							<input type="date" class="form-control" name="dtIniContrato" id="dtIniContrato">
+						</div>
+						<div class="form-group col-md-3">
+							<label class="obrigatorio">Vigência do Contrato (em meses)</label>
+							<input type="number" class="form-control" name="vingencia" id="vingencia" min="1">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label>Informações do Fornecedor</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label class="obrigatorio">Nome / Razão Social</label>
+											<input type="text" class="form-control" name="codFornecCadastrado" id="codFornecCadastrado">
+											<input type="hidden" class="form-control" name="codigoFor" id="codigoFor">
+											<input type="hidden" class="form-control" name="lojaFor" id="lojaFor">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-12" id="div_itemCompras">
+							<label>Itens do Contrato</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="form-group col-md-12">
+										<table tablename="tableProduto" class="col-md-12" nodeletebutton="true" noaddbutton="true">
+											<thead>
+												<tr>
+													<td></td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div class="panel panel-default">
+															<div class="panel-body">
+																<div class="row">
+																	<div class="form-group col-xs-2">
+																		<br>
+																		<button type="button" class="btn btn-danger form-control bbras-btnExcluir"
+																			onClick="customRemoveChild(this);" name="btnExcluir" id="btnExcluir">Excluir</button>
+																	</div>
+																	<div class="form-group col-xs-2">
+																		<label>Item</label>
+																		<input type="text" class="form-control id-item" name="item" id="item" readonly>
+																	</div>
+																	<div class="form-group col-xs-6">
+																		<label class="obrigatorio">Produto/Serviço</label>
+																		<input type="zoom" id="zoomProduto" name="zoomProduto" class="form-control" data-zoom="{
+																			'displayKey':'CODNOMPROD',
+																			'datasetId':'ds_produtos',
+																			'placeholder':' ',
+																			'filterValues':' ',
+																			'fields':[
+																				{
+																					'field':'CODNOMPROD',
+																					'label':'Produto'
+																				}
+																			]
+																		}" />
+																		<input type="hidden" class="form-control" name="codProduto" id="codProduto">
+																		<input type="hidden" class="form-control" name="nomeProduto" id="nomeProduto">
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group col-xs-3">
+																		<label class="obrigatorio">Quantidade</label>
+																		<input type="number" class="form-control" id="Qtde" name="Qtde" min="1" onblur="calculaTotal(this)">
+																	</div>
+																	<div class="form-group col-xs-3">
+																		<label class="obrigatorio">Valor Unitário</label>
+																		<input type="text" class="form-control" name="valorUnit" id="valorUnit"
+																			mask="#00.000.000,00" maxlength="13" onblur="calculaTotal(this)">
+																	</div>
+																	<div class="form-group col-xs-3">
+																		<label>Valor Total</label>
+																		<input type="text" class="form-control" name="valorTotal" id="valorTotal" readonly>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="form-group col-md-2" tabindex="0">
+											<div class="input-group">
+												<input type="button" class="btn btn-default bbras-btnIncluir" id="inserirItem"
+													name="inserirItem" value="Inserir item" onclick="customAddChild('tableProduto', this);">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row" id="containerObsBackgroundCad">
+						<div class="form-group col-md-12">
+							<label class="control-label obrigatorio" id="labelCheckCad">Observação</label>
+							<textarea rows="10" class="form-control" name="obsContratoCad" id="obsContratoCad"></textarea>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+		</form>
+	</div>
+</body>
+
+</html>

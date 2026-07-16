@@ -1,0 +1,231 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/style-guide/css/fluig-style-guide-flat.min.css">
+	<link rel="stylesheet" type="text/css" href="https://style.fluig.com/css/fluig-style-guide-flat.min.css">
+
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Estilos -->
+	<link href="/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<script type="text/javascript" src="widget_code_repository.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide-richeditor.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="banner-netlex.css">
+	<script type="text/javascript" src="custom.js"></script>
+	<script type="text/javascript" src="zoom.js"></script>
+	<script type="text/javascript" src="custom_valida.js"></script>
+
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3>PROCESSO DE SOLICITAÇÃO DE SERVIÇO</h3>
+				</div>
+
+				<!-- DADOS DA SOLICITAÇÃO - SEQUÊNCIA 1 -->
+				
+				<div class="panel-heading">
+					<h3 class="panel-title">Dados do Solicitante</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-5">
+							<label for="dataDaSolicitacao">Data da Solicitação</label>
+							<input type="text" class="form-control" name="dataDaSolicitacao" id="dataDaSolicitacao" placeholder="Data da Solicitação">
+						</div>
+						<div class="form-group col-md-5">
+							<label for="empresa" class="obrigatorio">Empresa</label>
+							<input type="text" class="form-control" name="empresa" id="empresa" placeholder="Empresa">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="departamento">Departamento</label>
+							<input type="text" class="form-control" name="departamento" id="departamento" placeholder="Departamento">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-8">
+							<label for="nomeCompleto">Nome Completo</label>
+							<input type="text" class="form-control" name="nomeCompleto" id="nomeCompleto" placeholder="Nome Completo">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="emailCorporativo">E-mail Corporativo</label>
+							<input type="email" class="form-control" name="emailCorporativo" id="emailCorporativo" placeholder="E-mail Corporativo">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-5">
+							<label for="cargo">Cargo</label>
+							<input type="text" class="form-control" name="dataDaSolicitacao" id="dataDaSolicitacao" placeholder="Data da Solicitação">
+						</div>
+						<div class="form-group col-md-5">
+							<label for="matricula">Matrícula</label>
+							<input type="text" class="form-control" name="matricula" id="matricula" placeholder="Matrícula">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="telefone">Telefone</label>
+							<input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone" mask="(00) 00000-0000">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Dados da Solicitação</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="filial">Filial</label>
+							<input type="zoom" class="form-control" name="filial" id="filial" data-zoom="{
+										'displayKey':'departamento',
+										'datasetId':'GetDeptoServicosGenericosSLA',
+										'maximumSelectionLength':'1',
+										'placeholder':'Digite o departamento',
+										'fields':[
+											{
+											'field':'departamento',
+											'label':'Departamento'											  
+											},{
+											'field':'idDepartamento',
+											'label':'ID Departamento',
+											'visible':'false'											  
+											}
+											]
+										}">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="codigoDoEvento">Código do Evento</label>
+							<input type="zoom" class="form-control" name="codigoDoEvento" id="codigoDoEvento" data-zoom="{
+										'displayKey':'departamento',
+										'datasetId':'GetDeptoServicosGenericosSLA',
+										'maximumSelectionLength':'1',
+										'placeholder':'Digite o departamento',
+										'fields':[
+											{
+											'field':'departamento',
+											'label':'Departamento'											  
+											},{
+											'field':'idDepartamento',
+											'label':'ID Departamento',
+											'visible':'false'											  
+											}
+											]
+										}">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="descricaoDoEvento">Descrição do Evento</label>
+							<input type="text" class="form-control" name="descricaoDoEvento" id="descricaoDoEvento" placeholder="Preenchido conforme código">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label for="descritivoSolicitacao">Descritivo</label>
+							<textarea rows="5" name="descritivoSolicitacao" id="descritivoSolicitacao" class="form-control"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ANÁLISE CONTROLADORIA - SEQUÊNCIA 2 -->
+
+			<div class="panel panel-primary" id="div_analiseControladoria">
+				<div class="panel-heading">
+					<h3 class="panel-title">Análise controladoria</h3>
+				</div>
+				<div class="panel-body">
+					<p><b>Conta Débito</b></p>
+					<p><b>Agrupador 0001</b></p>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="contaCustoDiretoCredito">Conta custo direto - Crédito</label>
+							<input type="zoom" class="form-control" name="contaCustoDiretoCredito" id="contaCustoDiretoCredito">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="contaCustoDiretoDebito">Conta custo direto - Débito</label>
+							<input type="text" class="form-control" name="contaCustoDiretoDebito" id="contaCustoDiretoDebito">
+						</div>
+					</div>
+					<p><b>Agrupador 0002</b></p>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="contaCustoIndiretoCredito">Conta custo indireto - Crédito</label>
+							<input type="text" class="form-control" name="contaCustoIndiretoCredito" id="contaCustoIndiretoCredito">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="contaCustoIndiretoDebito">Conta custo idireto - Débito</label>
+							<input type="text" class="form-control" name="contaCustoIndiretoDebito" id="contaCustoIndiretoDebito">
+						</div>
+					</div>
+					<p><b>Agrupador 0003</b></p>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="contaDespesasGeraisCredito">Conta despesas gerais - Crédito</label>
+							<input type="text" class="form-control" name="contaDespesasGeraisCredito" id="contaDespesasGeraisCredito">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="contaDespesasGeraisDebito">Conta despesas gerais - Débito</label>
+							<input type="text" class="form-control" name="contaDespesasGeraisDebito" id="contaDespesasGeraisDebito">
+						</div>
+					</div>
+					<p><b>Agrupador 0004</b></p>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="contaDespesasComerciaisCredito">Conta despesas comerciais - Crédito</label>
+							<input type="text" class="form-control" name="contaDespesasComerciaisCredito" id="contaDespesasComerciaisCredito">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="contaDespesasComerciaisDebito">Conta despesas comerciais - Débito</label>
+							<input type="text" class="form-control" name="contaDespesasComerciaisDebito" id="contaDespesasComerciaisDebito">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- CRIAÇÃO RM - SEQUÊNCIA 3 -->
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Criação RM</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label for="descritivoRM">Descritivo</label>
+							<textarea rows="5" name="descritivoRM" id="descritivoRM" class="form-control"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		var calendarioDataSolicitacao = FLUIGC.calendar("#dataDaSolicitacao");
+	</script>
+</body>
+
+</html>

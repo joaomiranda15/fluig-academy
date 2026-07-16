@@ -1,0 +1,470 @@
+<html>
+<head>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+<link rel="stylesheet" href="https://style.fluig.com/css/fluig-style-guide.min.css">
+<link rel="stylesheet" href="/style-guide/css/fluig-style-guide-ratingstars.min.css">
+<link rel="stylesheet" href="style.css" />
+
+<!-- JS: bases -->
+<script src="/portal/resources/js/jquery/jquery.js"></script>
+<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+
+<!-- JS: Fluig -->
+<script src="/style-guide/js/fluig-style-guide.min.js"></script>
+<script src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+<script src="/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+
+<!-- JS: libs/plugins -->
+<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+<script src="/webdesk/vcXMLRPC.js"></script>
+<script src="jquery.mask.js"></script>
+
+<!-- JS: seus scripts (que dependem dos de cima) -->
+<script src="zoom.js"></script>
+<script src="anexos.js"></script>
+<script src="custom_valida.js"></script>
+<script src="util_code_repository.js"></script>
+<script src="custom.js"></script>
+
+</head>
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form" autocomplete="off" novalidate>
+
+			<!-- Process vars -->
+			<input type="hidden" name="formMode" id="formMode" />
+			<input type="hidden" name="currentState" id="currentState" />
+			<input type="hidden" name="SOLIC" id="SOLIC" />
+			<input type="hidden" name="SERVICO" id="SERVICO" />
+			<input type="hidden" name="ITEM_SOLICITACAO" id="ITEM_SOLICITACAO" />
+			<input type="hidden" name="DEPARTAMENTOLyceum" id="DEPARTAMENTOLyceum" />
+			<input type="hidden" name="TIPO_SERVICO" id="TIPO_SERVICO" />
+
+			<div class="page-header">
+				<header class="main-header clearfix">
+					<div class="wrapper">
+						<div class="row">
+							<div class="col-md-3 text-left"></div>
+							<div class="col-md-6 title">
+								<h1 class="text-center" style="color: #3714FF;">Solicitação de Serviços</h1>
+							</div>
+							<div class="col-md-3 text-right">
+								<img class="company-logo imagem-reduzida"
+									src="/widget_code_repository/resources/images/LogoClariens.jpeg">
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="panel panel-default" id="dadosColaborador">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Dados do Colaborador</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-3">
+							<label for="dataSolicitacao">Data Solicitação</label>
+							<input type="text" class="form-control" id="dataSolicitacao" name="dataSolicitacao" readonly>
+						</div>
+						<div class="form-group col-md-5 ">
+							<label for="empresa">Empresa</label>
+							<input type="text" class="form-control" name="empresa" id="empresa" readonly>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="departamento">Departamento</label>
+							<input type="text" class="form-control" name="departamento" id="departamento" readonly>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="nomeCompleto">Nome completo</label>
+							<input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" readonly>
+						</div>
+						<div class="form-group col-md-6 ">
+							<label>E-mail Corporativo</label>
+							<input type="text" class="form-control" name="email" id="email" readonly>
+						</div>
+					</div>
+					<div class='row'>
+						<div class="form-group col-md-6">
+							<label for="cargo">Cargo</label>
+							<input type="text" class="form-control" name="cargo" id="cargo" readonly>
+							<input type="hidden" name="matricula" id="matricula" value="" readonly>
+							<input type="hidden" name="emailsolicitante" id="emailsolicitante" readonly>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="matricula1">Matrícula</label>
+							<input type="text" class="form-control" name="matricula1" id="matricula1" readonly>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="telefone" class="obrigatorio">Telefone</label>
+							<input type="text" class="form-control required" name="telefone" id="telefone">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default" id="formSolicitacao">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Dados da Solicitação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="zoomDepartamento" class="obrigatorio">Departamento</label>
+							<input type="zoom" id="zoomDepartamento" name="zoomDepartamento"
+								class="form-control required"
+								data-zoom="{
+										'displayKey':'departamento',
+										'datasetId':'GetDeptoServicosGenericosSLA',
+										'maximumSelectionLength':'1',
+										'placeholder':'Digite o departamento',
+										'fields':[
+											{
+											'field':'departamento',
+											'label':'Departamento'											  
+											},{
+											'field':'idDepartamento',
+											'label':'ID Departamento',
+											'visible':'false'											  
+											}
+											]
+										}" />
+							<input type="hidden" class="form-control" name="idDepartamento" id="idDepartamento" readonly>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="tipoServico" class="obrigatorio">Tipo de Serviço</label>
+							<input type="zoom" id="tipoServico" name="tipoServico" class="form-control required"
+								data-zoom="{
+										'displayKey':'tipConsulta',
+										'datasetId':'GetServicosGenericosSLA',
+										'maximumSelectionLength':'1',
+										'placeholder':'Digite o Serviço',
+										'fields':[
+											{
+											'field':'tipConsulta',
+											'label':'Serviço'											  
+											},{
+											'field':'departamento',
+											'label':'Departamento',
+											'standard':'true',
+											'visible':'false'												  
+											},{
+											'field':'SLA1',
+											'label':'SLA1',
+											'standard':'true'											  
+											}
+											]
+										}" />
+						</div>
+						<div class="form-group col-md-2">
+							<label for="inputSLA">SLA (Dias Úteis)</label>
+							<input type="text" class="form-control" name="inputSLADia" id="inputSLADia" readonly>
+							<input type="hidden" class="form-control" name="inputSLA" id="inputSLA" readonly>
+						</div>
+						<div class="form-group col-md-3" style="display: none;">
+							<label for="inputSLA2">SLA 2 Complementar (Dias Úteis)</label>
+							<input type="text" class="form-control" name="inputSLA2Dia" id="inputSLA2Dia" readonly>
+							<input type="hidden" class="form-control" name="inputSLA2" id="inputSLA2" readonly>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+							<span class="text-danger"> </span> <label class="obrigatorio" for="descricaoSolicitacao">Descrição</label>
+							<textarea type="text" class="form-control required" name="descricaoSolicitacao"
+								id="descricaoSolicitacao" required="Informe a descrição da Solicitação." rows="5"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ANALISE DA SOLICITACAO -->
+			<div class="panel panel-default" id="formAnalise">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<strong>Análise da Solicitação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="form-group col-md-12">
+						<label class="obrigatorio">Análise</label>
+						<div class="card">
+							<div class="card-body">
+								<div class="switch switch-warning form-group col-md-3" id="formSwitchLy">
+									<h5>
+										<b>Complementar informações </b>
+									</h5>
+									<input class="switch-input" id="informacoes" name="avalsolicitacao" type="radio"
+										value="informacoes">
+									<label class="switch-button" for="informacoes">Toggle</label>
+								</div>
+								<div class="switch switch-success form-group col-md-3">
+									<h5>
+										<b>Validado</b>
+									</h5>
+									<input class="switch-input" id="validado" name="avalsolicitacao" type="radio"
+										value="validado">
+									<label class="switch-button" for="validado">Toggle</label>
+								</div>
+								<div class="switch switch-warning form-group col-md-3" id="formSwitchDepois">
+									<h5>
+										<b>Responder depois</b>
+									</h5>
+									<input class="switch-input" id="respDepois" name="avalsolicitacao" type="radio"
+										value="respDepois">
+									<label class="switch-button" for="respDepois">Toggle</label>
+								</div>
+								<div class="switch switch-danger form-group col-md-3" id="formSwitchCancelado">
+									<h5>
+										<b>Cancelado</b>
+									</h5>
+									<input class="switch-input" id="cancelado" name="avalsolicitacao" type="radio"
+										value="cancelado">
+									<label class="switch-button" for="cancelado">Toggle</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="containerDescricao">
+						<div class="form-group col-md-12">
+							<label class="obrigatorio" for="descricao">Descrição</label>
+							<textarea rows="5" class="form-control " name="descricao" id="descricao"></textarea>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- ANALISE Planejamento Acadêmico -->
+			<div class="panel panel-default" id="formAnalisePlanAcademico">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<strong>Análise Planejamento Acadêmico</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="form-group col-md-12">
+						<label class="obrigatorio">Análise</label>
+						<div class="card">
+							<div class="card-body">
+								<div class="switch switch-success form-group col-md-3">
+									<h5>
+										<b>Validado</b>
+									</h5>
+									<input class="switch-input" id="avalPlanAcedValidado" name="avalPlanAcademico" type="radio"
+										value="validado">
+									<label class="switch-button" for="avalPlanAcedValidado">Toggle</label>
+								</div>
+								<div class="switch switch-danger form-group col-md-3">
+									<h5>
+										<b>Cancelado</b>
+									</h5>
+									<input class="switch-input" id="avalPlanAcedCancelado" name="avalPlanAcademico"
+										type="radio" value="cancelado">
+									<label class="switch-button" for="avalPlanAcedCancelado">Toggle</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="containerDescPlanAcademico">
+						<div class="form-group col-md-12">
+							<label class="obrigatorio" for="descricao">Descrição</label>
+							<textarea rows="5" class="form-control " name="descricaoPlaneAcad" id="descricaoPlaneAcad"></textarea>
+						</div>
+					</div>
+
+
+
+					<div class="form-group col-md-12" id="containerAnexoPlanAcademico">
+						<label>Selecione os documentos que serão enviados.</label>
+						<div class="card">
+							<div class="card-body">
+								<input type="file" name="upload_arquivos_anexo" id="upload_arquivos_anexo"
+									style="display: none;" />
+								<table tablename="tableAnexosServicos" class="col-md-12" nodeletebutton="true"
+									noaddbutton="true">
+									<thead>
+										<tr>
+											<td></td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class='row'>
+													<!--<div class="form-group col-md-2">
+														<br>
+														<button type="button" class="btn btn-danger form-control bbras-btnExcluir"
+															onClick="customRemoveChild(this);" name="btnExcluirContr" id="btnExcluirContr">Excluir</button>
+													</div> -->
+
+													<div class="col-md-3">
+														<div class="form-group">
+															<label class="control-label "></label>
+															<div class="componentAnexo">
+																<div class="input-group">
+																	<input type="hidden" class="descAnexo" name="fdAnexoServico"
+																		value="Contrato Social" />
+																	<input type="text" id="fnAnexoServico" name="fnAnexoServico"
+																		class="form-control inputAnexo input-sm" placeholder="Selecione um arquivo"
+																		readonly />
+																</div>
+																<div class="icones">
+																	<button type="button" class="btnUpFile btn btn-success btn-sm" data-acao="upload"
+																		onclick="anexo(event)" title="Selecionar">
+																		<i class="fluigicon fluigicon-file-upload icon-sm"></i>
+																	</button>
+																	<button style="display: none;" type="button"
+																		class="btnViewerFile btn btn-info btn-sm" data-acao="viewer"
+																		onclick="anexo(event)" title="Visualizar" disabled>
+																		<i class="fluigicon fluigicon-eye-open icon-sm"></i>
+																	</button>
+																	<button style="display: none;" type="button"
+																		class="btnDownloadFile btn btn-info btn-sm" data-acao="download"
+																		onclick="anexo(event)" title="Download" disabled>
+																		<i class="fluigicon fluigicon-download icon-sm"></i>
+																	</button>
+																	<button style="display: none;" type="button"
+																		class="btnDeleteFile btn btn-danger btn-sm" data-acao="delete"
+																		onclick="anexo(event)" title="Excluir" disabled>
+																		<i class="fluigicon fluigicon-trash icon-sm"></i>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="form-group col-md-2" tabindex="0" id="divbtnincluir">
+									<div class="input-group">
+										<input type="button" class="btn btn-default bbras-btnIncluir" id="inserirAnexo"
+											name="inserirAnexo" value="Inserir Anexo"
+											onclick="customAddChild('tableAnexosServicos',this);">
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- RESPONDER SOLICITACAO -->
+			<div class="panel panel-default " id="formResposta">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Responder Solicitação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="obrigatorio">Descrição</label>
+							<textarea rows="5" class="form-control " name="complementoSolicitacao"
+								id="complementoSolicitacao"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- COMPLEMENTAR SOLICITACAO -->
+			<div class="panel panel-default " id="formComplementar">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Complementar Solicitação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label class="obrigatorio">Descrição</label>
+							<textarea rows="5" class="form-control " name="descricaoComplemento"
+								id="descricaoComplemento"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- DIV histórico-->
+			<div class="panel-group" id="div_historico">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+								<h3 class="panel-title">
+									<b>Histórico da solicitação</b>
+								</h3>
+							</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="form-group col-md-12" id="div_histEntregua">
+								<label class="control-label"></label>
+								<div class="form-group col-md-12">
+									<table tablename="itenshistorico" class="col-md-12" nodeletebutton="true"
+										noaddbutton="true">
+										<thead>
+											<tr>
+												<td></td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr id="trproduto">
+												<td>
+													<div class="row">
+														<input type="hidden" class="form-control id-itemH" name="itemH" id="itemH" readonly>
+														<div class="form-group col-md-3">
+															<label class="control-label" for="resp">Responsável</label>
+															<input type="text" class="form-control" name="resp" id="resp" readonly>
+														</div>
+														<div class="form-group col-md-3">
+															<label class="control-label" for="departamentoResp">Departamento</label>
+															<input type="text" class="form-control" name="departamentoResp" id="departamentoResp"
+																readonly>
+														</div>
+
+														<div class="form-group col-md-3">
+															<label class="control-label" for="atividade">Atividade</label>
+															<input type="text" class="form-control" name="atividade" id="atividade" readonly>
+														</div>
+														<div class="form-group col-md-3">
+															<label class="control-label" for="datahist">Data</label>
+															<input type="text" class="form-control" name="datahist" id="datahist" readonly>
+														</div>
+
+														<div class="form-group col-md-12" id="div_coment">
+															<label class="control-label" for="observacao">Observação</label>
+															<textarea class="form-control" rows="5" maxlength="2000" name="observacao"
+																id="observacao" readonly></textarea>
+														</div>
+
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+	"version": "1.0.0",
+	"configurations": [
+		{
+			"id": "76jxzrys4i6mrdujbtu7pfbeilcc8",
+			"name": "teste",
+			"host": "conecta-teste.clariens.com.br",
+			"ssl": true,
+			"port": 1600,
+			"username": "elton.peres.ter@clariens.com.br",
+			"password": "eyJpdiI6ImY2MDI5OTc1ZjljN2ZlNThmZjMzM2EyODM1NWJjM2JhIiwic2FsdCI6IjUyNjNjZGQ0NTBhY2Y2ZjNjYmMxYjQ3NzViYWJlMTMyIiwidGV4dCI6IjNjOThlZmRhMWEzNWZkY2U0MWQ0MjhjYmIwOTUzNTU2In0=",
+			"userCode": "3f3ae5fe7fbf41bb81d08b595a1fe988",
+			"confirmExporting": false,
+			"hasBrowser": false,
+			"companyId": 1
+		}
+	]
+}
