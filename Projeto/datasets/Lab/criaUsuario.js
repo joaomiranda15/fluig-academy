@@ -242,18 +242,19 @@ function data() {
   "portTypeMethod" : "getColleagueServicePort",
   "parameters" : [ ],
   "inputValues" : {
-    "password" : "joao.c",
+    "password" : "academy.aluno",
     "companyId" : 1,
     "colleagues" : [ {
       "active" : true,
       "adminUser" : false,
-      "colleagueId" : "joao.c",
-      "colleagueName" : "joao.c",
-      "login" : "joao.c",
-      "mail" : "joao.c",
-      "passwd" : "joao.c"
+      "colleagueId" : "academy.aluno",   
+	//   Informando qual o usuário vai ser responsável por criar os novos usuários e adicioná-los a comunidade - deve ser um usuário existente.
+      "colleagueName" : "academy.aluno",
+      "login" : "academy.aluno",
+      "mail" : "academy.aluno@email.com",
+      "passwd" : "academy.aluno"
     } ],
-    "username" : "joao.c"
+    "username" : "academy.aluno"
   },
   "inputAssignments" : {
     "password" : "VALUE",
