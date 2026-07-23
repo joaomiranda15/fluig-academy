@@ -1,19 +1,4 @@
 INDEX VERSION 1.4+C:\Users\João Carvalho\trabalho\clariens\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3444567670.index
-859600146.index
-365440369.index
-2543206480.index
-656694942.index
-3738897320.index
+2117467122.index
 3927496509.index
-3289666701.index
-858357601.index
-3118037557.index
-2625680277.index
 4146801842.index
-2401346985.index
-3224629987.index
-927040025.index
-1679173263.index
-2165163430.index
-2989375396.index

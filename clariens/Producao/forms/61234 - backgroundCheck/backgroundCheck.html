@@ -1,0 +1,316 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+<link rel="stylesheet" type="text/css" href="https://style.fluig.com/css/fluig-style-guide.min.css">
+<link type="text/css" rel="stylesheet" href="style.css" />
+
+<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js"></script>
+<script type="text/javascript" src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+<script type="text/javascript" src="custom.js"></script>
+<script type="text/javascript" src="zoom.js"></script>
+<script type="text/javascript" src="jquery.mask.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script type="text/javascript" src="custom_valida.js"></script>
+<script type="text/javascript" src="/widget_code_repository/resources/js/widget_code_repository.js" charset="utf-8"></script>
+<script type="text/javascript" src="/portal/resources/style-guide/js/fluig-style-guide-richeditor.min.js"></script>
+
+
+</head>
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form" autocomplete="off" novalidate>
+
+			<!-- Process vars -->
+			<input type="hidden" name="formMode" id="formMode" />
+			<input type="hidden" name="currentState" id="currentState" />
+			<input type="hidden" name="controlBack" id="controlBack" value="0" />
+
+			<div class="page-header">
+				<header class="main-header clearfix">
+					<div class="wrapper">
+						<div class="row">
+							<div class="col-md-3 text-left"></div>
+							<div class="col-md-6 title">
+								<h1 class="text-center" style="color: #3714FF;">Background Check</h1>
+							</div>
+							<div class="col-md-3 text-right">
+								<img class="company-logo imagem-reduzida" src="/widget_code_repository/resources/images/LogoClariens2.png"
+									style="max-width: 150px; height: auto;">
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="panel panel-default" id="dadosColaborador">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Dados do Colaborador</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-3">
+							<label for="dataSolicitacao">Data Solicitação</label>
+							<input type="date" class="form-control" id="dataSolicitacao" name="dataSolicitacao" readonly>
+						</div>
+						<div class="form-group col-md-5 ">
+							<label for="empresa">Empresa</label>
+							<input type="text" class="form-control" name="empresa" id="empresa" readonly>
+							<input type="hidden" class="form-control" name="codColigadaSol" id="codColigadaSol">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="departamento">Departamento</label>
+							<input type="text" class="form-control" name="departamento" id="departamento" readonly>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="nomeCompleto">Nome completo</label>
+							<input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" readonly>
+						</div>
+						<div class="form-group col-md-6 ">
+							<label>E-mail Corporativo</label>
+							<input type="text" class="form-control" name="email" id="email" readonly>
+						</div>
+					</div>
+					<div class='row'>
+						<div class="form-group col-md-6">
+							<label for="cargo">Cargo</label>
+							<input type="text" class="form-control" name="cargo" id="cargo" readonly>
+							<input type="hidden" name="emailsolicitante" id="emailsolicitante" readonly>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="matricula">Matrícula</label>
+							<input type="text" class="form-control" name="matricula" id="matricula" readonly>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="telefone" class="obrigatorio">Telefone</label>
+							<input type="text" class="form-control required" name="telefone" id="telefone">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default" id="formSolicitacao">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Dados da Solicitação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+
+					<div class="form-group col-md-3">
+						<label for="codFornece" class="control-label obrigatorio">ID do Fornecedor</label>
+						<input type="text" class="form-control" name="codFornece" id="codFornece" maxlength="40">
+						<input type="hidden" class="form-control" name="Filial" id="Filial">
+						<input type="hidden" class="form-control" name="lojaFornecedor" id="lojaFornecedor">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="nomeFornecedor" class="control-label obrigatorio">Nome do Fornecedor</label>
+						<input type="text" class="form-control" name="nomeFornecedor" id="nomeFornecedor" maxlength="40">
+					</div>
+					<div class="form-group col-md-3">
+						<label for="nomeContato" class="control-label obrigatorio">Número do contrato</label>
+
+						<input type="text" class="form-control" name="numContrato" id="numContrato">
+
+					</div>
+					<div class="form-group col-md-3">
+						<label for="nomeContato" class="control-label obrigatorio">Número da cotação</label>
+						<input type="text" class="form-control" name="numCotacao" id="numCotacao">
+						<input type="hidden" class="form-control" name="nSolicCompra" id="nSolicCompra">
+					</div>
+					<div class="form-group col-md-3">
+						<label for="telefone2" class="control-label obrigatorio">Telefone</label>
+						<input type="text" class="form-control" name="telefone2" id="telefone2">
+					</div>
+					<div class="form-group col-md-3">
+						<label for="cnpj" class="control-label obrigatorio">CNPJ/CPF</label>
+						<input type="text" class="form-control" name="cnpj" id="cnpj" maxlength="14">
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default " id="formAprovCot">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Aprovação Cotação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Aprovado?</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="switch switch-success form-group col-md-4">
+										<h5>
+											<b>Sim</b>
+										</h5>
+										<input class="switch-input" id="AprovCotSIM" name="AprovCot" type="radio" value="SIM">
+										<label class="switch-button" for="AprovCotSIM">Toggle</label>
+									</div>
+									<div class="switch switch-danger form-group col-md-4">
+										<h5>
+											<b>Não</b>
+										</h5>
+										<input class="switch-input" id="AprovCotNAO" name="AprovCot" type="radio" value="NAO">
+										<label class="switch-button" for="AprovCotNAO">Toggle</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="containerObsAprovCot">
+						<div class="form-group col-md-12">
+							<label id="labelCotacao">Observação</label>
+							<textarea rows="5" class="form-control " name="obsAprovCot" id="obsAprovCot"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default " id="formBackground">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Análise compliance</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Aprovado?</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="switch switch-success form-group col-md-4">
+										<h5>
+											<b>Sim</b>
+										</h5>
+										<input class="switch-input" id="backgroundSIM" name="background" type="radio" value="SIM">
+										<label class="switch-button" for="backgroundSIM">Toggle</label>
+									</div>
+									<div class="switch switch-danger form-group col-md-4">
+										<h5>
+											<b>Revisar</b>
+										</h5>
+										<input class="switch-input" id="backgroundNAO" name="background" type="radio" value="NAO">
+										<label class="switch-button" for="backgroundNAO">Toggle</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="containerObsBackground">
+						<div class="form-group col-md-12">
+							<label id="labelCheck">Observação</label>
+							<textarea rows="5" class="form-control " name="obsBackground" id="obsBackground"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default " id="formAvaliacao">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Avaliação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Aprovado?</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="switch switch-success form-group col-md-4">
+										<h5>
+											<b>Sim</b>
+										</h5>
+										<input class="switch-input" id="avaliacaoSIM" name="avaliacao" type="radio" value="SIM">
+										<label class="switch-button" for="avaliacaoSIM">Toggle</label>
+									</div>
+									<div class="switch switch-danger form-group col-md-4">
+										<h5>
+											<b>Não</b>
+										</h5>
+										<input class="switch-input" id="avaliacaoNAO" name="avaliacao" type="radio" value="NAO">
+										<label class="switch-button" for="avaliacaoNAO">Toggle</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="containerObsValidada">
+						<div class="form-group col-md-12">
+							<label id="labelAvaliacao">Observação</label>
+							<textarea rows="5" class="form-control " name="obsValidada" id="obsValidada"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="sidebar-custom" id="myCustomSidebar">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+
+				<div class="panel panel-default ">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<strong>Histórico de Decisões</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="form-group col-md-12" id="div_histEntregua">
+							<label class="control-label"></label>
+							<div class="form-group col-md-12">
+								<table tablename="itenshistorico" class="col-md-12" nodeletebutton="true" noaddbutton="true">
+									<thead>
+										<tr>
+											<td></td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr id="trproduto">
+											<td>
+												<div class="card rowStatusHist">
+													<div class="card-body">
+														<div class="row">
+															<input type="hidden" class="form-control id-itemH" name="itemH" id="itemH" readonly>
+															<input type="hidden" class="statusHistorico" name="statusHistorico" id="statusHistorico">
+															<div class="form-group col-md-4">
+																<label class="control-label" for="atividade">Atividade</label>
+																<input type="text" class="form-control" name="atividade" id="atividade" readonly>
+															</div>
+															<div class="form-group col-md-4">
+																<label class="control-label" for="resp">Responsável</label>
+																<input type="text" class="form-control" name="resp" id="resp" readonly>
+															</div>
+															<div class="form-group col-md-3">
+																<label class="control-label" for="datahist">Data</label>
+																<input type="text" class="form-control" name="datahist" id="datahist" readonly>
+															</div>
+
+															<div class="form-group col-md-12" id="div_coment">
+																<!-- <label class="control-label" for="observacao">Solicitação de informação complementar</label> -->
+																<textarea class="form-control" rows="5" maxlength="2000" name="observacao" id="observacao" readonly></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<button class="btn btn-primary openbtn" onclick="toggleSidebar()">Visualizar Histórico</button>
+			
+		</form>
+	</div>
+</body>
+</html>

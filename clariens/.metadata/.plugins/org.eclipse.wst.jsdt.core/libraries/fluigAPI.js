@@ -111,8 +111,6 @@ com.fluig.sdk.api.task.TaskKindEnum = function() {};
 com.fluig.sdk.api.task.TaskKindEnum.prototype = {};
 com.fluig.sdk.api.task.TaskStatusEnum = function() {};
 com.fluig.sdk.api.task.TaskStatusEnum.prototype = {};
-com.fluig.sdk.api.task.TaskTransferVO = function() {};
-com.fluig.sdk.api.task.TaskTransferVO.prototype = {};
 com.fluig.sdk.api.workflow.AssumeProcessTaskResultVO = function() {};
 com.fluig.sdk.api.workflow.AssumeProcessTaskResultVO.prototype = {};
 com.fluig.sdk.api.workflow.AssumeProcessTaskVO = function() {};
@@ -219,8 +217,6 @@ com.fluig.sdk.filter.FilterOrderVO = function() {};
 com.fluig.sdk.filter.FilterOrderVO.prototype = {};
 com.fluig.sdk.filter.FilterResultVO = function() {};
 com.fluig.sdk.filter.FilterResultVO.prototype = {};
-com.fluig.sdk.filter.FilterUpdateNameVO = function() {};
-com.fluig.sdk.filter.FilterUpdateNameVO.prototype = {};
 com.fluig.sdk.filter.FilterVO = function() {};
 com.fluig.sdk.filter.FilterVO.prototype = {};
 com.fluig.sdk.holiday.HolidayVO = function() {};
@@ -1528,13 +1524,6 @@ com.fluig.sdk.service.SecurityService.prototype = {
 	*/
 	"getCurrentTenant": function() {}, 
 	/**
-	* Get the current tenant
-	* @memberOf fluigAPI
-	* @param {long} tenantId 
-	* @returns {com.fluig.sdk.tenant.TenantVO} 
-	*/
-	"getCurrentTenantById": function(tenantId) {}, 
-	/**
 	* 
 	* @memberOf fluigAPI
 	* @param {long} companyId 
@@ -1633,13 +1622,6 @@ SecurityService.prototype = {
 	* @returns {com.fluig.sdk.tenant.TenantVO} 
 	*/
 	"getCurrentTenant": function() {}, 
-	/**
-	* Get the current tenant
-	* @memberOf fluigAPI
-	* @param {long} tenantId 
-	* @returns {com.fluig.sdk.tenant.TenantVO} 
-	*/
-	"getCurrentTenantById": function(tenantId) {}, 
 	/**
 	* 
 	* @memberOf fluigAPI
@@ -3906,7 +3888,6 @@ com.fluig.sdk.service.GroupService.prototype = {
 	* @memberOf fluigAPI
 	* @param {String} groupCode 
 	* @param {List} logins 
-	* @returns {List&lt;String&gt;} 
 	*/
 	"addUsers": function(groupCode, logins) {}, 
 	/**
@@ -3974,7 +3955,6 @@ GroupService.prototype = {
 	* @memberOf fluigAPI
 	* @param {String} groupCode 
 	* @param {List} logins 
-	* @returns {List&lt;String&gt;} 
 	*/
 	"addUsers": function(groupCode, logins) {}, 
 	/**
@@ -11805,19 +11785,7 @@ com.fluig.sdk.api.workflow.ProcessDefinitionVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {String} processDescription 
 	*/
-	"setProcessDescription": function(processDescription) {}, 
-	/**
-	* Recupera valor do icon
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getIcon": function() {}, 
-	/**
-	* Atribui valor para icon
-	* @memberOf fluigAPI
-	* @param {String} icon 
-	*/
-	"setIcon": function(icon) {}
+	"setProcessDescription": function(processDescription) {}
 };
 ProcessDefinitionVO.prototype = {
 	/**
@@ -11843,19 +11811,7 @@ ProcessDefinitionVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {String} processDescription 
 	*/
-	"setProcessDescription": function(processDescription) {}, 
-	/**
-	* Recupera valor do icon
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getIcon": function() {}, 
-	/**
-	* Atribui valor para icon
-	* @memberOf fluigAPI
-	* @param {String} icon 
-	*/
-	"setIcon": function(icon) {}
+	"setProcessDescription": function(processDescription) {}
 };
 com.fluig.sdk.api.workflow.ResumeProcessTaskVO.prototype = {
 	/**
@@ -18933,322 +18889,6 @@ ResumedTasksVO.prototype = {
 	*/
 	"setChildren": function(children) {}
 };
-com.fluig.sdk.api.task.TaskTransferVO.prototype = {
-	/**
-	* Recupera valor do userTo
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserTo": function() {}, 
-	/**
-	* Atribui valor para userTo
-	* @memberOf fluigAPI
-	* @param {String} userTo 
-	*/
-	"setUserTo": function(userTo) {}, 
-	/**
-	* Recupera valor do userFrom
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserFrom": function() {}, 
-	/**
-	* Atribui valor para userFrom
-	* @memberOf fluigAPI
-	* @param {String} userFrom 
-	*/
-	"setUserFrom": function(userFrom) {}, 
-	/**
-	* Recupera valor do transferActiveDocuments
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferActiveDocuments": function() {}, 
-	/**
-	* Atribui valor para transferActiveDocuments
-	* @memberOf fluigAPI
-	* @param {boolean} transferActiveDocuments 
-	*/
-	"setTransferActiveDocuments": function(transferActiveDocuments) {}, 
-	/**
-	* Recupera valor do transferMyDocumentsInApproval
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferMyDocumentsInApproval": function() {}, 
-	/**
-	* Atribui valor para transferMyDocumentsInApproval
-	* @memberOf fluigAPI
-	* @param {boolean} transferMyDocumentsInApproval 
-	*/
-	"setTransferMyDocumentsInApproval": function(transferMyDocumentsInApproval) {}, 
-	/**
-	* Recupera valor do transferPendingWorkflow
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferPendingWorkflow": function() {}, 
-	/**
-	* Atribui valor para transferPendingWorkflow
-	* @memberOf fluigAPI
-	* @param {boolean} transferPendingWorkflow 
-	*/
-	"setTransferPendingWorkflow": function(transferPendingWorkflow) {}, 
-	/**
-	* Recupera valor do transferOpenWorkflow
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferOpenWorkflow": function() {}, 
-	/**
-	* Atribui valor para transferOpenWorkflow
-	* @memberOf fluigAPI
-	* @param {boolean} transferOpenWorkflow 
-	*/
-	"setTransferOpenWorkflow": function(transferOpenWorkflow) {}, 
-	/**
-	* Recupera valor do transferApprovers
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferApprovers": function() {}, 
-	/**
-	* Atribui valor para transferApprovers
-	* @memberOf fluigAPI
-	* @param {boolean} transferApprovers 
-	*/
-	"setTransferApprovers": function(transferApprovers) {}, 
-	/**
-	* Recupera valor do transferApprovals
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferApprovals": function() {}, 
-	/**
-	* Atribui valor para transferApprovals
-	* @memberOf fluigAPI
-	* @param {boolean} transferApprovals 
-	*/
-	"setTransferApprovals": function(transferApprovals) {}, 
-	/**
-	* Recupera valor do transferDocumentSecurity
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferDocumentSecurity": function() {}, 
-	/**
-	* Atribui valor para transferDocumentSecurity
-	* @memberOf fluigAPI
-	* @param {boolean} transferDocumentSecurity 
-	*/
-	"setTransferDocumentSecurity": function(transferDocumentSecurity) {}, 
-	/**
-	* Recupera valor do instanceIdInitial
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getInstanceIdInitial": function() {}, 
-	/**
-	* Atribui valor para instanceIdInitial
-	* @memberOf fluigAPI
-	* @param {int} instanceIdInitial 
-	*/
-	"setInstanceIdInitial": function(instanceIdInitial) {}, 
-	/**
-	* Recupera valor do instanceIdFinal
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getInstanceIdFinal": function() {}, 
-	/**
-	* Atribui valor para instanceIdFinal
-	* @memberOf fluigAPI
-	* @param {int} instanceIdFinal 
-	*/
-	"setInstanceIdFinal": function(instanceIdFinal) {}, 
-	/**
-	* Recupera valor do documentIdInitial
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getDocumentIdInitial": function() {}, 
-	/**
-	* Atribui valor para documentIdInitial
-	* @memberOf fluigAPI
-	* @param {int} documentIdInitial 
-	*/
-	"setDocumentIdInitial": function(documentIdInitial) {}, 
-	/**
-	* Recupera valor do documentIdFinal
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getDocumentIdFinal": function() {}, 
-	/**
-	* Atribui valor para documentIdFinal
-	* @memberOf fluigAPI
-	* @param {int} documentIdFinal 
-	*/
-	"setDocumentIdFinal": function(documentIdFinal) {}
-};
-TaskTransferVO.prototype = {
-	/**
-	* Recupera valor do userTo
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserTo": function() {}, 
-	/**
-	* Atribui valor para userTo
-	* @memberOf fluigAPI
-	* @param {String} userTo 
-	*/
-	"setUserTo": function(userTo) {}, 
-	/**
-	* Recupera valor do userFrom
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserFrom": function() {}, 
-	/**
-	* Atribui valor para userFrom
-	* @memberOf fluigAPI
-	* @param {String} userFrom 
-	*/
-	"setUserFrom": function(userFrom) {}, 
-	/**
-	* Recupera valor do transferActiveDocuments
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferActiveDocuments": function() {}, 
-	/**
-	* Atribui valor para transferActiveDocuments
-	* @memberOf fluigAPI
-	* @param {boolean} transferActiveDocuments 
-	*/
-	"setTransferActiveDocuments": function(transferActiveDocuments) {}, 
-	/**
-	* Recupera valor do transferMyDocumentsInApproval
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferMyDocumentsInApproval": function() {}, 
-	/**
-	* Atribui valor para transferMyDocumentsInApproval
-	* @memberOf fluigAPI
-	* @param {boolean} transferMyDocumentsInApproval 
-	*/
-	"setTransferMyDocumentsInApproval": function(transferMyDocumentsInApproval) {}, 
-	/**
-	* Recupera valor do transferPendingWorkflow
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferPendingWorkflow": function() {}, 
-	/**
-	* Atribui valor para transferPendingWorkflow
-	* @memberOf fluigAPI
-	* @param {boolean} transferPendingWorkflow 
-	*/
-	"setTransferPendingWorkflow": function(transferPendingWorkflow) {}, 
-	/**
-	* Recupera valor do transferOpenWorkflow
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferOpenWorkflow": function() {}, 
-	/**
-	* Atribui valor para transferOpenWorkflow
-	* @memberOf fluigAPI
-	* @param {boolean} transferOpenWorkflow 
-	*/
-	"setTransferOpenWorkflow": function(transferOpenWorkflow) {}, 
-	/**
-	* Recupera valor do transferApprovers
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferApprovers": function() {}, 
-	/**
-	* Atribui valor para transferApprovers
-	* @memberOf fluigAPI
-	* @param {boolean} transferApprovers 
-	*/
-	"setTransferApprovers": function(transferApprovers) {}, 
-	/**
-	* Recupera valor do transferApprovals
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferApprovals": function() {}, 
-	/**
-	* Atribui valor para transferApprovals
-	* @memberOf fluigAPI
-	* @param {boolean} transferApprovals 
-	*/
-	"setTransferApprovals": function(transferApprovals) {}, 
-	/**
-	* Recupera valor do transferDocumentSecurity
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"getTransferDocumentSecurity": function() {}, 
-	/**
-	* Atribui valor para transferDocumentSecurity
-	* @memberOf fluigAPI
-	* @param {boolean} transferDocumentSecurity 
-	*/
-	"setTransferDocumentSecurity": function(transferDocumentSecurity) {}, 
-	/**
-	* Recupera valor do instanceIdInitial
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getInstanceIdInitial": function() {}, 
-	/**
-	* Atribui valor para instanceIdInitial
-	* @memberOf fluigAPI
-	* @param {int} instanceIdInitial 
-	*/
-	"setInstanceIdInitial": function(instanceIdInitial) {}, 
-	/**
-	* Recupera valor do instanceIdFinal
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getInstanceIdFinal": function() {}, 
-	/**
-	* Atribui valor para instanceIdFinal
-	* @memberOf fluigAPI
-	* @param {int} instanceIdFinal 
-	*/
-	"setInstanceIdFinal": function(instanceIdFinal) {}, 
-	/**
-	* Recupera valor do documentIdInitial
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getDocumentIdInitial": function() {}, 
-	/**
-	* Atribui valor para documentIdInitial
-	* @memberOf fluigAPI
-	* @param {int} documentIdInitial 
-	*/
-	"setDocumentIdInitial": function(documentIdInitial) {}, 
-	/**
-	* Recupera valor do documentIdFinal
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getDocumentIdFinal": function() {}, 
-	/**
-	* Atribui valor para documentIdFinal
-	* @memberOf fluigAPI
-	* @param {int} documentIdFinal 
-	*/
-	"setDocumentIdFinal": function(documentIdFinal) {}
-};
 com.fluig.sdk.service.TasksService.prototype = {
 	/**
 	* Busca os documentos para aprovação
@@ -19368,13 +19008,6 @@ com.fluig.sdk.service.TasksService.prototype = {
 	* @returns {String} 
 	*/
 	"transferTasks": function(transferOptions) {}, 
-	/**
-	* Transfer tasks from one user to another
-	* @memberOf fluigAPI
-	* @param {com.fluig.sdk.api.task.TaskTransferVO} tasksTransfer 
-	* @returns {String} 
-	*/
-	"transferTasks": function(tasksTransfer) {}, 
 	/**
 	* Return users pendent to approve a document
 	* @memberOf fluigAPI
@@ -19502,13 +19135,6 @@ TasksService.prototype = {
 	* @returns {String} 
 	*/
 	"transferTasks": function(transferOptions) {}, 
-	/**
-	* Transfer tasks from one user to another
-	* @memberOf fluigAPI
-	* @param {com.fluig.sdk.api.task.TaskTransferVO} tasksTransfer 
-	* @returns {String} 
-	*/
-	"transferTasks": function(tasksTransfer) {}, 
 	/**
 	* Return users pendent to approve a document
 	* @memberOf fluigAPI
@@ -23932,19 +23558,7 @@ com.fluig.sdk.filter.FilterResultVO.prototype = {
 	* @memberOf fluigAPI
 	* @param  filterOrder 
 	*/
-	"setFilterOrder": function(filterOrder) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getPermission": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {int} permission 
-	*/
-	"setPermission": function(permission) {}
+	"setFilterOrder": function(filterOrder) {}
 };
 FilterResultVO.prototype = {
 	/**
@@ -24065,19 +23679,7 @@ FilterResultVO.prototype = {
 	* @memberOf fluigAPI
 	* @param  filterOrder 
 	*/
-	"setFilterOrder": function(filterOrder) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getPermission": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {int} permission 
-	*/
-	"setPermission": function(permission) {}
+	"setFilterOrder": function(filterOrder) {}
 };
 com.fluig.sdk.filter.FilterVO.prototype = {
 	/**
@@ -24321,115 +23923,7 @@ com.fluig.sdk.filter.FilterGroupResultVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {String} groupDescription 
 	*/
-	"setGroupDescription": function(groupDescription) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {long} 
-	*/
-	"getUserTenantId": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} userTenantId 
-	*/
-	"setUserTenantId": function(userTenantId) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserLogin": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} userLogin 
-	*/
-	"setUserLogin": function(userLogin) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserFullName": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} userFullName 
-	*/
-	"setUserFullName": function(userFullName) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {long} 
-	*/
-	"getRoleId": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} roleId 
-	*/
-	"setRoleId": function(roleId) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getRoleCode": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} roleCode 
-	*/
-	"setRoleCode": function(roleCode) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getRoleDescription": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} roleDescription 
-	*/
-	"setRoleDescription": function(roleDescription) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {long} 
-	*/
-	"getGroupParticipantsCount": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} groupParticipantsCount 
-	*/
-	"setGroupParticipantsCount": function(groupParticipantsCount) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserEmail": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} userEmail 
-	*/
-	"setUserEmail": function(userEmail) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getPermission": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {int} permission 
-	*/
-	"setPermission": function(permission) {}
+	"setGroupDescription": function(groupDescription) {}
 };
 FilterGroupResultVO.prototype = {
 	/**
@@ -24503,115 +23997,7 @@ FilterGroupResultVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {String} groupDescription 
 	*/
-	"setGroupDescription": function(groupDescription) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {long} 
-	*/
-	"getUserTenantId": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} userTenantId 
-	*/
-	"setUserTenantId": function(userTenantId) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserLogin": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} userLogin 
-	*/
-	"setUserLogin": function(userLogin) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserFullName": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} userFullName 
-	*/
-	"setUserFullName": function(userFullName) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {long} 
-	*/
-	"getRoleId": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} roleId 
-	*/
-	"setRoleId": function(roleId) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getRoleCode": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} roleCode 
-	*/
-	"setRoleCode": function(roleCode) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getRoleDescription": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} roleDescription 
-	*/
-	"setRoleDescription": function(roleDescription) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {long} 
-	*/
-	"getGroupParticipantsCount": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} groupParticipantsCount 
-	*/
-	"setGroupParticipantsCount": function(groupParticipantsCount) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getUserEmail": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} userEmail 
-	*/
-	"setUserEmail": function(userEmail) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getPermission": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {int} permission 
-	*/
-	"setPermission": function(permission) {}
+	"setGroupDescription": function(groupDescription) {}
 };
 com.fluig.sdk.filter.FilterGroupVO.prototype = {
 	/**
@@ -24637,43 +24023,7 @@ com.fluig.sdk.filter.FilterGroupVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {List} groupsCode 
 	*/
-	"setGroupsCode": function(groupsCode) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {List&lt;String&gt;} 
-	*/
-	"getTenantUserLogin": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {List} tenantUserLogin 
-	*/
-	"setTenantUserLogin": function(tenantUserLogin) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {List&lt;String&gt;} 
-	*/
-	"getRolesCode": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {List} rolesCode 
-	*/
-	"setRolesCode": function(rolesCode) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {Map&lt;String,&gt;} 
-	*/
-	"getEntityPermissions": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {Map} entityPermissions 
-	*/
-	"setEntityPermissions": function(entityPermissions) {}
+	"setGroupsCode": function(groupsCode) {}
 };
 FilterGroupVO.prototype = {
 	/**
@@ -24699,71 +24049,7 @@ FilterGroupVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {List} groupsCode 
 	*/
-	"setGroupsCode": function(groupsCode) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {List&lt;String&gt;} 
-	*/
-	"getTenantUserLogin": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {List} tenantUserLogin 
-	*/
-	"setTenantUserLogin": function(tenantUserLogin) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {List&lt;String&gt;} 
-	*/
-	"getRolesCode": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {List} rolesCode 
-	*/
-	"setRolesCode": function(rolesCode) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {Map&lt;String,&gt;} 
-	*/
-	"getEntityPermissions": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {Map} entityPermissions 
-	*/
-	"setEntityPermissions": function(entityPermissions) {}
-};
-com.fluig.sdk.filter.FilterUpdateNameVO.prototype = {
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getName": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} name 
-	*/
-	"setName": function(name) {}
-};
-FilterUpdateNameVO.prototype = {
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getName": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} name 
-	*/
-	"setName": function(name) {}
+	"setGroupsCode": function(groupsCode) {}
 };
 com.fluig.sdk.service.FilterAPIService.prototype = {
 	/**
@@ -24774,10 +24060,9 @@ com.fluig.sdk.service.FilterAPIService.prototype = {
 	* @param {String} pattern 
 	* @param {int} limit 
 	* @param {int} offset 
-	* @param {String} orderBy 
 	* @returns {List&lt;com.fluig.sdk.filter.FilterResultVO&gt;} 
 	*/
-	"getProcessFilters": function(onlyMyFilters, findPublicFilters, pattern, limit, offset, orderBy) {}, 
+	"getProcessFilters": function(onlyMyFilters, findPublicFilters, pattern, limit, offset) {}, 
 	/**
 	* 
 	* @memberOf fluigAPI
@@ -24830,22 +24115,7 @@ com.fluig.sdk.service.FilterAPIService.prototype = {
 	* @param {com.fluig.sdk.filter.FilterGroupVO} filterGroupVO 
 	* @returns {List&lt;com.fluig.sdk.filter.FilterGroupResultVO&gt;} 
 	*/
-	"saveFiltersGroup": function(filterGroupVO) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} applicationInstanceId 
-	* @param {Map} filtersSequence 
-	*/
-	"updateFilterSequence": function(applicationInstanceId, filtersSequence) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} filterId 
-	* @param {com.fluig.sdk.filter.FilterUpdateNameVO} filterUpdateNameVO 
-	* @returns {com.fluig.sdk.filter.FilterResultVO} 
-	*/
-	"updateFilterName": function(filterId, filterUpdateNameVO) {}
+	"saveFiltersGroup": function(filterGroupVO) {}
 };
 FilterAPIService.prototype = {
 	/**
@@ -24856,10 +24126,9 @@ FilterAPIService.prototype = {
 	* @param {String} pattern 
 	* @param {int} limit 
 	* @param {int} offset 
-	* @param {String} orderBy 
 	* @returns {List&lt;com.fluig.sdk.filter.FilterResultVO&gt;} 
 	*/
-	"getProcessFilters": function(onlyMyFilters, findPublicFilters, pattern, limit, offset, orderBy) {}, 
+	"getProcessFilters": function(onlyMyFilters, findPublicFilters, pattern, limit, offset) {}, 
 	/**
 	* 
 	* @memberOf fluigAPI
@@ -24912,22 +24181,7 @@ FilterAPIService.prototype = {
 	* @param {com.fluig.sdk.filter.FilterGroupVO} filterGroupVO 
 	* @returns {List&lt;com.fluig.sdk.filter.FilterGroupResultVO&gt;} 
 	*/
-	"saveFiltersGroup": function(filterGroupVO) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} applicationInstanceId 
-	* @param {Map} filtersSequence 
-	*/
-	"updateFilterSequence": function(applicationInstanceId, filtersSequence) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {long} filterId 
-	* @param {com.fluig.sdk.filter.FilterUpdateNameVO} filterUpdateNameVO 
-	* @returns {com.fluig.sdk.filter.FilterResultVO} 
-	*/
-	"updateFilterName": function(filterId, filterUpdateNameVO) {}
+	"saveFiltersGroup": function(filterGroupVO) {}
 };
 com.fluig.sdk.api.workflow.CardIndexAPIVO.prototype = {
 	/**
@@ -26007,19 +25261,7 @@ com.fluig.sdk.api.cardindex.CardFieldVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {String} value 
 	*/
-	"setValue": function(value) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getTableId": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} tableId 
-	*/
-	"setTableId": function(tableId) {}
+	"setValue": function(value) {}
 };
 CardFieldVO.prototype = {
 	/**
@@ -26045,19 +25287,7 @@ CardFieldVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {String} value 
 	*/
-	"setValue": function(value) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getTableId": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} tableId 
-	*/
-	"setTableId": function(tableId) {}
+	"setValue": function(value) {}
 };
 com.fluig.sdk.api.cardindex.CardChildrenVO.prototype = {
 	/**
@@ -30895,91 +30125,7 @@ com.fluig.sdk.filter.FilterFieldVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {boolean} visible 
 	*/
-	"setVisible": function(visible) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getColor": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} color 
-	*/
-	"setColor": function(color) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getFontStyle": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} fontStyle 
-	*/
-	"setFontStyle": function(fontStyle) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getOrderPosition": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {int} orderPosition 
-	*/
-	"setOrderPosition": function(orderPosition) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getFontSize": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {int} fontSize 
-	*/
-	"setFontSize": function(fontSize) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"isSensitiveData": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {boolean} sensitiveData 
-	*/
-	"setSensitiveData": function(sensitiveData) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getTextDecoration": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} textDecoration 
-	*/
-	"setTextDecoration": function(textDecoration) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getFontWeight": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} fontWeight 
-	*/
-	"setFontWeight": function(fontWeight) {}
+	"setVisible": function(visible) {}
 };
 FilterFieldVO.prototype = {
 	/**
@@ -31065,91 +30211,7 @@ FilterFieldVO.prototype = {
 	* @memberOf fluigAPI
 	* @param {boolean} visible 
 	*/
-	"setVisible": function(visible) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getColor": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} color 
-	*/
-	"setColor": function(color) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getFontStyle": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} fontStyle 
-	*/
-	"setFontStyle": function(fontStyle) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getOrderPosition": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {int} orderPosition 
-	*/
-	"setOrderPosition": function(orderPosition) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {int} 
-	*/
-	"getFontSize": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {int} fontSize 
-	*/
-	"setFontSize": function(fontSize) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {boolean} 
-	*/
-	"isSensitiveData": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {boolean} sensitiveData 
-	*/
-	"setSensitiveData": function(sensitiveData) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getTextDecoration": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} textDecoration 
-	*/
-	"setTextDecoration": function(textDecoration) {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @returns {String} 
-	*/
-	"getFontWeight": function() {}, 
-	/**
-	* 
-	* @memberOf fluigAPI
-	* @param {String} fontWeight 
-	*/
-	"setFontWeight": function(fontWeight) {}
+	"setVisible": function(visible) {}
 };
 com.fluig.sdk.filter.FilterOrderVO.prototype = {
 	/**
