@@ -1,0 +1,5 @@
+/* Coloque aqui seu codigo CSS */
+.imagem-reduzida {
+    max-width: 150px; /* Defina a largura máxima desejada */
+    height: auto; /* Mantém a proporção original da imagem */
+}

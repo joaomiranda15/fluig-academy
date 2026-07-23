@@ -2,164 +2,6 @@
 <java version="1.8.0_202" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
-   <string>camposFormulario, documentoId = 201</string>
-   <array class="java.lang.String" length="51">
-    <void index="0">
-     <string>aprovadorProximaAprovacao</string>
-    </void>
-    <void index="1">
-     <string>atividade</string>
-    </void>
-    <void index="2">
-     <string>avalCoordAluno</string>
-    </void>
-    <void index="3">
-     <string>avalDiretoria</string>
-    </void>
-    <void index="4">
-     <string>avalPlanAcademico</string>
-    </void>
-    <void index="5">
-     <string>avalsolicitacao</string>
-    </void>
-    <void index="6">
-     <string>cargo</string>
-    </void>
-    <void index="7">
-     <string>codigoPapelSalvo</string>
-    </void>
-    <void index="8">
-     <string>complementoSolicitacao</string>
-    </void>
-    <void index="9">
-     <string>currentState</string>
-    </void>
-    <void index="10">
-     <string>datahist</string>
-    </void>
-    <void index="11">
-     <string>dataSolicitacao</string>
-    </void>
-    <void index="12">
-     <string>departamento</string>
-    </void>
-    <void index="13">
-     <string>DEPARTAMENTOLyceum</string>
-    </void>
-    <void index="14">
-     <string>departamentoResp</string>
-    </void>
-    <void index="15">
-     <string>descricao</string>
-    </void>
-    <void index="16">
-     <string>descricaoComplemento</string>
-    </void>
-    <void index="17">
-     <string>descricaoCoordAluno</string>
-    </void>
-    <void index="18">
-     <string>descricaoDiretoria</string>
-    </void>
-    <void index="19">
-     <string>descricaoExecucao</string>
-    </void>
-    <void index="20">
-     <string>descricaoPlaneAcad</string>
-    </void>
-    <void index="21">
-     <string>descricaoSolicitacao</string>
-    </void>
-    <void index="22">
-     <string>email</string>
-    </void>
-    <void index="23">
-     <string>emailsolicitante</string>
-    </void>
-    <void index="24">
-     <string>empresa</string>
-    </void>
-    <void index="25">
-     <string>fdAnexoServico</string>
-    </void>
-    <void index="26">
-     <string>fdAnexoSolicitacao</string>
-    </void>
-    <void index="27">
-     <string>fnAnexoServico</string>
-    </void>
-    <void index="28">
-     <string>fnAnexoSolicitacao</string>
-    </void>
-    <void index="29">
-     <string>formMode</string>
-    </void>
-    <void index="30">
-     <string>idDepartamento</string>
-    </void>
-    <void index="31">
-     <string>inputSLA</string>
-    </void>
-    <void index="32">
-     <string>inputSLA2</string>
-    </void>
-    <void index="33">
-     <string>inputSLA2Dia</string>
-    </void>
-    <void index="34">
-     <string>inputSLADia</string>
-    </void>
-    <void index="35">
-     <string>inserirAnexo</string>
-    </void>
-    <void index="36">
-     <string>itemH</string>
-    </void>
-    <void index="37">
-     <string>ITEM_SOLICITACAO</string>
-    </void>
-    <void index="38">
-     <string>matricula</string>
-    </void>
-    <void index="39">
-     <string>matricula1</string>
-    </void>
-    <void index="40">
-     <string>nomeCompleto</string>
-    </void>
-    <void index="41">
-     <string>observacao</string>
-    </void>
-    <void index="42">
-     <string>resp</string>
-    </void>
-    <void index="43">
-     <string>SERVICO</string>
-    </void>
-    <void index="44">
-     <string>SOLIC</string>
-    </void>
-    <void index="45">
-     <string>telefone</string>
-    </void>
-    <void index="46">
-     <string>tipoServico</string>
-    </void>
-    <void index="47">
-     <string>TIPO_SERVICO</string>
-    </void>
-    <void index="48">
-     <string>upload_arquivos_anexo</string>
-    </void>
-    <void index="49">
-     <string>upload_arquivos_anexo1</string>
-    </void>
-    <void index="50">
-     <string>zoomDepartamento</string>
-    </void>
-   </array>
-  </void>
-  <void method="put">
    <string>volume</string>
    <array class="java.lang.String" length="1">
     <void index="0">
@@ -2020,7 +1862,7 @@
        <long>1</long>
       </void>
       <void property="roleDescription">
-       <string>CoordenacaoDeAdmissaoUnidade</string>
+       <string>CoordenacaoDeUnidade</string>
       </void>
       <void property="roleId">
        <string>CoordenacaoDeAdmissao</string>
@@ -2171,7 +2013,7 @@
     <void index="11">
      <array class="java.lang.Object" length="2">
       <void index="0">
-       <string>Atribui papel dinâmico</string>
+       <string>papel_consulta_generica</string>
       </void>
       <void index="1">
        <string>papel_consulta_generica</string>
@@ -2217,6 +2059,185 @@
        <string>Usuário</string>
       </void>
      </array>
+    </void>
+   </array>
+  </void>
+  <void method="put">
+   <string>camposFormulario, documentoId = 24</string>
+   <array class="java.lang.String" length="58">
+    <void index="0">
+     <string>aliquotaICMS</string>
+    </void>
+    <void index="1">
+     <string>armazem</string>
+    </void>
+    <void index="2">
+     <string>avalCadastro</string>
+    </void>
+    <void index="3">
+     <string>calculaINSS</string>
+    </void>
+    <void index="4">
+     <string>cargo</string>
+    </void>
+    <void index="5">
+     <string>classificacaoFiscal</string>
+    </void>
+    <void index="6">
+     <string>codISS</string>
+    </void>
+    <void index="7">
+     <string>codProdCadastrado</string>
+    </void>
+    <void index="8">
+     <string>contaContabil</string>
+    </void>
+    <void index="9">
+     <string>contaCustoDireto</string>
+    </void>
+    <void index="10">
+     <string>contaCustoIndireto</string>
+    </void>
+    <void index="11">
+     <string>contaDesconto</string>
+    </void>
+    <void index="12">
+     <string>contaDespAdm</string>
+    </void>
+    <void index="13">
+     <string>contaDespComercial</string>
+    </void>
+    <void index="14">
+     <string>contaInvestimento</string>
+    </void>
+    <void index="15">
+     <string>currentState</string>
+    </void>
+    <void index="16">
+     <string>dataSolicitacao</string>
+    </void>
+    <void index="17">
+     <string>departamento</string>
+    </void>
+    <void index="18">
+     <string>descDetalhada</string>
+    </void>
+    <void index="19">
+     <string>descricao</string>
+    </void>
+    <void index="20">
+     <string>descricaoProduto</string>
+    </void>
+    <void index="21">
+     <string>email</string>
+    </void>
+    <void index="22">
+     <string>emailsolicitante</string>
+    </void>
+    <void index="23">
+     <string>empresa</string>
+    </void>
+    <void index="24">
+     <string>formMode</string>
+    </void>
+    <void index="25">
+     <string>grupoProduto</string>
+    </void>
+    <void index="26">
+     <string>impostoRenda</string>
+    </void>
+    <void index="27">
+     <string>matricula</string>
+    </void>
+    <void index="28">
+     <string>matricula1</string>
+    </void>
+    <void index="29">
+     <string>necessarioAjuste</string>
+    </void>
+    <void index="30">
+     <string>newcadprod</string>
+    </void>
+    <void index="31">
+     <string>nomeCompleto</string>
+    </void>
+    <void index="32">
+     <string>nomeProduto</string>
+    </void>
+    <void index="33">
+     <string>obsAjuste</string>
+    </void>
+    <void index="34">
+     <string>observacao</string>
+    </void>
+    <void index="35">
+     <string>origem</string>
+    </void>
+    <void index="36">
+     <string>posicaoIPI</string>
+    </void>
+    <void index="37">
+     <string>respAvalCad</string>
+    </void>
+    <void index="38">
+     <string>retemCOF</string>
+    </void>
+    <void index="39">
+     <string>retemCSLL</string>
+    </void>
+    <void index="40">
+     <string>retemPIS</string>
+    </void>
+    <void index="41">
+     <string>telefone</string>
+    </void>
+    <void index="42">
+     <string>tePadrao</string>
+    </void>
+    <void index="43">
+     <string>tipo</string>
+    </void>
+    <void index="44">
+     <string>unidade</string>
+    </void>
+    <void index="45">
+     <string>zoomCodISS</string>
+    </void>
+    <void index="46">
+     <string>zoomContaContabil</string>
+    </void>
+    <void index="47">
+     <string>zoomcontaCustoDireto</string>
+    </void>
+    <void index="48">
+     <string>zoomcontaCustoIndireto</string>
+    </void>
+    <void index="49">
+     <string>zoomcontaDesconto</string>
+    </void>
+    <void index="50">
+     <string>zoomcontaDespAdm</string>
+    </void>
+    <void index="51">
+     <string>zoomcontaDespComercial</string>
+    </void>
+    <void index="52">
+     <string>zoomcontaInvestimento</string>
+    </void>
+    <void index="53">
+     <string>zoomGrupo</string>
+    </void>
+    <void index="54">
+     <string>zoomOrigem</string>
+    </void>
+    <void index="55">
+     <string>zoomTePad</string>
+    </void>
+    <void index="56">
+     <string>zoomTipo</string>
+    </void>
+    <void index="57">
+     <string>zoomUnidade</string>
     </void>
    </array>
   </void>

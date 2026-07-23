@@ -69,6 +69,10 @@ var beforeSendValidate = function (numState, nextState) {
     arrError.push("Selecione a aprovação da diretoria.");
   }
 
+  if (currentTask == 56 && !$("#descritivoRM").val()) {
+    arrError.push("Informe a descrição da Criação do RM.");
+  }
+
   if (arrError.length > 0) {
     var error = "Por favor, verifique os alertas abaixo.\r\t";
     for (var i = 0; i < arrError.length; i++) {

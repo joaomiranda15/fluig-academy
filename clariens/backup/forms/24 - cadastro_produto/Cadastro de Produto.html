@@ -1,0 +1,591 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+<link rel="stylesheet" type="text/css" href="https://style.fluig.com/css/fluig-style-guide.min.css">
+
+<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js"></script>
+<script type="text/javascript" src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+<script type="text/javascript" src="custom.js"></script>
+<script type="text/javascript" src="zoom.js"></script>
+<script type="text/javascript" src="jquery.mask.js"></script>
+<script type="text/javascript" src="custom_valida.js"></script>
+<link href="/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+<script src="/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+<script type="text/javascript" src="/widget_code_repository/resources/js/widget_code_repository.js" charset="utf-8"></script>
+
+</head>
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form" autocomplete="off" novalidate>
+
+			<!-- Process vars -->
+			<input type="hidden" name="formMode" id="formMode" />
+			<input type="hidden" name="currentState" id="currentState" />
+			<input type="hidden" name="respAvalCad" id="respAvalCad">
+
+			<div class="page-header">
+				<header class="main-header clearfix">
+					<div class="wrapper">
+						<div class="row">
+							<div class="col-md-3 text-left"></div>
+							<div class="col-md-6 title">
+								<h1 class="text-center" style="color: #3714FF;">Cadastro de Produto ou Serviço</h1>
+							</div>
+							<div class="col-md-3 text-right">
+								<img class="company-logo imagem-reduzida" src="/widget_code_repository/resources/images/LogoClariens2.png"
+									style="max-width: 150px; height: auto;">
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<input type="hidden" name="newcadprod" id="newcadprod">
+			<div class="panel panel-default" id="dadosColaborador">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Dados do Colaborador</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-3">
+							<label for="dataSolicitacao">Data Solicitação</label>
+							<input type="text" class="form-control" id="dataSolicitacao" name="dataSolicitacao" readonly>
+						</div>
+						<div class="form-group col-md-5 ">
+							<label for="empresa">Empresa</label>
+							<input type="text" class="form-control" name="empresa" id="empresa" readonly>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="departamento">Departamento</label>
+							<input type="text" class="form-control" name="departamento" id="departamento" readonly>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="nomeCompleto">Nome completo</label>
+							<input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" readonly>
+
+						</div>
+						<div class="form-group col-md-6 ">
+							<label>E-mail Corporativo</label>
+							<input type="text" class="form-control" name="email" id="email" readonly>
+						</div>
+					</div>
+
+					<div class='row'>
+						<div class="form-group col-md-6">
+							<label for="cargo">Cargo</label>
+							<input type="text" class="form-control" name="cargo" id="cargo" readonly>
+							<input type="hidden" name="matricula" id="matricula" value="" readonly>
+							<input type="hidden" name="emailsolicitante" id="emailsolicitante" readonly>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="matricula1">Matrícula</label>
+							<input type="text" class="form-control" name="matricula1" id="matricula1" readonly>
+						</div>
+						<div class="form-group col-md-3">
+							<label class="obrigatorio" for="telefone">Telefone</label>
+							<input type="text" class="form-control" name="telefone" id="telefone">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default" id="formSolicitacao">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Dados da Solicitação</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="form-group col-md-3">
+						<label for="nomeProduto">Nome do Produto/Serviço</label>
+						<input type="text" class="form-control obrigatorio" name="nomeProduto" id="nomeProduto" maxlength="30">
+					</div>
+					<div class="form-group col-md-12" id="div_obsSolic">
+						<label class="control-label obrigatorio" for="observacao">Observação</label>
+						<textarea class="form-control" rows="5" maxlength="2000" name="observacao" id="observacao"></textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default " id="formAvaliar">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Avaliar necessidade do cadastro do Produto/Serviço</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label class="obrigatorio">Avaliação</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="switch switch-warning form-group col-md-4">
+										<h5>
+											<b>Necessita mais informações</b>
+										</h5>
+										<input class="switch-input" id="maisInfo" name="avalCadastro" type="radio" value="maisInfo">
+										<label class="switch-button" for="maisInfo">Toggle</label>
+									</div>
+									<div class="switch switch-danger form-group col-md-4">
+										<h5>
+											<b>Produto possui cadastro</b>
+										</h5>
+										<input class="switch-input" id="possuiCad" name="avalCadastro" type="radio" value="possuiCad">
+										<label class="switch-button" for="possuiCad">Toggle</label>
+									</div>
+									<div class="switch switch-success form-group col-md-4">
+										<h5>
+											<b>Cadastro Aprovado</b>
+										</h5>
+										<input class="switch-input" id="cadAprovado" name="avalCadastro" type="radio" value="cadAprovado">
+										<label class="switch-button" for="cadAprovado">Toggle</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="containerDescricao">
+						<div class="form-group col-md-12">
+							<label class="obrigatorio">Descrição</label>
+							<textarea rows="6" class="form-control " name="descricao" id="descricao"></textarea>
+						</div>
+					</div>
+					<div class="row" id="containerProdCad">
+						<div class="form-group col-md-6">
+							<label class="obrigatorio">Dados do produto cadastrado</label>
+							<input type="text" class="form-control" name="codProdCadastrado" id="codProdCadastrado">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default " id="formInformCadastrais">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Informações Cadastrais do Produto/Serviço</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Grupo do produto</label>
+							<input type="zoom" id="zoomGrupo" name="zoomGrupo" class="form-control"
+								data-zoom="{
+								'displayKey':'CODDESCGRUP',
+								'datasetId':'ds_grupoProdutos',
+								'placeholder':' ',
+								'filterValues':' ',
+								'fields':[
+									{
+										'field':'CODDESCGRUP',
+										'label':'Grupo'
+									},{
+										'field':'CODGRUPO',
+										'label':'CODGRUPO',
+										'visible':'false'
+									}
+									]
+					                      }" />
+							<input type="hidden" class="form-control" name="grupoProduto" id="grupoProduto">
+						</div>
+
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Tipo</label>
+							<input type="zoom" id="zoomTipo" name="zoomTipo" class="form-control"
+								data-zoom="{
+								'displayKey':'CODDESCTIP',
+								'datasetId':'ds_tipoProdutos',
+								'placeholder':' ',
+								'filterValues':' ',
+								'fields':[
+									{
+										'field':'CODDESCTIP',
+										'label':'Tipo'
+									},{
+										'field':'CODTIPO',
+										'label':'CODTIPO',
+										'visible':'false'
+									}
+									]
+					                      }" />
+							<input type="hidden" class="form-control" name="tipo" id="tipo">
+						</div>
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Descrição do produto</label>
+							<input type="text" class="form-control" name="descricaoProduto" id="descricaoProduto" maxlength="30">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Unidade</label>
+							<input type="zoom" id="zoomUnidade" name="zoomUnidade" class="form-control"
+								data-zoom="{
+								'displayKey':'CODDESCMED',
+								'datasetId':'ds_unidadeMedida',
+								'placeholder':' ',
+								'filterValues':' ',
+								'fields':[
+									{
+										'field':'CODDESCMED',
+										'label':'Unidade Medida'
+									},{
+										'field':'CODMEDIDA',
+										'label':'CODMEDIDA',
+										'visible':'false'
+									}
+									]
+					                      }" />
+							<input type="hidden" class="form-control" name="unidade" id="unidade">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="armazem">Armazém padrão</label>
+							<input type="text" class="form-control" name="armazem" id="armazem" readonly value="ARMAZEM 01">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="tePadrao">TE padrão</label>
+							<input type="zoom" id="zoomTePad" name="zoomTePad" class="form-control"
+								data-zoom="{
+								'displayKey':'CODDESCTES',
+								'datasetId':'ds_tesEntrada',
+								'placeholder':' ',
+								'filterValues':' ',
+								'fields':[
+									{
+										'field':'CODDESCTES',
+										'label':'Tes Entrada'
+									},{
+										'field':'CODTES',
+										'label':'CODTES',
+										'visible':'false'
+									}
+									]
+					                      }" />
+							<input type="hidden" class="form-control" name="tePadrao" id="tePadrao">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label>Descrição detalhada</label>
+							<textarea class="form-control" name="descDetalhada" id="descDetalhada" maxlength="200"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default " id="formInformFiscais">
+				<div class="panel-heading ">
+					<h3 class="panel-title">
+						<strong>Informações Fiscais/Contábeis</strong>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row" id="formNecessarioAjuste">
+						<div class="form-group col-md-4">
+							<label class="obrigatorio">Necessário ajuste?</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="switch switch-success form-group col-md-4">
+										<h5>
+											<b>Sim</b>
+										</h5>
+										<input class="switch-input" id="ajusteSIM" name="necessarioAjuste" type="radio" value="ajusteSIM">
+										<label class="switch-button" for="ajusteSIM">Toggle</label>
+									</div>
+									<div class="switch switch-danger form-group col-md-4">
+										<h5>
+											<b>Não</b>
+										</h5>
+										<input class="switch-input" id="ajusteNAO" name="necessarioAjuste" type="radio" value="ajusteNAO">
+										<label class="switch-button" for="ajusteNAO">Toggle</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="containerObsAjuste">
+							<div class="form-group col-md-12">
+								<label class="obrigatorio">Observação</label>
+								<textarea rows="5" class="form-control " name="obsAjuste" id="obsAjuste"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="row" id="containerFiscalContabil">
+						<div class="form-group col-md-12">
+							<label>Fiscal</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="form-group col-md-3">
+											<label for="posicaoIPI">Posição IPI / NCM</label>
+											<input type="text" class="form-control" name="posicaoIPI" id="posicaoIPI" maxlength="10">
+										</div>
+										<div class="form-group col-md-3">
+											<label class="obrigatorio">Origem</label>
+											<input type="zoom" id="zoomOrigem" name="zoomOrigem" class="form-control"
+												data-zoom="{
+										'displayKey':'CODDESC',
+										'datasetId':'ds_tabelaOrigem',
+										'placeholder':' ',
+										'filterValues':' ',
+										'fields':[
+											{
+												'field':'CODDESC',
+												'label':'Origem'
+											},{
+												'field':'CODIGO',
+												'label':'CODIGO',
+												'visible':'false'
+											}
+											]
+							                      }" />
+											<input type="hidden" class="form-control" name="origem" id="origem">
+										</div>
+										<div class="form-group col-md-3">
+											<label>Cód. Serviço ISS</label>
+											<input type="zoom" id="zoomCodISS" name="zoomCodISS" class="form-control"
+												data-zoom="{
+										'displayKey':'CODDESC',
+										'datasetId':'ds_tabelaISS',
+										'placeholder':' ',
+										'filterValues':' ',
+										'fields':[
+											{
+												'field':'CODDESC',
+												'label':'Cód. Serviço ISS'
+											},{
+												'field':'CODIGO',
+												'label':'CODIGO',
+												'visible':'false'
+											}
+											]
+							                      }" />
+											<input type="hidden" class="form-control" name="codISS" id="codISS">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="calculaINSS">Calcula INSS</label> <select id="calculaINSS" name="calculaINSS"
+												class="form-control">
+												<option value=""></option>
+												<option value="S">Sim</option>
+												<option value="N">Não</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-3">
+											<label for="impostoRenda">Imposto de Renda</label> <select id="impostoRenda" name="impostoRenda"
+												class="form-control">
+												<option value=""></option>
+												<option value="S">Sim</option>
+												<option value="N">Não</option>
+											</select>
+										</div>
+										<div class="form-group col-md-3">
+											<label for="retemPIS">Retém PIS</label> <select id="retemPIS" name="retemPIS" class="form-control">
+												<option value=""></option>
+												<option value="1">Sim</option>
+												<option value="2">Não</option>
+											</select>
+										</div>
+										<div class="form-group col-md-3">
+											<label for="retemCOF">Retém COF</label> <select id="retemCOF" name="retemCOF" class="form-control">
+												<option value=""></option>
+												<option value="1">Sim</option>
+												<option value="2">Não</option>
+											</select>
+										</div>
+										<div class="form-group col-md-3">
+											<label for="retemCSLL">Retém CSLL</label> <select id="retemCSLL" name="retemCSLL" class="form-control">
+												<option value=""></option>
+												<option value="1">Sim</option>
+												<option value="2">Não</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-3">
+											<label for="aliquotaICMS">Alíquota ICMS</label>
+											<input type="text" class="form-control" name="aliquotaICMS" id="aliquotaICMS" mask="99.99">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="classificacaoFiscal">Classificação Fiscal</label>
+											<input type="text" class="form-control" name="classificacaoFiscal" id="classificacaoFiscal" maxlength="2">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-12">
+							<label>Contábil</label>
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="form-group col-md-3">
+											<label class="obrigatorio">Conta Contábil</label>
+											<input type="zoom" id="zoomContaContabil" name="zoomContaContabil" class="form-control"
+												data-zoom="{
+											'displayKey':'CODDESCCTA',
+											'datasetId':'ds_contaContabil',
+											'placeholder':' ',
+											'filterValues':' ',
+											'fields':[
+												{
+													'field':'CODDESCCTA',
+													'label':'Conta Contábil'
+												},{
+													'field':'CODCONTA',
+													'label':'CODCONTA',
+													'visible':'false'
+												}
+												]
+								                      }" />
+											<input type="hidden" class="form-control" name="contaContabil" id="contaContabil">
+										</div>
+
+										<div class="form-group col-md-3">
+											<label for="contaCustoIndireto">Conta Custo Indireto</label>
+											<input type="zoom" id="zoomcontaCustoIndireto" name="zoomcontaCustoIndireto" class="form-control"
+												data-zoom="{
+											'displayKey':'CODDESCCTA',
+											'datasetId':'ds_contaContabil',
+											'placeholder':' ',
+											'filterValues':' ',
+											'fields':[
+												{
+													'field':'CODDESCCTA',
+													'label':'Conta Contábil'
+												},{
+													'field':'CODCONTA',
+													'label':'CODCONTA',
+													'visible':'false'
+												}
+												]
+								                      }" />
+											<input type="hidden" class="form-control" name="contaCustoIndireto" id="contaCustoIndireto" maxlength="20">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="contaCustoDireto">Conta Custo Direto</label>
+											<input type="zoom" id="zoomcontaCustoDireto" name="zoomcontaCustoDireto" class="form-control"
+												data-zoom="{
+											'displayKey':'CODDESCCTA',
+											'datasetId':'ds_contaContabil',
+											'placeholder':' ',
+											'filterValues':' ',
+											'fields':[
+												{
+													'field':'CODDESCCTA',
+													'label':'Conta Contábil'
+												},{
+													'field':'CODCONTA',
+													'label':'CODCONTA',
+													'visible':'false'
+												}
+												]
+								                      }" />
+											<input type="hidden" class="form-control" name="contaCustoDireto" id="contaCustoDireto" maxlength="20">
+										</div>
+
+										<div class="form-group col-md-3">
+											<label for="contaCustoDiretoPJ">Conta Desconto</label>
+											<input type="zoom" id="zoomcontaDesconto" name="zoomcontaDesconto" class="form-control"
+												data-zoom="{
+											'displayKey':'CODDESCCTA',
+											'datasetId':'ds_contaContabil',
+											'placeholder':' ',
+											'filterValues':' ',
+											'fields':[
+												{
+													'field':'CODDESCCTA',
+													'label':'Conta Contábil'
+												},{
+													'field':'CODCONTA',
+													'label':'CODCONTA',
+													'visible':'false'
+												}
+												]
+								                      }" />
+											<input type="hidden" class="form-control" name="contaDesconto" id="contaDesconto" maxlength="20">
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-3">
+											<label for="contaDespComercial">Conta Despesa Comercial</label>
+											<input type="zoom" id="zoomcontaDespComercial" name="zoomcontaDespComercial" class="form-control"
+												data-zoom="{
+											'displayKey':'CODDESCCTA',
+											'datasetId':'ds_contaContabil',
+											'placeholder':' ',
+											'filterValues':' ',
+											'fields':[
+												{
+													'field':'CODDESCCTA',
+													'label':'Conta Contábil'
+												},{
+													'field':'CODCONTA',
+													'label':'CODCONTA',
+													'visible':'false'
+												}
+												]
+								                      }" />
+											<input type="hidden" class="form-control" name="contaDespComercial" id="contaDespComercial" maxlength="20">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="contaDespAdm">Conta Despesa Adm</label>
+											<input type="zoom" id="zoomcontaDespAdm" name="zoomcontaDespAdm" class="form-control"
+												data-zoom="{
+											'displayKey':'CODDESCCTA',
+											'datasetId':'ds_contaContabil',
+											'placeholder':' ',
+											'filterValues':' ',
+											'fields':[
+												{
+													'field':'CODDESCCTA',
+													'label':'Conta Contábil'
+												},{
+													'field':'CODCONTA',
+													'label':'CODCONTA',
+													'visible':'false'
+												}
+												]
+								                      }" />
+											<input type="hidden" class="form-control" name="contaDespAdm" id="contaDespAdm" maxlength="20">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="contaInvestimento">Conta Investimento</label>
+											<input type="zoom" id="zoomcontaInvestimento" name="zoomcontaInvestimento" class="form-control"
+												data-zoom="{
+											'displayKey':'CODDESCCTA',
+											'datasetId':'ds_contaContabil',
+											'placeholder':' ',
+											'filterValues':' ',
+											'fields':[
+												{
+													'field':'CODDESCCTA',
+													'label':'Conta Contábil'
+												},{
+													'field':'CODCONTA',
+													'label':'CODCONTA',
+													'visible':'false'
+												}
+												]
+								                      }" />
+											<input type="hidden" class="form-control" name="contaInvestimento" id="contaInvestimento" maxlength="20">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+</body>
+</html>

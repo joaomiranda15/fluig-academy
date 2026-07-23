@@ -33,6 +33,10 @@ function setSelectedZoomItem(selectedItem) {
     );
   }
   controlarVisibilidadeEventoFolha();
+  controlarVisibilidadePlanoSaude();
+  controlarVisibilidadePlanoOdontologico();
+  controlarVisibilidadeValeTransporte();
+  exibirAvisoToastAnexo();
 }
 
 function removedZoomItem(removedItem) {
@@ -53,4 +57,7 @@ function removedZoomItem(removedItem) {
     reloadZoomFilterValues("tipoServico");
   }
   controlarVisibilidadeEventoFolha();
+  controlarVisibilidadePlanoSaude();
+  controlarVisibilidadePlanoOdontologico();
+  controlarVisibilidadeValeTransporte();
 }

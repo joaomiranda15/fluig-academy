@@ -44,6 +44,7 @@
 			<input type="hidden" name="TIPO_SERVICO" id="TIPO_SERVICO" />
 			<input type="hidden" name="aprovadorProximaAprovacao" id="aprovadorProximaAprovacao" />
 			<input type="hidden" id="codigoPapelSalvo" name="codigoPapelSalvo" />
+			<input type="hidden" id="papelAnaliseSol" name="papelAnaliseSol">
 
 			<div class="page-header">
 				<header class="main-header clearfix">
@@ -180,6 +181,79 @@
 						</div>
 					</div>
 
+					<!-- APARECER SOMENTE QUANDO O DEPARTAMENTO FOR DEPARTAMENTO PESSOAL E O TIPO DE SERVIÇO FOR "INCLUSÃO/EXCLUSÃO PLANO DE SAÚDE" -->
+					<div class="row">
+						<div class="form-group" id="planoSaude" name="planoSaude" style="display: none;">
+							<div class="col-md-12">
+								<label for="fnAnexoPlanoSaude" class="obrigatorio">Formulário para adesão ao Plano de Saúde<a href="https://conecta-teste.clariens.com.br:1600/webdesk/streamcontrol/Plano+de+Fundo+-+2.png?WDCompanyId=1&WDNrDocto=161554&WDNrVersao=1000" download="https://conecta-teste.clariens.com.br:1600/webdesk/streamcontrol/Plano+de+Fundo+-+2.png?WDCompanyId=1&WDNrDocto=161554&WDNrVersao=1000"> (Clique Aqui para baixar)</a></label>
+							</div>
+								<div class="componentAnexo col-md-3">
+									<input type="file" id="upload_arquivos_PlanoSaude" name="upload_arquivos_PlanoSaude" style="display: none;">
+									<div class="input-group">
+									<input type="hidden" class="descAnexo" id="fdAnexoPlanoSaude" name="fdAnexoPlanoSaude" value="PlanoSaude" />
+										<input type="text" id="fnAnexoPlanoSaude" name="fnAnexoPlanoSaude" class="form-control inputAnexo input-sm obrigatorio" placeholder="Selecione um arquivo" readonly />
+									</div>
+									<div class="icones">
+										<button type="button" class="btnUpFile btn btn-success btn-sm" data-acao="upload" onclick="anexo(event)" title="Selecionar">
+											<i class="fluigicon fluigicon-file-upload icon-sm"></i>
+										</button>
+										<button style="display: none;" type="button" class="btnViewerFile btn btn-info btn-sm" data-acao="viewer" onclick="anexo(event)" title="Visualizar">
+											<i class="fluigicon fluigicon-eye-open icon-sm"></i>
+										</button>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<!-- APARECER SOMENTE QUANDO O DEPARTAMENTO FOR DEPARTAMENTO PESSOAL E O TIPO DE SERVIÇO FOR "INCLUSÃO/EXCLUSÃO PLANO ODONTOLÓGICO" -->
+					<div class="row">
+						<div class="form-group" id="planoOdontologico" name="planoOdontologico" style="display: none;">
+							<div class="col-md-12">
+								<label for="anexoPlanoOdontologico" class="obrigatorio">Formulário para adesão ao Plano Odontológico <a href="https://conecta-teste.clariens.com.br:1600/webdesk/streamcontrol/Plano+de+Fundo+-+2.png?WDCompanyId=1&WDNrDocto=161554&WDNrVersao=1000" download="https://conecta-teste.clariens.com.br:1600/webdesk/streamcontrol/Plano+de+Fundo+-+2.png?WDCompanyId=1&WDNrDocto=161554&WDNrVersao=1000">(Clique aqui para baixar)</a></label>
+							</div>
+							<div class="componentAnexo col-md-3">
+									<input type="file" id="upload_arquivos_PlanoOdonto" name="upload_arquivos_PlanoOdonto" style="display: none;">
+									<div class="input-group">
+									<input type="hidden" class="descAnexo" id="fdAnexoPlanoOdontologico" name="fdAnexoPlanoOdontologico" value="planoOdontologico" />
+										<input type="text" id="fnAnexoPlanoOdontologico" name="fnAnexoPlanoOdontologico" class="form-control inputAnexo input-sm obrigatorio" placeholder="Selecione um arquivo" readonly/>
+									</div>
+									<div class="icones">
+										<button type="button" class="btnUpFile btn btn-success btn-sm" data-acao="upload" onclick="anexo(event)" title="Selecionar">
+											<i class="fluigicon fluigicon-file-upload icon-sm"></i>
+										</button>
+										<button style="display: none;" type="button" class="btnViewerFile btn btn-info btn-sm" data-acao="viewer" onclick="anexo(event)" title="Visualizar">
+											<i class="fluigicon fluigicon-eye-open icon-sm"></i>
+									</div>
+								</div>
+						</div>
+					</div>
+
+
+					<!-- APARECER SOMENTE QUANDO O DEPARTAMENTO FOR DEPARTAMENTO PESSOAL E O TIPO DE SERVIÇO FOR "SOLICITAÇÃO/CANCELAMENTO VALE TRANSPORTE" -->
+
+					<div class="row">
+						<div class="form-group" id="valeTransporte" name="valeTransporte" style="display: none;">
+							<div class="col-md-12">
+								<label for="anexoValeTransporte" class="obrigatorio">Formulário para adesão ao Vale-transporte <a href="https://conecta-teste.clariens.com.br:1600/webdesk/streamcontrol/Plano+de+Fundo+-+2.png?WDCompanyId=1&WDNrDocto=161554&WDNrVersao=1000" download="https://conecta-teste.clariens.com.br:1600/webdesk/streamcontrol/Plano+de+Fundo+-+2.png?WDCompanyId=1&WDNrDocto=161554&WDNrVersao=1000">(Clique aqui para baixar)</a></label>
+							</div>
+							<div class="componentAnexo col-md-3">
+									<input type="file" id="upload_arquivos_ValeTrans" name="upload_arquivos_ValeTrans" style="display: none;">
+								<div class="input-group">
+									<input type="hidden" class="descAnexo" id="fdAnexoValeTransporte" name="fdAnexoValeTransporte" value="ValeTransporte" />
+										<input type="text" id="fnAnexoValeTransporte" name="fnAnexoValeTransporte" class="form-control inputAnexo input-sm obrigatorio" placeholder="Selecione um arquivo" readonly/>
+								</div>
+								<div class="icones">
+										<button type="button" class="btnUpFile btn btn-success btn-sm" data-acao="upload" onclick="anexo(event)" title="Selecionar">
+											<i class="fluigicon fluigicon-file-upload icon-sm"></i>
+										</button>
+										<button style="display: none;" type="button" class="btnViewerFile btn btn-info btn-sm" data-acao="viewer" onclick="anexo(event)" title="Visualizar">
+											<i class="fluigicon fluigicon-eye-open icon-sm"></i>
+										</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<!-- APARECER SOMENTE QUANDO O TIPO DE SERVIÇO FOR - 'CONTA CONTÁBIL - EVENTO DE FOLHA'-->
 
 					<div class="row" name="eventoDeFolha" id="eventoDeFolha" style="display: none;">
@@ -283,12 +357,12 @@
 
 					<!-- ANÁLISE DA CONTROLADORIA - VAI APARECER SOMENTE QUANDO O USUÁRIO SELECIONAR DEPARTAMENTO CONTROLADORIA E CONTA CONTABIL EVENTO DE FOLHA E ENVIAR -->
 					<div id="containerAgrupadores" style="display: none;">
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-6">
 							<label class="obrigatorio">Agupador 0001</label>
 							<div class="card" id="cardAgrupador0001" name="cardAgrupador0001">
 								<div class="card-body">
 									<div class="row">
-									<div class="form-group col-md-4">
+									<div class="form-group col-md-12">
 									<label for="contaCustoDiretoCredito" class="obrigatorio">Conta custo direto - Crédito</label>
 									<input type="zoom" class="form-control obrigatorio" name="contaCustoDiretoCredito" id="contaCustoDiretoCredito" data-zoom="{
 												'displayKey':'CODDESCCTA',
@@ -310,7 +384,7 @@
 								</div>
 									</div>
 									<div class="row">
-										<div class="form-group col-md-4">
+										<div class="form-group col-md-12">
 											<label for="contaCustoDiretoDebito" class="obrigatorio">Conta custo direto -
 												Débito</label>
 											<input type="zoom" class="form-control obrigatorio" name="contaCustoDiretoDebito" id="contaCustoDiretoDebito" data-zoom="{
@@ -336,12 +410,12 @@
 							</div>
 						</div>
 
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-6">
 							<label class="obrigatorio">Agupador 0002</label>
 							<div class="card" id="cardAgrupador0002" name="cardAgrupador0002">
 								<div class="card-body">
 									<div class="row">
-										<div class="form-group col-md-4">
+										<div class="form-group col-md-12">
 											<label for="contaCustoIndiretoCredito" class="obrigatorio">Conta custo indireto -
 												Crédito</label>
 											<input type="zoom" class="form-control obrigatorio" name="contaCustoIndiretoCredito" id="contaCustoIndiretoCredito" data-zoom="{
@@ -364,7 +438,7 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="form-group col-md-4">
+										<div class="form-group col-md-12">
 											<label for="contaCustoIndiretoDebito" class="obrigatorio">Conta custo idireto -
 												Débito</label>
 											<input type="zoom" class="form-control obrigatorio" name="contaCustoIndiretoDebito" id="contaCustoIndiretoDebito" data-zoom="{
@@ -390,12 +464,12 @@
 							</div>
 						</div>
 
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-6">
 							<label>Agrupador 0003</label>
 							<div class="card" id="cardAgrupador0003" name="cardAgrupador0003">
 								<div class="card-body">
 									<div class="row">
-									<div class="form-group col-md-4">
+									<div class="form-group col-md-12">
 										<label for="contaDespesasGeraisCredito" class="obrigatorio">Conta despesas gerais -
 											Crédito</label>
 										<input type="zoom" class="form-control obrigatorio" name="contaDespesasGeraisCredito" id="contaDespesasGeraisCredito" data-zoom="{
@@ -418,7 +492,7 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="form-group col-md-4">
+									<div class="form-group col-md-12">
 										<label for="contaDespesasGeraisDebito" class="obrigatorio">Conta despesas gerais -
 											Débito</label>
 										<input type="zoom" class="form-control obrigatorio" name="contaDespesasGeraisDebito" id="contaDespesasGeraisDebito" data-zoom="{
@@ -446,12 +520,12 @@
 						
 
 
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-6">
 							<label>Agrupador 0004</label>
 							<div class="card" id="cardAgrupador0004" name="cardAgrupador0004">
 								<div class="card-body">
 									<div class="row">
-										<div class="form-group col-md-4">
+										<div class="form-group col-md-12">
 											<label for="contaDespesasComerciaisCredito" class="obrigatorio">Conta despesas
 												comerciais - Crédito</label>
 											<input type="zoom" class="form-control obrigatorio"
@@ -475,7 +549,7 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="form-group col-md-4">
+										<div class="form-group col-md-12">
 											<label for="contaDespesasComerciaisDebito" class="obrigatorio">Conta despesas
 												comerciais - Débito</label>
 											<input type="zoom" class="form-control obrigatorio"
@@ -531,7 +605,7 @@
 			<div class="panel panel-default" id="formAprovCoordAluno">
 				<div class="panel-heading">
 					<h3 class="panel-title">
-						<strong>Aprovação Coordenação unidade</strong>
+						<strong>Aprovação Gerência Experiência do Aluno</strong>
 					</h3>
 				</div>
 				<div class="panel-body">

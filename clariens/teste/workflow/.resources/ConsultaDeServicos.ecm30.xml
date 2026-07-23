@@ -28,10 +28,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Solicitação de Serviços</processId>
-      <version>105</version>
+      <version>113</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>201</formId>
+    <formId>0</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -162,8 +162,8 @@
       <deadlineFieldName>inputSLA</deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Papel</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;experincia_ComunicaoAluno&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;papelAnaliseSol&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -412,8 +412,8 @@
         <version>1</version>
         <sequence>34</sequence>
       </processStatePK>
-      <stateName>Aprovação Coordenação unidade</stateName>
-      <stateDescription>Aprovação Coordenação unidade</stateDescription>
+      <stateName>Aprovação Gerência Experiência do Aluno</stateName>
+      <stateDescription>Aprovação Gerência Experiência do Aluno</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -976,7 +976,7 @@
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;avalsolicitacao&quot;) == &quot;informacoes&quot;</condition>
@@ -988,7 +988,7 @@
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;avalsolicitacao&quot;) == &quot;validado&quot; &amp;&amp; (((hAPI.getCardValue(&quot;TIPO_SERVICO&quot;) + &quot;&quot;).toUpperCase() == &quot;14 - ENVIO DE DIPLOMA&quot;) || ((hAPI.getCardValue(&quot;TIPO_SERVICO&quot;) + &quot;&quot;).toUpperCase() == &quot;14  ENVIO DE DIPLOMA&quot;)) </condition>
@@ -1000,7 +1000,7 @@
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>3</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;avalsolicitacao&quot;) == &quot;respDepois&quot;</condition>
@@ -1012,7 +1012,7 @@
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>4</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;avalsolicitacao&quot;) == &quot;validado&quot; &amp;&amp; &#xd;
@@ -1025,10 +1025,10 @@ hAPI.getCardValue(&quot;DEPARTAMENTOLyceum&quot;) == &quot;ComunicaoComoAluno&qu
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>5</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>9</sequence>
       </conditionProcessStatePK>
-      <condition>hAPI.getCardValue(&quot;avalsolicitacao&quot;) == &quot;validado&quot; &amp;&amp; (((hAPI.getCardValue(&quot;tipoServico&quot;) + &quot;&quot;) == &quot;Conta contábil - Evento de Folha&quot;)</condition>
+      <condition>hAPI.getCardValue(&quot;avalsolicitacao&quot;) == &quot;validado&quot; &amp;&amp; ((hAPI.getCardValue(&quot;tipoServico&quot;) + &quot;&quot;) == &quot;Conta contábil - Evento de Folha&quot;)</condition>
       <destinationSequenceId>56</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
@@ -1037,7 +1037,7 @@ hAPI.getCardValue(&quot;DEPARTAMENTOLyceum&quot;) == &quot;ComunicaoComoAluno&qu
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>36</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;avalCoordAluno&quot;) == &quot;rejeitado&quot;&#xd;
@@ -1050,7 +1050,7 @@ hAPI.getCardValue(&quot;DEPARTAMENTOLyceum&quot;) == &quot;ComunicaoComoAluno&qu
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>36</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;avalCoordAluno&quot;) == &quot;validado&quot;&#xd;
@@ -1063,7 +1063,7 @@ hAPI.getCardValue(&quot;DEPARTAMENTOLyceum&quot;) == &quot;ComunicaoComoAluno&qu
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>1</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>43</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;avalDiretoria&quot;) == &quot;rejeitado&quot;</condition>
@@ -1075,7 +1075,7 @@ hAPI.getCardValue(&quot;DEPARTAMENTOLyceum&quot;) == &quot;ComunicaoComoAluno&qu
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <expressionOrder>2</expressionOrder>
-        <version>105</version>
+        <version>113</version>
         <sequence>43</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;avalDiretoria&quot;) == &quot;validado&quot;</condition>
@@ -1503,61 +1503,61 @@ hAPI.getCardValue(&quot;DEPARTAMENTOLyceum&quot;) == &quot;ComunicaoComoAluno&qu
         <processId>ConsultaDeServicos</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function beforeTaskSave(colleagueId, nextSequenceId, userList) {
-  if (parseInt(nextSequenceId, 10) !== 40) {
-    return;
-  }
-
-  var servico = hAPI.getCardValue(&quot;tipoServico&quot;) || hAPI.getCardValue(&quot;TIPO_SERVICO&quot;) || &quot;&quot;;
-  var aprovador = getAprovadorDiretoriaPorServico(servico);
-
-  if (aprovador) {
-    hAPI.setCardValue(&quot;aprovadorProximaAprovacao&quot;, aprovador);
-  }
-}
-
-function getAprovadorDiretoriaPorServico(servico) {
-  var chave = normalizaTextoAprovador(servico);
-
-  if (chave === &quot;COMUNICACAO INSTITUCIONAL&quot;) {
-    return &quot;Pool:Role:comunicacaoAluno_comunicacaoInstitucional&quot;;
-  }
-
-  if (chave === &quot;FINANCEIRO&quot;) {
-    return &quot;Pool:Role:comunicacaoAluno_Financeiro&quot;;
-  }
-
-  if (chave === &quot;TI PARA EVENTUAIS INSTABILIDADES DE SISTEMAS&quot;) {
-    return &quot;Pool:Role:comunicacaoAluno_TI&quot;;
-  }
-
-  if (chave === &quot;ACADEMICO&quot;) {
-    return &quot;Pool:Role:comunicacaoAluno_Academico&quot;;
-  }
-
-  return &quot;&quot;;
-}
-
-function normalizaTextoAprovador(valor) {
-  var texto = String(valor || &quot;&quot;);
-
-  return texto
-    .replace(/[\u00C1\u00C0\u00C3\u00C2\u00C4]/g, &quot;A&quot;)
-    .replace(/[\u00E1\u00E0\u00E3\u00E2\u00E4]/g, &quot;a&quot;)
-    .replace(/[\u00C9\u00C8\u00CA\u00CB]/g, &quot;E&quot;)
-    .replace(/[\u00E9\u00E8\u00EA\u00EB]/g, &quot;e&quot;)
-    .replace(/[\u00CD\u00CC\u00CE\u00CF]/g, &quot;I&quot;)
-    .replace(/[\u00ED\u00EC\u00EE\u00EF]/g, &quot;i&quot;)
-    .replace(/[\u00D3\u00D2\u00D5\u00D4\u00D6]/g, &quot;O&quot;)
-    .replace(/[\u00F3\u00F2\u00F5\u00F4\u00F6]/g, &quot;o&quot;)
-    .replace(/[\u00DA\u00D9\u00DB\u00DC]/g, &quot;U&quot;)
-    .replace(/[\u00FA\u00F9\u00FB\u00FC]/g, &quot;u&quot;)
-    .replace(/[\u00C7]/g, &quot;C&quot;)
-    .replace(/[\u00E7]/g, &quot;c&quot;)
-    .replace(/\s+/g, &quot; &quot;)
-    .trim()
-    .toUpperCase();
-}
+      <eventDescription>function beforeTaskSave(colleagueId, nextSequenceId, userList) {&#xd;
+  if (parseInt(nextSequenceId, 10) !== 40) {&#xd;
+    return;&#xd;
+  }&#xd;
+&#xd;
+  var servico = hAPI.getCardValue(&quot;tipoServico&quot;) || hAPI.getCardValue(&quot;TIPO_SERVICO&quot;) || &quot;&quot;;&#xd;
+  var aprovador = getAprovadorDiretoriaPorServico(servico);&#xd;
+&#xd;
+  if (aprovador) {&#xd;
+    hAPI.setCardValue(&quot;aprovadorProximaAprovacao&quot;, aprovador);&#xd;
+  }&#xd;
+}&#xd;
+&#xd;
+function getAprovadorDiretoriaPorServico(servico) {&#xd;
+  var chave = normalizaTextoAprovador(servico);&#xd;
+&#xd;
+  if (chave === &quot;COMUNICACAO INSTITUCIONAL&quot;) {&#xd;
+    return &quot;Pool:Role:comunicacaoAluno_comunicacaoInstitucional&quot;;&#xd;
+  }&#xd;
+&#xd;
+  if (chave === &quot;FINANCEIRO&quot;) {&#xd;
+    return &quot;Pool:Role:comunicacaoAluno_Financeiro&quot;;&#xd;
+  }&#xd;
+&#xd;
+  if (chave === &quot;TI PARA EVENTUAIS INSTABILIDADES DE SISTEMAS&quot;) {&#xd;
+    return &quot;Pool:Role:comunicacaoAluno_TI&quot;;&#xd;
+  }&#xd;
+&#xd;
+  if (chave === &quot;ACADEMICO&quot;) {&#xd;
+    return &quot;Pool:Role:comunicacaoAluno_Academico&quot;;&#xd;
+  }&#xd;
+&#xd;
+  return &quot;&quot;;&#xd;
+}&#xd;
+&#xd;
+function normalizaTextoAprovador(valor) {&#xd;
+  var texto = String(valor || &quot;&quot;);&#xd;
+&#xd;
+  return texto&#xd;
+    .replace(/[\u00C1\u00C0\u00C3\u00C2\u00C4]/g, &quot;A&quot;)&#xd;
+    .replace(/[\u00E1\u00E0\u00E3\u00E2\u00E4]/g, &quot;a&quot;)&#xd;
+    .replace(/[\u00C9\u00C8\u00CA\u00CB]/g, &quot;E&quot;)&#xd;
+    .replace(/[\u00E9\u00E8\u00EA\u00EB]/g, &quot;e&quot;)&#xd;
+    .replace(/[\u00CD\u00CC\u00CE\u00CF]/g, &quot;I&quot;)&#xd;
+    .replace(/[\u00ED\u00EC\u00EE\u00EF]/g, &quot;i&quot;)&#xd;
+    .replace(/[\u00D3\u00D2\u00D5\u00D4\u00D6]/g, &quot;O&quot;)&#xd;
+    .replace(/[\u00F3\u00F2\u00F5\u00F4\u00F6]/g, &quot;o&quot;)&#xd;
+    .replace(/[\u00DA\u00D9\u00DB\u00DC]/g, &quot;U&quot;)&#xd;
+    .replace(/[\u00FA\u00F9\u00FB\u00FC]/g, &quot;u&quot;)&#xd;
+    .replace(/[\u00C7]/g, &quot;C&quot;)&#xd;
+    .replace(/[\u00E7]/g, &quot;c&quot;)&#xd;
+    .replace(/\s+/g, &quot; &quot;)&#xd;
+    .trim()&#xd;
+    .toUpperCase();&#xd;
+}&#xd;
 </eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
@@ -1567,12 +1567,8 @@ function normalizaTextoAprovador(valor) {
         <processId>ConsultaDeServicos</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function beforeStateEntry(sequenceId){
-	// if (sequenceId == 9) {
-    //     throw &quot;Erro aqui.&quot; + hAPI.getCardValue(&quot;avalsolicitacao&quot;) + &quot; &quot; + hAPI.getCardValue(&quot;#tipoServico&quot;)
-    // }
-
-	
+      <eventDescription>function beforeStateEntry(sequenceId){&#xd;
+&#xd;
 }</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
@@ -1582,101 +1578,101 @@ function normalizaTextoAprovador(valor) {
         <processId>ConsultaDeServicos</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function servicetask17(attempt, message) {
-
-	var attachments = hAPI.listAttachments();
-	var solicitação = hAPI.getCardValue(&quot;SOLIC&quot;);
-	var itemSolicitacao = &quot;1&quot;//hAPI.getCardValue(&quot;ITEM_SOLICITACAO&quot;);
-	var servico = hAPI.getCardValue(&quot;SERVICO&quot;);
-	var documentBase64 = &quot;&quot;
-	var DescDocto = &quot;&quot;
-	var extensao = &quot;&quot;
-	var tamanho = &quot;&quot;
-	var tipo = &quot;&quot;
-	var comentario = hAPI.getCardValue(&quot;descricao&quot;) + &quot; &quot; + hAPI.getCardValue(&quot;complementoSolicitacao&quot;)
-
-	if (hAPI.getCardValue(&quot;avalsolicitacao&quot;) == &quot;validado&quot; &amp;&amp;
-		(hAPI.getCardValue(&quot;TIPO_SERVICO&quot;).toUpperCase() == &quot;14 - ENVIO DE DIPLOMA&quot; ||
-			hAPI.getCardValue(&quot;TIPO_SERVICO&quot;).toUpperCase() == &quot;14  ENVIO DE DIPLOMA&quot;)) {
-
-		comentario = hAPI.getCardValue(&quot;descricaoPlaneAcad&quot;);
-	}
-
-	//se solicitação for do lyceum
-	if (solicitação != &quot;&quot; &amp;&amp; solicitação != null) {
-
-		// Percorre os anexos do processo
-		for (var i = 0; i &lt; attachments.size(); i++) {
-
-			var attachment = attachments.get(i);
-			var idDocumento = attachment.getDocumentId()
-			var descDocumento = attachment.getDocumentDescription()
-
-			// Verifica se o documento é um anexo do Lyceum
-			if (descDocumento.indexOf(&quot;Anexo_Lyceum_&quot;) !== -1) {
-				continue;
-			}
-
-			// Busca o anexo no formato base64
-			var constraints = new Array();
-			constraints.push(DatasetFactory.createConstraint(&quot;idDocument&quot;, idDocumento, idDocumento, ConstraintType.MUST));
-			var dsBase64 = DatasetFactory.getDataset(&quot;ds_parseDocumentToBase64&quot;, null, constraints, null)
-
-			if (dsBase64 != null &amp;&amp; dsBase64.rowsCount &gt; 0) {
-
-				documentBase64 = String(dsBase64.getValue(0, &quot;documentBase64&quot;))
-				DescDocto = String(dsBase64.getValue(0, &quot;descricao&quot;))
-				extensao = String(dsBase64.getValue(0, &quot;extensao&quot;))
-				tamanho = String(dsBase64.getValue(0, &quot;tamanho&quot;))
-				tipo = String(dsBase64.getValue(0, &quot;tipo&quot;))
-
-				var message = String(dsBase64.getValue(0, &quot;message&quot;))
-				if (message != &quot;SUCESSO&quot;) {
-					throw &quot;Erro ao gerar anexo: &quot; + message;
-				}
-			}
-		}
-
-		// Atualiza o Lyceum
-		atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tamanho, tipo, itemSolicitacao, servico, comentario)
-	}
-}
-
-function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tamanho, tipo, itemSolicitacao, servico, comentario) {
-
-	var clientService = fluigAPI.getAuthorizeClientService();
-	var data = {
-		companyId: getValue(&apos;WKCompany&apos;) + &apos;&apos;,
-		serviceCode: &apos;rest_lyceum&apos;,
-		endpoint: &apos;/comum/tipo/custom/titulo/PR_CLARIENS_POST_LY_ANDAMENTO_SERVICOS_DOCENTE/consultaDinamica&apos;,
-		method: &apos;post&apos;,// &apos;delete&apos;, &apos;patch&apos;, &apos;put&apos;, &apos;get&apos;
-		timeoutService: &apos;100&apos;, // segundos
-		params: {
-
-			SERVICO: String(servico)
-			, PASSO: &quot;1&quot;
-			, SOLICITACAO: String(solicitação)
-			, ITEM_SOLICITACAO: String(itemSolicitacao)
-			, COMENTARIO: String(comentario) //&quot;Solciitação de Serviço numero &quot; + String(getValue(&quot;WKNumProces&quot;)) + &quot; finalizada.&quot;
-			, NOME_ARQ: String(DescDocto)
-			, TAMANHO: String(tamanho)
-			, EXTENSAO: String(extensao)
-			, TIPO: String(tipo)
-			, ARQUIVO: String(documentBase64)
-		},
-	}
-
-
-
-	var vo = clientService.invoke(JSON.stringify(data));
-	//var objret = JSON.parse(vo.getResult());
-
-	if (vo.getHttpStatusResult() != 200) {
-		throw &apos;Erro ao integrar com o Lyceum: &apos; + vo.getResult();
-	}
-
-
-}
+      <eventDescription>function servicetask17(attempt, message) {&#xd;
+&#xd;
+	var attachments = hAPI.listAttachments();&#xd;
+	var solicitação = hAPI.getCardValue(&quot;SOLIC&quot;);&#xd;
+	var itemSolicitacao = &quot;1&quot;//hAPI.getCardValue(&quot;ITEM_SOLICITACAO&quot;);&#xd;
+	var servico = hAPI.getCardValue(&quot;SERVICO&quot;);&#xd;
+	var documentBase64 = &quot;&quot;&#xd;
+	var DescDocto = &quot;&quot;&#xd;
+	var extensao = &quot;&quot;&#xd;
+	var tamanho = &quot;&quot;&#xd;
+	var tipo = &quot;&quot;&#xd;
+	var comentario = hAPI.getCardValue(&quot;descricao&quot;) + &quot; &quot; + hAPI.getCardValue(&quot;complementoSolicitacao&quot;)&#xd;
+&#xd;
+	if (hAPI.getCardValue(&quot;avalsolicitacao&quot;) == &quot;validado&quot; &amp;&amp;&#xd;
+		(hAPI.getCardValue(&quot;TIPO_SERVICO&quot;).toUpperCase() == &quot;14 - ENVIO DE DIPLOMA&quot; ||&#xd;
+			hAPI.getCardValue(&quot;TIPO_SERVICO&quot;).toUpperCase() == &quot;14  ENVIO DE DIPLOMA&quot;)) {&#xd;
+&#xd;
+		comentario = hAPI.getCardValue(&quot;descricaoPlaneAcad&quot;);&#xd;
+	}&#xd;
+&#xd;
+	//se solicitação for do lyceum&#xd;
+	if (solicitação != &quot;&quot; &amp;&amp; solicitação != null) {&#xd;
+&#xd;
+		// Percorre os anexos do processo&#xd;
+		for (var i = 0; i &lt; attachments.size(); i++) {&#xd;
+&#xd;
+			var attachment = attachments.get(i);&#xd;
+			var idDocumento = attachment.getDocumentId()&#xd;
+			var descDocumento = attachment.getDocumentDescription()&#xd;
+&#xd;
+			// Verifica se o documento é um anexo do Lyceum&#xd;
+			if (descDocumento.indexOf(&quot;Anexo_Lyceum_&quot;) !== -1) {&#xd;
+				continue;&#xd;
+			}&#xd;
+&#xd;
+			// Busca o anexo no formato base64&#xd;
+			var constraints = new Array();&#xd;
+			constraints.push(DatasetFactory.createConstraint(&quot;idDocument&quot;, idDocumento, idDocumento, ConstraintType.MUST));&#xd;
+			var dsBase64 = DatasetFactory.getDataset(&quot;ds_parseDocumentToBase64&quot;, null, constraints, null)&#xd;
+&#xd;
+			if (dsBase64 != null &amp;&amp; dsBase64.rowsCount &gt; 0) {&#xd;
+&#xd;
+				documentBase64 = String(dsBase64.getValue(0, &quot;documentBase64&quot;))&#xd;
+				DescDocto = String(dsBase64.getValue(0, &quot;descricao&quot;))&#xd;
+				extensao = String(dsBase64.getValue(0, &quot;extensao&quot;))&#xd;
+				tamanho = String(dsBase64.getValue(0, &quot;tamanho&quot;))&#xd;
+				tipo = String(dsBase64.getValue(0, &quot;tipo&quot;))&#xd;
+&#xd;
+				var message = String(dsBase64.getValue(0, &quot;message&quot;))&#xd;
+				if (message != &quot;SUCESSO&quot;) {&#xd;
+					throw &quot;Erro ao gerar anexo: &quot; + message;&#xd;
+				}&#xd;
+			}&#xd;
+		}&#xd;
+&#xd;
+		// Atualiza o Lyceum&#xd;
+		atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tamanho, tipo, itemSolicitacao, servico, comentario)&#xd;
+	}&#xd;
+}&#xd;
+&#xd;
+function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tamanho, tipo, itemSolicitacao, servico, comentario) {&#xd;
+&#xd;
+	var clientService = fluigAPI.getAuthorizeClientService();&#xd;
+	var data = {&#xd;
+		companyId: getValue(&apos;WKCompany&apos;) + &apos;&apos;,&#xd;
+		serviceCode: &apos;rest_lyceum&apos;,&#xd;
+		endpoint: &apos;/comum/tipo/custom/titulo/PR_CLARIENS_POST_LY_ANDAMENTO_SERVICOS_DOCENTE/consultaDinamica&apos;,&#xd;
+		method: &apos;post&apos;,// &apos;delete&apos;, &apos;patch&apos;, &apos;put&apos;, &apos;get&apos;&#xd;
+		timeoutService: &apos;100&apos;, // segundos&#xd;
+		params: {&#xd;
+&#xd;
+			SERVICO: String(servico)&#xd;
+			, PASSO: &quot;1&quot;&#xd;
+			, SOLICITACAO: String(solicitação)&#xd;
+			, ITEM_SOLICITACAO: String(itemSolicitacao)&#xd;
+			, COMENTARIO: String(comentario) //&quot;Solciitação de Serviço numero &quot; + String(getValue(&quot;WKNumProces&quot;)) + &quot; finalizada.&quot;&#xd;
+			, NOME_ARQ: String(DescDocto)&#xd;
+			, TAMANHO: String(tamanho)&#xd;
+			, EXTENSAO: String(extensao)&#xd;
+			, TIPO: String(tipo)&#xd;
+			, ARQUIVO: String(documentBase64)&#xd;
+		},&#xd;
+	}&#xd;
+&#xd;
+&#xd;
+&#xd;
+	var vo = clientService.invoke(JSON.stringify(data));&#xd;
+	//var objret = JSON.parse(vo.getResult());&#xd;
+&#xd;
+	if (vo.getHttpStatusResult() != 200) {&#xd;
+		throw &apos;Erro ao integrar com o Lyceum: &apos; + vo.getResult();&#xd;
+	}&#xd;
+&#xd;
+&#xd;
+}&#xd;
 </eventDescription>
     </WorkflowProcessEvent>
   </list>
@@ -1719,8 +1715,8 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <height>171</height>
       <width>901</width>
       <positionX>0</positionX>
-      <positionY>171</positionY>
-      <stateName>Departamento Responsável</stateName>
+      <positionY>0</positionY>
+      <stateName>Solicitante</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
       <swimLanePK>
@@ -1735,8 +1731,8 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <height>171</height>
       <width>901</width>
       <positionX>0</positionX>
-      <positionY>848</positionY>
-      <stateName>Planejamento Acadêmico</stateName>
+      <positionY>171</positionY>
+      <stateName>Departamento Responsável</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
       <swimLanePK>
@@ -1744,6 +1740,22 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
         <processId>ConsultaDeServicos</processId>
         <version>1</version>
         <sequence>4</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFFFF</color>
+      <height>171</height>
+      <width>901</width>
+      <positionX>0</positionX>
+      <positionY>1185</positionY>
+      <stateName>Criação RM</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>ConsultaDeServicos</processId>
+        <version>1</version>
+        <sequence>5</sequence>
       </swimLanePK>
     </SwimLane>
     <SwimLane>
@@ -1759,7 +1771,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <version>1</version>
-        <sequence>5</sequence>
+        <sequence>6</sequence>
       </swimLanePK>
     </SwimLane>
     <SwimLane>
@@ -1775,22 +1787,6 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
         <version>1</version>
-        <sequence>6</sequence>
-      </swimLanePK>
-    </SwimLane>
-    <SwimLane>
-      <color>FFFFFF</color>
-      <height>171</height>
-      <width>901</width>
-      <positionX>0</positionX>
-      <positionY>0</positionY>
-      <stateName>Solicitante</stateName>
-      <type>2</type>
-      <parentSequence>0</parentSequence>
-      <swimLanePK>
-        <companyId>1</companyId>
-        <processId>ConsultaDeServicos</processId>
-        <version>1</version>
         <sequence>7</sequence>
       </swimLanePK>
     </SwimLane>
@@ -1799,8 +1795,8 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <height>171</height>
       <width>901</width>
       <positionX>0</positionX>
-      <positionY>1185</positionY>
-      <stateName>Criação RM</stateName>
+      <positionY>848</positionY>
+      <stateName>Planejamento Acadêmico</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
       <swimLanePK>
@@ -1818,7 +1814,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>18</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1829,7 +1825,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>18</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1840,7 +1836,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>18</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1851,7 +1847,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>18</linkSequence>
         <bendSequence>4</bendSequence>
       </processLinkBendPK>
@@ -1862,7 +1858,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>18</linkSequence>
         <bendSequence>5</bendSequence>
       </processLinkBendPK>
@@ -1873,7 +1869,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>18</linkSequence>
         <bendSequence>6</bendSequence>
       </processLinkBendPK>
@@ -1884,7 +1880,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>18</linkSequence>
         <bendSequence>7</bendSequence>
       </processLinkBendPK>
@@ -1895,7 +1891,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>19</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1906,7 +1902,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>19</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1917,7 +1913,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>20</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1928,7 +1924,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>20</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1939,7 +1935,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>20</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -1950,7 +1946,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>20</linkSequence>
         <bendSequence>4</bendSequence>
       </processLinkBendPK>
@@ -1961,7 +1957,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>24</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1972,7 +1968,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>29</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1983,7 +1979,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>29</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1994,7 +1990,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>29</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -2005,7 +2001,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2016,7 +2012,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>30</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2027,7 +2023,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>30</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -2038,7 +2034,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>30</linkSequence>
         <bendSequence>4</bendSequence>
       </processLinkBendPK>
@@ -2049,7 +2045,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>30</linkSequence>
         <bendSequence>5</bendSequence>
       </processLinkBendPK>
@@ -2060,7 +2056,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>30</linkSequence>
         <bendSequence>6</bendSequence>
       </processLinkBendPK>
@@ -2071,7 +2067,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2082,7 +2078,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>35</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2093,7 +2089,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>59</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2104,7 +2100,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>ConsultaDeServicos</processId>
-        <version>105</version>
+        <version>113</version>
         <linkSequence>59</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2114,53 +2110,7 @@ function atualizaLiceum(solicitação, documentBase64, DescDocto, extensao, tama
   </list>
   <list/>
   <list/>
-  <list>
-    <ProcessFormField>
-      <processFormFieldPK>
-        <companyId>1</companyId>
-        <processId>ConsultaDeServicos</processId>
-        <fieldId>empresa</fieldId>
-      </processFormFieldPK>
-      <fieldDescription>empresa</fieldDescription>
-      <slotId>1</slotId>
-    </ProcessFormField>
-    <ProcessFormField>
-      <processFormFieldPK>
-        <companyId>1</companyId>
-        <processId>ConsultaDeServicos</processId>
-        <fieldId>telefone</fieldId>
-      </processFormFieldPK>
-      <fieldDescription>telefone</fieldDescription>
-      <slotId>2</slotId>
-    </ProcessFormField>
-    <ProcessFormField>
-      <processFormFieldPK>
-        <companyId>1</companyId>
-        <processId>ConsultaDeServicos</processId>
-        <fieldId>tipoServico</fieldId>
-      </processFormFieldPK>
-      <fieldDescription>tipoServico</fieldDescription>
-      <slotId>3</slotId>
-    </ProcessFormField>
-    <ProcessFormField>
-      <processFormFieldPK>
-        <companyId>1</companyId>
-        <processId>ConsultaDeServicos</processId>
-        <fieldId>TIPO_SERVICO</fieldId>
-      </processFormFieldPK>
-      <fieldDescription>TIPO_SERVICO</fieldDescription>
-      <slotId>4</slotId>
-    </ProcessFormField>
-    <ProcessFormField>
-      <processFormFieldPK>
-        <companyId>1</companyId>
-        <processId>ConsultaDeServicos</processId>
-        <fieldId>zoomDepartamento</fieldId>
-      </processFormFieldPK>
-      <fieldDescription>zoomDepartamento</fieldDescription>
-      <slotId>5</slotId>
-    </ProcessFormField>
-  </list>
+  <list/>
   <list>
     <ProcessStateService>
       <companyId>1</companyId>

@@ -87,7 +87,7 @@
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="121" y="71">
+      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="121" y="68">
         <graphicsAlgorithmChildren xsi:type="al:Ellipse" lineWidth="1" transparency="0.0" width="35" height="35" style="/0/@styles.15"/>
       </graphicsAlgorithm>
       <link businessObjects="startevent4"/>
@@ -97,7 +97,7 @@
       </anchors>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="106" height="70" x="277" y="53"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="106" height="70" x="277" y="50"/>
       <link businessObjects="task5"/>
       <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.1" incomingConnections="/0/@connections.4"/>
       <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="/0/@children.8/@graphicsAlgorithm" relativeWidth="1.0" relativeHeight="0.51">
@@ -238,21 +238,21 @@
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="106" height="84" x="240" y="413"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="106" height="98" x="240" y="379"/>
       <link businessObjects="task34"/>
       <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.14" incomingConnections="/0/@connections.13"/>
       <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="/0/@children.17/@graphicsAlgorithm" relativeWidth="1.0" relativeHeight="0.51">
         <graphicsAlgorithm xsi:type="al:Ellipse" filled="false" lineVisible="false"/>
       </anchors>
       <children visible="true">
-        <graphicsAlgorithm xsi:type="al:RoundedRectangle" lineWidth="1" transparency="0.0" width="106" height="84" style="/0/@styles.32" cornerHeight="5" cornerWidth="5"/>
+        <graphicsAlgorithm xsi:type="al:RoundedRectangle" lineWidth="1" transparency="0.0" width="106" height="98" style="/0/@styles.32" cornerHeight="5" cornerWidth="5"/>
       </children>
       <children visible="true">
-        <graphicsAlgorithm xsi:type="al:MultiText" lineWidth="1" filled="false" lineVisible="true" transparency="0.0" width="96" height="74" x="5" y="5" style="/0/@styles.33" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Aprova&#xe7;&#xe3;o Coordena&#xe7;&#xe3;o unidade"/>
+        <graphicsAlgorithm xsi:type="al:MultiText" lineWidth="1" filled="false" lineVisible="true" transparency="0.0" width="96" height="88" x="5" y="5" style="/0/@styles.33" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Aprova&#xe7;&#xe3;o Ger&#xea;ncia Experi&#xea;ncia do Aluno"/>
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="60" height="102" x="400" y="403">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="60" height="102" x="400" y="377">
         <graphicsAlgorithmChildren xsi:type="al:Polygon" lineWidth="1" filled="true" transparency="0.0" width="60" height="60" style="/0/@styles.34">
           <points y="30"/>
           <points x="30"/>
@@ -276,7 +276,7 @@
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="510" y="443">
+      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="510" y="411">
         <graphicsAlgorithmChildren xsi:type="al:Ellipse" lineWidth="3" transparency="0.0" width="35" height="35" style="/0/@styles.36"/>
       </graphicsAlgorithm>
       <link businessObjects="endevent38"/>
@@ -300,7 +300,7 @@
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="660" y="581">
+      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="660" y="579">
         <graphicsAlgorithmChildren xsi:type="al:Ellipse" lineWidth="3" transparency="0.0" width="35" height="35" style="/0/@styles.39"/>
       </graphicsAlgorithm>
       <link businessObjects="endevent42"/>
@@ -310,7 +310,7 @@
       </anchors>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="60" height="102" x="520" y="543">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="60" height="102" x="520" y="545">
         <graphicsAlgorithmChildren xsi:type="al:Polygon" lineWidth="1" filled="true" transparency="0.0" width="60" height="60" style="/0/@styles.40">
           <points y="30"/>
           <points x="30"/>
@@ -348,7 +348,7 @@
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="760" y="748">
+      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="760" y="746">
         <graphicsAlgorithmChildren xsi:type="al:Ellipse" lineWidth="3" transparency="0.0" width="35" height="35" style="/0/@styles.44"/>
       </graphicsAlgorithm>
       <link businessObjects="endevent53"/>
@@ -2214,7 +2214,7 @@
       <graphicsAlgorithm xsi:type="al:Polyline" foreground="/0/@colors.3" lineWidth="1" filled="false" transparency="0.0"/>
       <link businessObjects="flow12"/>
       <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
-        <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" x="10" style="/0/@styles.49" font="/0/@fonts.0" value="Responder depois"/>
+        <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" x="-20" y="5" style="/0/@styles.49" font="/0/@fonts.0" value="Responder depois"/>
       </connectionDecorators>
       <connectionDecorators visible="true" locationRelative="true" location="1.0">
         <graphicsAlgorithm xsi:type="al:Polygon" background="/0/@colors.3" foreground="/0/@colors.3" lineWidth="1" filled="true" transparency="0.0" style="/0/@styles.46">
@@ -2403,8 +2403,7 @@
           <points x="-8" before="3" after="3"/>
         </graphicsAlgorithm>
       </connectionDecorators>
-      <bendpoints x="164" y="429"/>
-      <bendpoints x="164" y="457"/>
+      <bendpoints x="162" y="428"/>
     </connections>
     <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="/0/@children.17/@anchors.0" end="/0/@children.18/@anchors.0">
       <graphicsAlgorithm xsi:type="al:Polyline" foreground="/0/@colors.3" lineWidth="1" filled="false" transparency="0.0"/>
@@ -2532,23 +2531,23 @@
   <bpmn2:BpmnSwimLane id="bpmnswimlane7" name="Aprov Diretoria " cores="FFFFFF"/>
   <bpmn2:BpmnStartEvent id="startevent4" name="Solicita&#xe7;&#xe3;o de Servi&#xe7;os" outgoing="flow6" type="10" extendedFields="&lt;list/>" signalId="0" instrucoes=" Para solicitar a abertura da consulta, o solicitante deve:- Preencher os campos do formul&#xe1;rio - Anexar, arquivos obrigatoriamente;- Encaminhar solicita&#xe7;&#xe3;o, selecionado a op&#xe7;&#xe3;o &#x201c;Enviar&quot;" expediente="Default" selecionaColaboradores="1" esforcoCalculo="0"/>
   <bpmn2:BpmnTask id="task5" name="Complementar informa&#xe7;&#xf5;es" incoming="flow13" outgoing="flow8" type="80" extendedFields="&lt;list/>" managerMechanism="Executor Atividade" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerExecutorMechanism>&#xA;  &lt;idNode>startevent4&lt;/idNode>&#xA;  &lt;returns>0&lt;/returns>&#xA;  &lt;mechanismName>Executor Atividade&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerExecutorMechanism>" loopType="0" authNotify="true" instrucoes="Ao receber a solicita&#xe7;&#xe3;o, o respons&#xe1;vel pela execu&#xe7;&#xe3;o da atividade deve:- Verificar o motivo que a solicita&#xe7;&#xe3;o voltou a etapa anterior.- Complementar a solicita&#xe7;&#xe3;o;- Encerrar a solicita&#xe7;&#xe3;o, selecionando a op&#xe7;&#xe3;o &#x201c;Enviar&#x201d;." expediente="Default" prazoConclusao="960.0" selecionaColaboradores="1" notificaRequisitante="true" emAtrasoNotificarResponsavelTolerancia="1440.0" emAtrasoNotificarResponsavelFrequencia="1440.0" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
-  <bpmn2:BpmnTask id="task7" name="Analisar Solicita&#xe7;&#xe3;o" incoming="flow6 flow8" outgoing="flow10" type="80" extendedFields="&lt;list/>" managerMechanism="Pool Papel" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>&#xA;  &lt;roleId>experincia_ComunicaoAluno&lt;/roleId>&#xA;  &lt;mechanismName>Pool Papel&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>" loopType="0" authNotify="true" instrucoes="Ao receber a solicita&#xe7;&#xe3;o, o respons&#xe1;vel pela execu&#xe7;&#xe3;o da atividade deve:- Verificar as informa&#xe7;&#xf5;es cadastradas e confront&#xe1;-las com as informa&#xe7;&#xf5;es contidas nos anexos. - Se a documenta&#xe7;&#xe3;o for suficiente seguir para a pr&#xf3;xima atividade, se n&#xe3;o for voltar para atividade anterior.- Encerrar a solicita&#xe7;&#xe3;o, selecionando a op&#xe7;&#xe3;o &#x201c;Enviar&#x201d;." expediente="Default" selecionaColaboradores="1" notificaRequisitante="true" emAtrasoNotificarResponsavelTolerancia="1440.0" emAtrasoNotificarResponsavelFrequencia="1440.0" esforcoCalculo="0" executionAttempts="0" frequency="0" deadlineFieldName="inputSLA"/>
+  <bpmn2:BpmnTask id="task7" name="Analisar Solicita&#xe7;&#xe3;o" incoming="flow6 flow8" outgoing="flow10" type="80" extendedFields="&lt;list/>" managerMechanism="Pool Papel" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>&#xA;  &lt;roleId>Comu_Experiencia_aluno&lt;/roleId>&#xA;  &lt;mechanismName>Pool Papel&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>" loopType="0" authNotify="true" instrucoes="Ao receber a solicita&#xe7;&#xe3;o, o respons&#xe1;vel pela execu&#xe7;&#xe3;o da atividade deve:- Verificar as informa&#xe7;&#xf5;es cadastradas e confront&#xe1;-las com as informa&#xe7;&#xf5;es contidas nos anexos. - Se a documenta&#xe7;&#xe3;o for suficiente seguir para a pr&#xf3;xima atividade, se n&#xe3;o for voltar para atividade anterior.- Encerrar a solicita&#xe7;&#xe3;o, selecionando a op&#xe7;&#xe3;o &#x201c;Enviar&#x201d;." expediente="Default" selecionaColaboradores="1" notificaRequisitante="true" emAtrasoNotificarResponsavelTolerancia="1440.0" emAtrasoNotificarResponsavelFrequencia="1440.0" esforcoCalculo="0" executionAttempts="0" frequency="0" deadlineFieldName="inputSLA"/>
   <bpmn2:BpmnGateway id="exclusivegateway9" name="Necessita mais informa&#xe7;&#xf5;es?" incoming="flow10" outgoing="flow12 flow13 flow18 flow29 flow35" type="120" extendedFields="&lt;list/>" condition="&lt;list>&#xA;  &lt;org.eclipse.bpmn2.impl.ConditionImpl>&#xA;    &lt;order>1&lt;/order>&#xA;    &lt;expression>hAPI.getCardValue(&amp;quot;avalsolicitacao&amp;quot;) == &amp;quot;informacoes&amp;quot;&lt;/expression>&#xA;    &lt;targetTask>task5&lt;/targetTask>&#xA;    &lt;conditionType>0&lt;/conditionType>&#xA;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl>&#xA;  &lt;org.eclipse.bpmn2.impl.ConditionImpl>&#xA;    &lt;order>2&lt;/order>&#xA;    &lt;expression>hAPI.getCardValue(&amp;quot;avalsolicitacao&amp;quot;) == &amp;quot;validado&amp;quot; &amp;amp;&amp;amp; (((hAPI.getCardValue(&amp;quot;TIPO_SERVICO&amp;quot;) + &amp;quot;&amp;quot;).toUpperCase() == &amp;quot;14 - ENVIO DE DIPLOMA&amp;quot;) || ((hAPI.getCardValue(&amp;quot;TIPO_SERVICO&amp;quot;) + &amp;quot;&amp;quot;).toUpperCase() == &amp;quot;14  ENVIO DE DIPLOMA&amp;quot;)) &lt;/expression>&#xA;    &lt;targetTask>task28&lt;/targetTask>&#xA;    &lt;conditionType>0&lt;/conditionType>&#xA;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl>&#xA;  &lt;org.eclipse.bpmn2.impl.ConditionImpl>&#xA;    &lt;order>3&lt;/order>&#xA;    &lt;expression>hAPI.getCardValue(&amp;quot;avalsolicitacao&amp;quot;) == &amp;quot;respDepois&amp;quot;&lt;/expression>&#xA;    &lt;targetTask>task11&lt;/targetTask>&#xA;    &lt;conditionType>0&lt;/conditionType>&#xA;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl>&#xA;  &lt;org.eclipse.bpmn2.impl.ConditionImpl>&#xA;    &lt;order>4&lt;/order>&#xA;    &lt;expression>hAPI.getCardValue(&amp;quot;avalsolicitacao&amp;quot;) == &amp;quot;validado&amp;quot; &amp;amp;&amp;amp; &amp;#xd;&#xA;hAPI.getCardValue(&amp;quot;DEPARTAMENTOLyceum&amp;quot;) == &amp;quot;ComunicaoComoAluno&amp;quot;&lt;/expression>&#xA;    &lt;targetTask>task34&lt;/targetTask>&#xA;    &lt;conditionType>0&lt;/conditionType>&#xA;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl>&#xA;&lt;/list>"/>
-  <bpmn2:BpmnTask id="task11" name="Responder Solicita&#xe7;&#xe3;o" incoming="flow12" outgoing="flow20" type="80" extendedFields="&lt;list/>" managerMechanism="papel_consulta_generica" loopType="0" authNotify="true" instrucoes="Ao receber a solicita&#xe7;&#xe3;o, o respons&#xe1;vel pela execu&#xe7;&#xe3;o da atividade deve:-Anexar resposta ou documenta&#xe7;&#xe3;o." expediente="Default" prazoConclusao="960.0" selecionaColaboradores="1" notificaRequisitante="true" emAtrasoNotificarResponsavelTolerancia="1440.0" emAtrasoNotificarResponsavelFrequencia="1440.0" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
+  <bpmn2:BpmnTask id="task11" name="Responder Solicita&#xe7;&#xe3;o" incoming="flow12" outgoing="flow20" type="80" extendedFields="&lt;list/>" managerMechanism="papel_consulta_generica" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerCustom>&#xA;  &lt;mechanismName>papel_consulta_generica&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerCustom>" loopType="0" authNotify="true" instrucoes="Ao receber a solicita&#xe7;&#xe3;o, o respons&#xe1;vel pela execu&#xe7;&#xe3;o da atividade deve:-Anexar resposta ou documenta&#xe7;&#xe3;o." expediente="Default" prazoConclusao="960.0" selecionaColaboradores="1" notificaRequisitante="true" emAtrasoNotificarResponsavelTolerancia="1440.0" emAtrasoNotificarResponsavelFrequencia="1440.0" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
   <bpmn2:BpmnEndEvent id="endevent14" name="Fim" incoming="flow19 flow25" type="60" extendedFields="&lt;list/>" signalId="0"/>
   <bpmn2:BpmnTask id="servicetask17" name="Retorno Lyceum" incoming="flow18 flow20 flow24 flow30" outgoing="flow19" type="82" extendedFields="&lt;list/>" loopType="0" authNotify="true" serviceName="" scriptFileName="ConsultaDeServicos.servicetask17.js" expediente="" selecionaColaboradores="1" esforcoCalculo="0" attachedEvents="intermediateerror21" executionType="1" executionAttempts="0" executionSucessfulMessage="Integra&#xe7;&#xe3;o executada com sucesso" frequency="0"/>
   <bpmn2:BpmnIntermediateEvent id="intermediateerror21" name="Intermedi&#xe1;rio" outgoing="flow23" type="43" extendedFields="&lt;list/>" sequenceAttached="17" signalId="0" linkId="servicetask17" parentTask="servicetask17"/>
   <bpmn2:BpmnTask id="task22" name="Erro" incoming="flow23" outgoing="flow24 flow25" type="80" extendedFields="&lt;list/>" managerMechanism="Pool Papel" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>&#xA;  &lt;roleId>sustentacaoImplanta&lt;/roleId>&#xA;  &lt;mechanismName>Pool Papel&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
   <bpmn2:BpmnTask id="task28" name="Avalia&#xe7;&#xe3;o Diploma Certificado" incoming="flow29" outgoing="flow30" type="80" extendedFields="&lt;list/>" managerMechanism="Pool Papel" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>&#xA;  &lt;roleId>planejamento_academico&lt;/roleId>&#xA;  &lt;mechanismName>Pool Papel&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>" loopType="0" authNotify="true" expediente="Default" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
-  <bpmn2:BpmnTask id="task34" name="Aprova&#xe7;&#xe3;o Coordena&#xe7;&#xe3;o unidade" incoming="flow35" outgoing="flow37" type="80" extendedFields="&lt;list/>" managerMechanism="Papel" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerRole>&#xA;  &lt;roleId>CoordenacaoDeAdmissao&lt;/roleId>&#xA;  &lt;mechanismName>Papel&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerRole>" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
+  <bpmn2:BpmnTask id="task34" name="Aprova&#xe7;&#xe3;o Ger&#xea;ncia Experi&#xea;ncia do Aluno" incoming="flow35" outgoing="flow37" type="80" extendedFields="&lt;list/>" managerMechanism="Pool Papel" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>&#xA;  &lt;roleId>aprovacao_gerencia_experiencia_do_aluno&lt;/roleId>&#xA;  &lt;mechanismName>Pool Papel&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
   <bpmn2:BpmnGateway id="exclusivegateway36" name="Aprovado?" incoming="flow37" outgoing="flow39 flow41" type="120" extendedFields="&lt;list/>" condition="&lt;list>&#xA;  &lt;org.eclipse.bpmn2.impl.ConditionImpl>&#xA;    &lt;order>1&lt;/order>&#xA;    &lt;expression>hAPI.getCardValue(&amp;quot;avalCoordAluno&amp;quot;) == &amp;quot;rejeitado&amp;quot;&amp;#xd;&#xA;&lt;/expression>&#xA;    &lt;targetTask>endevent38&lt;/targetTask>&#xA;    &lt;conditionType>0&lt;/conditionType>&#xA;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl>&#xA;  &lt;org.eclipse.bpmn2.impl.ConditionImpl>&#xA;    &lt;order>2&lt;/order>&#xA;    &lt;expression>hAPI.getCardValue(&amp;quot;avalCoordAluno&amp;quot;) == &amp;quot;validado&amp;quot;&amp;#xd;&#xA;&lt;/expression>&#xA;    &lt;targetTask>task40&lt;/targetTask>&#xA;    &lt;conditionType>0&lt;/conditionType>&#xA;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl>&#xA;&lt;/list>"/>
   <bpmn2:BpmnEndEvent id="endevent38" name="Fim" incoming="flow39" type="60" extendedFields="&lt;list/>" signalId="0"/>
   <bpmn2:BpmnTask id="task40" name="Aprova&#xe7;&#xe3;o da diretoria" incoming="flow41" outgoing="flow44" type="80" extendedFields="&lt;list/>" managerMechanism="Campo Formul&#xe1;rio" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerFormField>&#xA;  &lt;formField>aprovadorProximaAprovacao&lt;/formField>&#xA;  &lt;mechanismName>Campo Formul&#xe1;rio&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerFormField>" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
   <bpmn2:BpmnEndEvent id="endevent42" name="Fim" incoming="flow45" type="60" extendedFields="&lt;list/>" signalId="0"/>
   <bpmn2:BpmnGateway id="exclusivegateway43" name="Aprovado?" incoming="flow44" outgoing="flow45 flow50" type="120" extendedFields="&lt;list/>" condition="&lt;list>&#xA;  &lt;org.eclipse.bpmn2.impl.ConditionImpl>&#xA;    &lt;order>1&lt;/order>&#xA;    &lt;expression>hAPI.getCardValue(&amp;quot;avalDiretoria&amp;quot;) == &amp;quot;rejeitado&amp;quot;&lt;/expression>&#xA;    &lt;targetTask>endevent42&lt;/targetTask>&#xA;    &lt;conditionType>0&lt;/conditionType>&#xA;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl>&#xA;  &lt;org.eclipse.bpmn2.impl.ConditionImpl>&#xA;    &lt;order>2&lt;/order>&#xA;    &lt;expression>hAPI.getCardValue(&amp;quot;avalDiretoria&amp;quot;) == &amp;quot;validado&amp;quot;&lt;/expression>&#xA;    &lt;targetTask>task46&lt;/targetTask>&#xA;    &lt;conditionType>0&lt;/conditionType>&#xA;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl>&#xA;&lt;/list>"/>
-  <bpmn2:BpmnTask id="task46" name="Execu&#xe7;&#xe3;o do servi&#xe7;o" incoming="flow50" outgoing="flow54" type="80" extendedFields="&lt;list/>" managerMechanism="Pool Papel" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>&#xA;  &lt;roleId>experincia_ComunicaoAluno&lt;/roleId>&#xA;  &lt;mechanismName>Pool Papel&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
+  <bpmn2:BpmnTask id="task46" name="Execu&#xe7;&#xe3;o do servi&#xe7;o" incoming="flow50" outgoing="flow54" type="80" extendedFields="&lt;list/>" managerMechanism="Pool Papel" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>&#xA;  &lt;roleId>Comu_Experiencia_aluno&lt;/roleId>&#xA;  &lt;mechanismName>Pool Papel&lt;/mechanismName>&#xA;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolRole>" loopType="0" authNotify="true" expediente="" selecionaColaboradores="1" esforcoCalculo="0" executionAttempts="0" frequency="0"/>
   <bpmn2:BpmnEndEvent id="endevent53" name="Fim" incoming="flow54" type="60" extendedFields="&lt;list/>" signalId="0"/>
-  <bpmn2:BpmnProcess id="ConsultaDeServicos" name="Solicita&#xe7;&#xe3;o de Servi&#xe7;os" serverId="teste" version="94" author="" extendedFields="&lt;list/>" cardIndex="201" formSource="server" category="Outras &#xc1;reas" volume="Default" expedient="Default" instruction="" descriptorFields="&lt;list>&#xA;  &lt;org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;    &lt;id>empresa&lt;/id>&#xA;    &lt;label>empresa&lt;/label>&#xA;    &lt;cardIndex>&lt;/cardIndex>&#xA;  &lt;/org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;  &lt;org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;    &lt;id>telefone&lt;/id>&#xA;    &lt;label>telefone&lt;/label>&#xA;    &lt;cardIndex>&lt;/cardIndex>&#xA;  &lt;/org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;  &lt;org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;    &lt;id>tipoServico&lt;/id>&#xA;    &lt;label>tipoServico&lt;/label>&#xA;    &lt;cardIndex>&lt;/cardIndex>&#xA;  &lt;/org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;  &lt;org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;    &lt;id>TIPO_SERVICO&lt;/id>&#xA;    &lt;label>TIPO_SERVICO&lt;/label>&#xA;    &lt;cardIndex>&lt;/cardIndex>&#xA;  &lt;/org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;  &lt;org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;    &lt;id>zoomDepartamento&lt;/id>&#xA;    &lt;label>zoomDepartamento&lt;/label>&#xA;    &lt;cardIndex>&lt;/cardIndex>&#xA;  &lt;/org.eclipse.bpmn2.impl.BpmnProcessFormField>&#xA;&lt;/list>" complementsLevel="2" notifyResponsibleComplements="true" notifyRequisitionerComplements="true" formType="ECM_FORM_BUILDER"/>
+  <bpmn2:BpmnProcess id="ConsultaDeServicos" name="Solicita&#xe7;&#xe3;o de Servi&#xe7;os" serverId="producao" version="94" author="" extendedFields="&lt;list/>" formSource="server" category="Outras &#xc1;reas" volume="Default" expedient="Default" instruction="" keyWord="" complementsLevel="2" notifyResponsibleComplements="true" notifyRequisitionerComplements="true" formType="ECM_FORM_BUILDER"/>
   <bpmn2:SequenceFlow id="flow6" name="" sourceRef="startevent4" targetRef="task7" atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/>" movementTitle="" movementDescription="" movementAccessLinkDescription=""/>
   <bpmn2:SequenceFlow id="flow8" name="" sourceRef="task5" targetRef="task7" atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/>" movementTitle="" movementDescription="" movementAccessLinkDescription=""/>
   <bpmn2:SequenceFlow id="flow10" name="" sourceRef="task7" targetRef="exclusivegateway9" atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/>" movementTitle="" movementDescription="" movementAccessLinkDescription=""/>

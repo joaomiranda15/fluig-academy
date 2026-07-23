@@ -1,0 +1,1075 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>CadastroProduto</processId>
+    </processDefinitionPK>
+    <processDescription>Cadastro de Produto</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>Compras</categoryId>
+    <managerEngineAllocationId></managerEngineAllocationId>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>1</complementsLevel>
+    <notifyRequisitionerComplements>true</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+    <notifyAuthorityComplements>true</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>Cadastro de Produto</processId>
+      <version>8</version>
+    </processDefinitionVersionPK>
+    <versionDescription></versionDescription>
+    <formId>24</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>2</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <mobileReady>false</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Solicitar cadastro do produto</stateName>
+      <stateDescription>Solicitar cadastro do produto</stateDescription>
+      <instruction>Para solicitar o cadastro, o solicitante deve: - Preencher os campos do formulário - Anexar, arquivos se necessário. - Encaminhar solicitação, selecionado a opção “Enviar&quot;</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>135</positionX>
+      <positionY>66</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>10</sequence>
+      </processStatePK>
+      <stateName>Avaliar necessidade de cadastro</stateName>
+      <stateDescription>Avaliar necessidade de cadastro</stateDescription>
+      <instruction>Ao receber a solicitação, o responsável pela execução da atividade deve:&#xd;
+- Avaliar a necessidade da solicitação.&#xd;
+- Verificar as informações cadastradas e confrontá-las com as informações contidas no Protheus. &#xd;
+- Se o produto existir o Departamento de Compras efetua o de/para no produto e encerra a atividade, se não possuir, encaminha para cadastro de informações contábeis e fiscais.&#xd;
+- Seguir a solicitação, selecionando a opção “Enviar”.</instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;respAvalCad&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>100</positionX>
+      <positionY>285</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>18</sequence>
+      </processStatePK>
+      <stateName>Cadastrar informações do produto</stateName>
+      <stateDescription>Cadastrar informações do produto</stateDescription>
+      <instruction>Ao receber a solicitação, o responsável pela execução da atividade deve:&#xd;
+- Cadastrar o produto.&#xd;
+- Seguir a solicitação, selecionando a opção “Enviar”.</instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;compras&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>620</positionX>
+      <positionY>370</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>22</sequence>
+      </processStatePK>
+      <stateName>Preencher informações fiscais/contábeis</stateName>
+      <stateDescription>Preencher informações fiscais/contábeis</stateDescription>
+      <instruction>Ao receber a solicitação, o responsável pela execução da atividade deve:&#xd;
+- Cadastrar informações contábeis.&#xd;
+- Cadastrar informações fiscais.&#xd;
+- Encerrar a solicitação, selecionando a opção “Enviar”.</instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;contabilidade&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>620</positionX>
+      <positionY>523</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>29</sequence>
+      </processStatePK>
+      <stateName>Complementar informações</stateName>
+      <stateDescription>Complementar informações</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;4&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>327</positionX>
+      <positionY>47</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>39</sequence>
+      </processStatePK>
+      <stateName>Integração Protheus</stateName>
+      <stateDescription>Integração Protheus</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1060</positionX>
+      <positionY>537</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>2</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>12</sequence>
+      </processStatePK>
+      <stateName>Avaliação</stateName>
+      <stateDescription>Avaliação</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>350</positionX>
+      <positionY>276</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>40</sequence>
+      </processStatePK>
+      <stateName>Necessário ajuste?</stateName>
+      <stateDescription>Necessário ajuste?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>880</positionX>
+      <positionY>514</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>20</sequence>
+      </processStatePK>
+      <stateName>Prodduto Possui cadastro.</stateName>
+      <stateDescription>Prodduto Possui cadastro.</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>655</positionX>
+      <positionY>214</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>26</sequence>
+      </processStatePK>
+      <stateName>Solicitação concluída</stateName>
+      <stateDescription>Solicitação concluída</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1250</positionX>
+      <positionY>554</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>8</version>
+        <sequence>12</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;avalCadastro&quot;) == &quot;maisInfo&quot;</condition>
+      <destinationSequenceId>29</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>8</version>
+        <sequence>12</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;avalCadastro&quot;) == &quot;possuiCad&quot;</condition>
+      <destinationSequenceId>20</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <expressionOrder>3</expressionOrder>
+        <version>8</version>
+        <sequence>12</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;avalCadastro&quot;) == &quot;cadAprovado&quot;</condition>
+      <destinationSequenceId>18</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>8</version>
+        <sequence>40</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;necessarioAjuste&quot;) == &quot;ajusteSIM&quot;</condition>
+      <destinationSequenceId>10</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>8</version>
+        <sequence>40</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;necessarioAjuste&quot;) == &quot;ajusteNAO&quot;</condition>
+      <destinationSequenceId>39</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>13</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>10</initialStateSequence>
+      <finalStateSequence>12</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>23</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>18</initialStateSequence>
+      <finalStateSequence>22</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>28</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>30</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>29</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Necessita mais informações</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>31</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>29</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>33</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>18</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Cadastro Aprovado</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>35</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>20</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Produto possui cadastro</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>38</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>39</initialStateSequence>
+      <finalStateSequence>26</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>41</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>22</initialStateSequence>
+      <finalStateSequence>40</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>42</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>40</initialStateSequence>
+      <finalStateSequence>39</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <linkSequence>43</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>40</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask34</eventId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask34() {
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeStateEntry</eventId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeStateEntry(sequenceId) {&#xd;
+&#xd;
+    if (sequenceId == 20 || sequenceId == 26) {&#xd;
+&#xd;
+        var mailSolicitante = hAPI.getCardValue(&quot;email&quot;);&#xd;
+        var numProcesso = getValue(&quot;WKNumProces&quot;);&#xd;
+        var statusProc = &apos;Produto cadastrado no Protheus.&apos;&#xd;
+        var infoProduto = hAPI.getCardValue(&quot;newcadprod&quot;);&#xd;
+&#xd;
+        if (sequenceId == 20) {&#xd;
+            statusProc = &apos;Produto já possui cadastrado no Protheus.&apos;&#xd;
+            infoProduto = hAPI.getCardValue(&quot;codProdCadastrado&quot;);&#xd;
+        }&#xd;
+&#xd;
+        if (mailSolicitante != &apos;&apos; &amp;&amp; mailSolicitante != null &amp;&amp; mailSolicitante != &apos;undefined&apos;) {&#xd;
+&#xd;
+            var dadosMail = {&#xd;
+                numProc: numProcesso&#xd;
+                , mailSol: mailSolicitante&#xd;
+                , status: statusProc&#xd;
+                , infoProd: infoProduto&#xd;
+            }&#xd;
+&#xd;
+            enviaEmail(dadosMail)&#xd;
+&#xd;
+        }&#xd;
+    }&#xd;
+}&#xd;
+&#xd;
+function enviaEmail(dadosMail) {&#xd;
+&#xd;
+    var emailService = new com.fluig.foundation.mail.service.EMailServiceBean()&#xd;
+    var urlBase = fluigAPI.getPageService().getServerURL();&#xd;
+    var subject = &apos;Conecta Clariens Informa&apos;&#xd;
+    var mail = &apos;conecta@clariens.com.br&apos;&#xd;
+    var emails = []&#xd;
+    var email = &apos;&apos;&#xd;
+    emails.push(String(dadosMail.mailSol))&#xd;
+    email = emails&#xd;
+    var to = email&#xd;
+    var message = &apos; &lt;html&gt; &apos;&#xd;
+        + &apos; &lt;head&gt; &apos;&#xd;
+        + &apos;     &lt;meta charset=&quot;utf-8&quot;&gt; &apos;&#xd;
+        + &apos;     &lt;title&gt;Fluig&lt;/title&gt; &apos;&#xd;
+        + &apos;     &lt;link href=&quot;&apos; + urlBase + &apos;/globalmailsender/resources/global.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt; &apos;&#xd;
+        + &apos; &lt;/head&gt; &apos;&#xd;
+        + &apos; &lt;body leftmargin=&quot;0&quot; topmargin=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot;&gt; &apos;&#xd;
+        + &apos;     &lt;div align=&quot;left&quot;&gt; &apos;&#xd;
+        + &apos;         &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt; &apos;&#xd;
+        + &apos;             &lt;tbody&gt; &apos;&#xd;
+        + &apos;                 &lt;tr&gt; &apos;&#xd;
+        + &apos;                     &lt;td&gt; &apos;&#xd;
+        + &apos;                         &lt;img src=&quot;&apos; + urlBase + &apos;/globalmailsender/mailSenderHeader?tenantId=1&quot;&gt; &apos;&#xd;
+        + &apos;                     &lt;/td&gt; &apos;&#xd;
+        + &apos;                 &lt;/tr&gt; &apos;&#xd;
+        + &apos;					&lt;tr&gt; &apos;&#xd;
+        + &apos;						&lt;td&gt; &apos;&#xd;
+        + &apos;							&lt;p&gt;Olá!&lt;/p&gt; &apos;&#xd;
+        + &apos;						&lt;/td&gt; &apos;&#xd;
+        + &apos;					&lt;/tr&gt; &apos;&#xd;
+        + &apos;					&lt;tr&gt; &apos;&#xd;
+        + &apos;						&lt;td&gt; &apos;&#xd;
+        + &apos;							&lt;p&gt;A solicitação Cadastro de Produto que você requisitou foi concluída.&apos;&#xd;
+        + &apos;						&lt;/td&gt; &apos;&#xd;
+        + &apos;					&lt;/tr&gt; &apos;&#xd;
+        + &apos;			        &lt;tr&gt; &apos;&#xd;
+        + &apos;			            &lt;td&gt; &apos;&#xd;
+        + &apos;			            	&lt;img src=&quot;&apos; + urlBase + &apos;/webdesk/assets/icons/tarefa_delegada.png&quot; align=&quot;absmiddle&quot; border=&quot;0&quot; class=&quot;CToWUd&quot; data-bit=&quot;iit&quot;&gt; &apos;&#xd;
+        + &apos;			            	&lt;a href=&quot;&apos; + urlBase + &apos;/portal/p/1/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID=&apos; + dadosMail.numProc + &apos;&quot; target=&quot;_blank&quot;&gt; &apos;&#xd;
+        + &apos;			            		&lt;b&gt;Solicitação&lt;/b&gt;: &apos; + dadosMail.numProc + &apos; - Cadastro de Produto - &apos; + dadosMail.status&#xd;
+        + &apos;			            	&lt;/a&gt; &apos;&#xd;
+        + &apos;			            &lt;/td&gt; &apos;&#xd;
+        + &apos;			        &lt;/tr&gt; &apos;&#xd;
+        + &apos;					&lt;tr&gt; &apos;&#xd;
+        + &apos;						&lt;td&gt; &apos;&#xd;
+        + &apos;							&lt;p&gt;Dados do Produto: &apos; + dadosMail.infoProd&#xd;
+        + &apos;						&lt;/td&gt; &apos;&#xd;
+        + &apos;					&lt;/tr&gt; &apos;&#xd;
+        + &apos;             &lt;/tbody&gt; &apos;&#xd;
+        + &apos;			&lt;/table&gt; &apos;&#xd;
+        + &apos;		&lt;/div&gt; &apos;&#xd;
+        + &apos;     &lt;br /&gt; &apos;&#xd;
+        + &apos; &lt;/body&gt; &apos;&#xd;
+        + &apos; &lt;/html&gt; &apos;&#xd;
+&#xd;
+    emailService.simpleEmail(1, subject, mail, to, message, &quot;text/html&quot;)&#xd;
+&#xd;
+}&#xd;
+&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask39</eventId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask39(attempt, message) {
+
+	var tipo = String(hAPI.getCardValue(&quot;tipo&quot;))
+
+	var params = {
+
+		&quot;chave&quot; : &quot;c8ZKRwZz8HyPMPQIlziD&quot;,
+		&quot;grupoProduto&quot; : String(hAPI.getCardValue(&quot;grupoProduto&quot;)),
+		&quot;tipo&quot; : tipo.trim(),
+		&quot;descricaoProduto&quot; : String(hAPI.getCardValue(&quot;descricaoProduto&quot;)),
+		&quot;descDetalhada&quot; : String(hAPI.getCardValue(&quot;descDetalhada&quot;)),
+		&quot;unidade&quot; : String(hAPI.getCardValue(&quot;unidade&quot;)),
+		&quot;armazem&quot; : &quot;01&quot;,
+		&quot;tePadrao&quot; : String(hAPI.getCardValue(&quot;tePadrao&quot;)),
+		&quot;posicaoIPI&quot; : String(hAPI.getCardValue(&quot;posicaoIPI&quot;)),
+		&quot;origem&quot; : String(hAPI.getCardValue(&quot;origem&quot;)),
+		&quot;codISS&quot; : String(hAPI.getCardValue(&quot;codISS&quot;)),
+		&quot;calculaINSS&quot; : String(hAPI.getCardValue(&quot;calculaINSS&quot;)),
+		&quot;impostoRenda&quot; : String(hAPI.getCardValue(&quot;impostoRenda&quot;)),
+		&quot;retemPIS&quot; : String(hAPI.getCardValue(&quot;retemPIS&quot;)),
+		&quot;retemCOF&quot; : String(hAPI.getCardValue(&quot;retemCOF&quot;)),
+		&quot;retemCSLL&quot; : String(hAPI.getCardValue(&quot;retemCSLL&quot;)),
+		&quot;aliquotaICMS&quot; : String(hAPI.getCardValue(&quot;aliquotaICMS&quot;)),
+		&quot;classificacaoFiscal&quot; : String(hAPI.getCardValue(&quot;classificacaoFiscal&quot;)),
+		&quot;contaContabil&quot; : String(hAPI.getCardValue(&quot;contaContabil&quot;)),
+		// NÃO EXISTE NO SERVICO
+		&quot;contaCustoIndireto&quot; : String(hAPI.getCardValue(&quot;contaCustoIndireto&quot;)),
+		&quot;contaCustoDireto&quot; : String(hAPI.getCardValue(&quot;contaCustoDireto&quot;)),
+		&quot;contaDesconto&quot; : String(hAPI.getCardValue(&quot;contaDesconto&quot;)),
+		&quot;contaDespComercial&quot; : String(hAPI.getCardValue(&quot;contaDespComercial&quot;)),
+		&quot;contaDespAdm&quot; : String(hAPI.getCardValue(&quot;contaDespAdm&quot;)),
+		&quot;contaInvestimento&quot; : String(hAPI.getCardValue(&quot;contaInvestimento&quot;)),
+		// EXISTE NO SERVICO E NAO EXISTE NO FORM
+		&quot;contaCustoIndiretoPF&quot; : &quot;&quot;,
+		&quot;contaCustoIndiretoPJ&quot; : &quot;&quot;,
+		&quot;contaCustoDiretoPF&quot; : &quot;&quot;,
+		&quot;contaCustoDiretoPJ&quot; : &quot;&quot;,
+		&quot;contaDespComercialPF&quot; : &quot;&quot;,
+		&quot;contaDespComercialPJ&quot; : &quot;&quot;,
+		&quot;despPjMant&quot; : &quot;&quot;,
+		&quot;despPfMant&quot; : &quot;&quot;
+	}
+	
+	log.dir(params)
+
+	var service = fluigAPI.getAuthorizeClientService();
+
+	var options = { 
+		companyId : getValue(&apos;WKCompany&apos;) + &apos;&apos;,
+		serviceCode : &apos;REST_PROTHEUS&apos;,
+		endpoint : &apos;/clariens/produto/inclusao&apos;,
+		method : &apos;POST&apos;,
+		params : params,
+		timeoutService : &apos;100&apos;,
+		headers : {
+			Connection : &apos;close&apos;
+		}
+	}
+	
+	log.dir(options)
+
+	var response = service.invoke(JSON.stringify(options));
+	var data = JSON.parse(response.getResult());
+
+	if ((data.Code == 400)) {
+		reterro = data.Message;
+		throw (&quot;Erro retorno: &quot; + reterro);
+	} else if (data.Code != 200) {
+		throw (&quot;Erro retorno: Verificar erro integração.&quot;);
+	}
+
+	hAPI.setCardValue(&quot;newcadprod&quot;, data.Message)
+
+}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>FFFFFF</color>
+      <height>145</height>
+      <width>1331</width>
+      <positionX>10</positionX>
+      <positionY>10</positionY>
+      <stateName>Solicitante</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFFFF</color>
+      <height>151</height>
+      <width>1331</width>
+      <positionX>10</positionX>
+      <positionY>500</positionY>
+      <stateName>Contabilidade</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFFFF</color>
+      <height>347</height>
+      <width>1331</width>
+      <positionX>10</positionX>
+      <positionY>154</positionY>
+      <stateName>Departamento de compras</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>1</version>
+        <sequence>3</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>8</version>
+        <linkSequence>33</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>380</positionX>
+      <positionY>412</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>8</version>
+        <linkSequence>35</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>380</positionX>
+      <positionY>231</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>8</version>
+        <linkSequence>43</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>853</positionX>
+      <positionY>629</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>CadastroProduto</processId>
+        <version>8</version>
+        <linkSequence>43</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>152</positionX>
+      <positionY>630</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>CadastroProduto</processId>
+      <version>1</version>
+      <sequence>39</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage>Integração executada com sucesso</sucessFullMessage>
+      <serviceName></serviceName>
+      <frequency>1</frequency>
+      <frequencyType>0</frequencyType>
+    </ProcessStateService>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+</list>

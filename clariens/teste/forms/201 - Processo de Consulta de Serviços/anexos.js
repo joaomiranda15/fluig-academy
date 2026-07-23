@@ -61,9 +61,16 @@ function uploadFile(fileDescription, idInput) {
                 //const isIe9 = parent.WCMAPI.isIe9();
                 //const element = parent.document.getElementById(isIe9 ? "ecm-navigation-silverlight" : "ecm-navigation-inputFile-clone");
 
-                document.getElementById('upload_arquivos_anexo').click();
+                //document.getElementById('upload_arquivos_anexo').click();
 
-                $("#upload_arquivos_anexo").off('change').on('change', function (e) {
+                const inputFile = $(event.currentTarget).closest('.componentAnexo').find('input[type="file"]')[0];
+                inputFile.click();
+                
+                // Quando for clicado algum componente que utiliza a classe '.componentAnexo' ele vai encontrar o click e vai executar a função do evento de upload
+                
+                $(inputFile).off('change').on('change',function (e) {
+
+                // $("#upload_arquivos_anexo").off('change').on('change', function (e) {
                     //document.getElementById('upload_arquivos_anexo').addEventListener('change', function (e) {
 
                     const filePhisical = e.target.files[0].name;

@@ -26,12 +26,29 @@ $(document).ready(function () {
 
   // Controle de Visibilidade para o Tipo de serviço Conta contábil - Evento de Folha
   controlarVisibilidadeEventoFolha();
+
+  // Controle de visbilidade para o campo "#planoSaude"
+  controlarVisibilidadePlanoSaude();
+
+  // Controle de visibilidade para o campo "#planoOdontologico"
+  controlarVisibilidadePlanoOdontologico();
+
+  // Controle de visibilidade para o campo "#valeTransporte"
+  controlarVisibilidadeValeTransporte();
   
   // Controle de visibilidade para o toggle "respDepois"
-  // escondeRespDepois();
+  escondeRespDepois();
 
   // Controle de visibilidade para o painel "CriacaoRM"
   visaoCriacaoRM();
+
+  // Deixando o campo de criacaoRM obrigatorio somente na task 56
+  if (currentTask != 56) {
+    $("#descritivoRM").removeClass("obrigatorio");
+  }
+
+  // Toast para aviso de obrigação de anexos
+  exibirAvisoToastAnexo();
 
   // Sincroniza o campo oculto TIPO_SERVICO com o valor do zoom tipoServico
   function syncTipoServicoField() {
@@ -252,6 +269,13 @@ function visaoAvalDiploma() {
   if (!$("input[name=avalPlanAcademico]").is(":checked")) {
     $("#containerAnexoPlanAcademico").hide();
   }
+
+  // Laço condicional para retirar o Análise e Planejamento Acadêmico, enquanto este não for selecionado
+  if ($('input[name="avalPlanAcademico"]:checked').length > 0) {
+      $("#formAnalisePlanAcademico").css('display', '');
+    } else {
+      $("#formAnalisePlanAcademico").css('display', 'none');
+  }
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -454,11 +478,58 @@ function customRemoveChild(idInput) {
   }
 }
 
+// Função para a Visão da div Criação RM
+
 function visaoCriacaoRM() {
   if (currentTask == 56) {
     $("#criacaoRM").show();
+
+
+    var departamento = normalizarTextoValidacao($("#zoomDepartamento").val());
+    var tipoServico = normalizarTextoValidacao($("#tipoServico").val());
+
+    if (departamento === "CONTROLADORIA" && tipoServico === "CONTA CONTABIL - EVENTO DE FOLHA") {
+      $("#containerAgrupadores").show();
+    }
+    else {
+      $("#containerAgrupadores").hide();
+    }
+
+    let divs =
+      "#formResposta,#formSolicitacao,#dadosColaborador,#formAnalise,#formAprovCoordAluno,#formAprovDiretoria,#formExecucao";
+    let divhide =
+      "#formResposta,#formAnaliseSolicitante,#formComplementar,#formAprovCoordAluno,#formAprovDiretoria,#formExecucao";
+    disablefield(divs);
+    hidediv(divhide);
+
+    $("#descritivoRM").prop("readonly",false);
+    $("#descritivoRM").prop("disabled",false);
+
   } else {
     $("#criacaoRM").hide();
+  }
+
+  if (currentTask == 57) {
+    $("#criacaoRM").show();
+
+    let divs =
+      "#formResposta,#formSolicitacao,#dadosColaborador,#formAnalise,#formAprovCoordAluno,#formAprovDiretoria,#formExecucao,#criacaoRM";
+    let divhide =
+      "#formResposta,#formAnaliseSolicitante,#formComplementar,#formAprovCoordAluno,#formAprovDiretoria,#formExecucao";
+    disablefield(divs);
+    hidediv(divhide);
+    
+    
+    var departamento = normalizarTextoValidacao($("#zoomDepartamento").val());
+    var tipoServico = normalizarTextoValidacao($("#tipoServico").val());
+
+    if (departamento === "CONTROLADORIA" && tipoServico === "CONTA CONTABIL - EVENTO DE FOLHA") {
+      $("#containerAgrupadores").show();
+    }
+    else {
+      $("#containerAgrupadores").hide();
+    }
+
   }
 }
 
@@ -489,18 +560,78 @@ function controlarVisibilidadeEventoFolha() {
 
     if (departamento === "CONTROLADORIA" && tipoServico === "CONTA CONTABIL - EVENTO DE FOLHA") {
       $("#eventoDeFolha").show();
+      $("#papelAnaliseSol").val('Pool:Role:Controladoria_');
     }
     else{
       $("#eventoDeFolha").hide();
+      $("#papelAnaliseSol").val('Pool:Role:experincia_ComunicaoAluno');
     }
 }
 
-// Função para esconder o toggle "respDepois" para o tipo de serviço Conta contábil - Evento de Folha
-// function escondeRespDepois() {
-//   var departamento = normalizarTextoValidacao($("#zoomDepartamento").val());
-//   var tipoServico = normalizarTextoValidacao($("#tipoServico").val());
+// Função para controlar a visibilidade do campo "#planoSaude"
 
-//   if (departamento === "CONTROLADORIA" && tipoServico === "CONTA CONTABIL - EVENTO DE FOLHA") {
-//     $("#formSwitchDepois").hide();
-//   }
-// }
+function controlarVisibilidadePlanoSaude() {
+  var departamento = normalizarTextoValidacao($("#zoomDepartamento").val());
+  var tipoServico = normalizarTextoValidacao($("#tipoServico").val());
+
+  if (departamento === "DEPARTAMENTO PESSOAL" && tipoServico === "08 - INCLUSAO/EXCLUSAO PLANO DE SAUDE") {
+    $("#planoSaude").show();
+  } else {
+    $("#planoSaude").hide();
+  }
+}
+
+// Função para controlar a visibilidade do campo "#planoOdontologico"
+
+function controlarVisibilidadePlanoOdontologico() {
+  var departamento = normalizarTextoValidacao($("#zoomDepartamento").val());
+  var tipoServico = normalizarTextoValidacao($("#tipoServico").val());
+
+  if (departamento === "DEPARTAMENTO PESSOAL" && tipoServico === "09 - INCLUSAO/EXCLUSAO PLANO ODONTOLOGICO") {
+    $("#planoOdontologico").show();
+  } else {
+    $("#planoOdontologico").hide();
+  }
+}
+
+// Função para controlar a visibilidade do campo "#valeTransporte"
+
+function controlarVisibilidadeValeTransporte() {
+  var departamento = normalizarTextoValidacao($("#zoomDepartamento").val());
+  var tipoServico = normalizarTextoValidacao($("#tipoServico").val());
+
+  if (departamento === "DEPARTAMENTO PESSOAL" && tipoServico === "13 - SOLICITACAO/CANCELAMENTO VALE TRANSPORTE") {
+    $("#valeTransporte").show();
+  } else {
+    $("#valeTransporte").hide();
+  }
+}
+
+// Função para esconder o toggle "respDepois" para o tipo de serviço Conta contábil - Evento de Folha
+function escondeRespDepois() {
+  var departamento = normalizarTextoValidacao($("#zoomDepartamento").val());
+  var tipoServico = normalizarTextoValidacao($("#tipoServico").val());
+
+  if (departamento === "CONTROLADORIA" && tipoServico === "CONTA CONTABIL - EVENTO DE FOLHA") {
+    $("#formSwitchDepois").hide();
+  }
+}
+
+// Função para exibir aviso Toast de obrigação de anexos
+function exibirAvisoToastAnexo() {
+  if (currentTask == 0 || currentTask == 4){
+    var departamento = normalizarTextoValidacao($("#zoomDepartamento").val());
+    var tipoServico = normalizarTextoValidacao($("#tipoServico").val());
+
+    if (departamento === "DEPARTAMENTO PESSOAL" && 
+       (tipoServico === "13 - SOLICITACAO/CANCELAMENTO VALE TRANSPORTE" || 
+        tipoServico === "09 - INCLUSAO/EXCLUSAO PLANO ODONTOLOGICO" || 
+        tipoServico === "08 - INCLUSAO/EXCLUSAO PLANO DE SAUDE")) {
+      FLUIGC.toast({
+          title: "Aviso:",
+          message: "Favor anexar o formulário preenchido!",
+          type: "warning",
+        });
+    }
+  }
+}

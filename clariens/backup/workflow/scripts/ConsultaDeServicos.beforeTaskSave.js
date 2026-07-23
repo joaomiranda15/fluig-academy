@@ -15,19 +15,19 @@ function getAprovadorDiretoriaPorServico(servico) {
   var chave = normalizaTextoAprovador(servico);
 
   if (chave === "COMUNICACAO INSTITUCIONAL") {
-    return "Pool:Role:comunicacaoAluno_comunicacaoInstitucional";
+    return "Pool:Role:Comu_Comunicacao_Institucional";
   }
 
   if (chave === "FINANCEIRO") {
-    return "Pool:Role:comunicacaoAluno_Financeiro";
+    return "Pool:Role:Comu_Financeiro";
   }
 
-  if (chave === "TI PARA EVENTUAIS INSTABILIDADES DE SISTEMAS") {
-    return "Pool:Role:comunicacaoAluno_TI";
+  if (chave === "TI") {
+    return "Pool:Role:Comu_TI";
   }
 
   if (chave === "ACADEMICO") {
-    return "Pool:Role:comunicacaoAluno_Academico";
+    return "Pool:Role:Comu_academico";
   }
 
   return "";
