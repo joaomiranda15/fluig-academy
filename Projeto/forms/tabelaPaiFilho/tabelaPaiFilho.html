@@ -1,0 +1,67 @@
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+
+
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="custom.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<input type="hidden" id="hidden" name="hidden">
+			<!-- Painel principal -->
+			<div class="panel panel-default">
+				
+				<!-- Cabeçalho do Painel -->
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<i class="fluigicon fluigicon-list icon-sm"></i> Lista de Produtos
+					</h3>
+				</div>
+				
+				<!-- Corpo do Painel -->
+				<div class="panel-body">
+					
+					<!-- Tabela Pai x Filho -->
+					<div class="table-responsive">
+						<table class="table" tablename="tb_exemplo" noaddbutton=true>
+							<thead>
+								<tr>
+									<th class="col-md-6">Produto</th>
+									<th class="col-md-5">Preço</th>
+									<td>
+										<i class="animaliaicon animaliaicon-plus icon-xl" aria-hidden="true" style="cursor: pointer;" onclick="addLinha();"></i>
+									</td>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Linha Molde (Oculta) -->
+								<tr style="display: none;">
+									<td>
+										<input type="text" name="txt_produto" id="txt_produto" class="form-control" placeholder="Informe o produto">
+									</td>
+									<td>
+										<input type="text" name="txt_preco" id="txt_preco" class="form-control" placeholder="0,00">
+									</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div>
+			</div>
+
+		</form>
+	</div>
+</body>
+
+</html>
