@@ -32,7 +32,7 @@
 					
 					<!-- Tabela Pai x Filho -->
 					<div class="table-responsive">
-						<table class="table" tablename="tb_exemplo" noaddbutton=true>
+						<table class="table" tablename="tb_exemplo" noaddbutton=true nodeletebutton="true">
 							<thead>
 								<tr>
 									<th class="col-md-6">Produto</th>
@@ -51,7 +51,9 @@
 									<td>
 										<input type="text" name="txt_preco" id="txt_preco" class="form-control" placeholder="0,00">
 									</td>
-									<td></td>
+									<td>
+										<i class="animaliaicon animaliaicon-trash icon-xl" aria-hidden="true" style="cursor: pointer;" onclick="excluirLinha(this);"></i>
+									</td>
 								</tr>
 							</tbody>
 						</table>
