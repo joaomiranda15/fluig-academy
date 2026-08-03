@@ -4,9 +4,9 @@
     <div class="panel panel-primary">
     <div class="panel-heading"><i class="flaticon flaticon-build icon-xl" aria-hidden="true"></i>Hello widget</div>
     <div class="panel-body">
-        <button type="button" class="btn btn-success">Botão 1</button>
-        <button type="button" class="btn btn-info">Botão 2</button>
-        <button type="button" class="btn btn-warning">Botão 3</button>
+        <button type="button" class="btn btn-success" data-chamarEvento1>Botão 1</button>
+        <button type="button" class="btn btn-info" data-chamarEvento2>Botão 2</button>
+        <button type="button" class="btn btn-warning" data-chamarEvento3>Botão 3</button>
     </div>
 </div>
 </div>
