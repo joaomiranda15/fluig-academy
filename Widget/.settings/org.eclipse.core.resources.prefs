@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//wcm/widget/helloWidget/src/main/resources/application.info=utf8
+encoding//wcm/widget/helloWidget/src/main/resources/edit.ftl=utf8
+encoding//wcm/widget/helloWidget/src/main/resources/helloWidget.properties=utf8
+encoding//wcm/widget/helloWidget/src/main/resources/helloWidget_en_US.properties=utf8
+encoding//wcm/widget/helloWidget/src/main/resources/helloWidget_es.properties=utf8
+encoding//wcm/widget/helloWidget/src/main/resources/helloWidget_pt_BR.properties=utf8
+encoding//wcm/widget/helloWidget/src/main/resources/view.ftl=utf8
+encoding//wcm/widget/helloWidget/src/main/webapp/WEB-INF/jboss-web.xml=utf8
+encoding//wcm/widget/helloWidget/src/main/webapp/WEB-INF/web.xml=utf8
+encoding//wcm/widget/helloWidget/src/main/webapp/resources/css/helloWidget.css=utf8
+encoding//wcm/widget/helloWidget/src/main/webapp/resources/images/icon.png=utf8
+encoding//wcm/widget/helloWidget/src/main/webapp/resources/js/helloWidget.js=utf8
