@@ -18,6 +18,9 @@
         </div>
         <button type="button" class="btn btn-default" data-chamarEvento4>Enviar</button>
     </div>
+    <hr>
+
+    <p>Olá, ${pageRender.getUser().fullName}!</p>
 </div>
 </div>
 
