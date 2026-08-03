@@ -12,7 +12,8 @@ var MyWidget = SuperWidget.extend({
         local: {
             'chamarEvento2': ['click_minhaFuncao1'],
             'chamarEvento3': ['dblclick_minhaFuncao2'],
-            'chamarEvento1': ['mouseover_minhaFuncao3']
+            'chamarEvento1': ['mouseover_minhaFuncao3'],
+            'chamarEvento4': ['click_minhaFuncao4']
         },
         global: {}
     },
@@ -28,6 +29,11 @@ var MyWidget = SuperWidget.extend({
 
     minhaFuncao3: function (htmlElement, event) {
         console.log("Passei o mouse encima do botão 1.");
+    },
+
+    minhaFuncao4: function(htmlElement, event) {
+        var email = $("#exampleInputEmail1_" + this.instanceId).val();
+        console.log("Valor do email: " + email);
     }
 
 });
