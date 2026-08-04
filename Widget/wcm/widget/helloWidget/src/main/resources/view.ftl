@@ -1,5 +1,5 @@
 <div id="MyWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="MyWidget.instance()">
-    <h2>Estou no arquivo view.ftl</h2>
+    <h2>${i18n.getTranslation('view.title')}</h2>
 
     <div class="panel panel-primary">
     <div class="panel-heading"><i class="flaticon flaticon-build icon-xl" aria-hidden="true"></i>Hello widget</div>
@@ -12,7 +12,7 @@
 
         <div class="row">
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label for="exampleInputEmail1">${i18n.getTranslation('email.address')}</label>
                 <input type="email" class="form-control" id="exampleInputEmail1_${instanceId}" placeholder="Enter email">
             </div>
         </div>
