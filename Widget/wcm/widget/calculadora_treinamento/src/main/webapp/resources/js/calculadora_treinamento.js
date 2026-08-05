@@ -6,6 +6,9 @@ var MyWidget = SuperWidget.extend({
 
     //método iniciado quando a widget é carregada
     init: function () {
+        this.criarTemplate();
+        this.criarObjeto();
+        this.spreadOperator();
     },
 
     //BIND de eventos
@@ -71,6 +74,27 @@ var MyWidget = SuperWidget.extend({
         } else if ($("#valor2") == '') {
             $("#valor2").val(0)
         }
+    },
+
+    criarTemplate: function() {
+        const numeros = [10, , 30];
+
+        const [a, b = 20, c] = numeros; // Quando o b for vazio, segundo a chamada de números, então, o valor dele será 20.
+
+        console.log(a, b, c);
+    },
+
+    criarObjeto: function() {
+        const usuario = { nome: "Bruno", idade: 30};
+        const { nome: n, idade: i } = usuario;
+        console.log(n,i);
+    },
+
+    spreadOperator: function() {
+        const numeros = [1,2,3];
+        const novosNumeros = [...numeros,4,5,6,7]; // A nova Array vai receber os valores da primeira Array, com os novos números que foram adicionados ("4,...,7")
+
+        console.log(novosNumeros);
     }
 });
 
