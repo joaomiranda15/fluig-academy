@@ -1,4 +1,16 @@
 eclipse.preferences.version=1
+encoding//wcm/widget/calculadora_treinamento/src/main/resources/application.info=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/resources/calculadora_treinamento.properties=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/resources/calculadora_treinamento_en_US.properties=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/resources/calculadora_treinamento_es.properties=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/resources/calculadora_treinamento_pt_BR.properties=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/resources/edit.ftl=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/resources/view.ftl=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/webapp/WEB-INF/jboss-web.xml=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/webapp/WEB-INF/web.xml=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/webapp/resources/css/calculadora_treinamento.css=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/webapp/resources/images/icon.png=utf8
+encoding//wcm/widget/calculadora_treinamento/src/main/webapp/resources/js/calculadora_treinamento.js=utf8
 encoding//wcm/widget/helloWidget/src/main/resources/application.info=utf8
 encoding//wcm/widget/helloWidget/src/main/resources/edit.ftl=utf8
 encoding//wcm/widget/helloWidget/src/main/resources/helloWidget.properties=utf8

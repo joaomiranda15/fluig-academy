@@ -25,10 +25,10 @@
 
                     <button type="button" class="btn btn-default" data-multiplicacao><i class="animaliaicon animaliaicon-x icon-xl" aria-hidden="true"></i></button>
 
-                    <button type="button" class="btn btn-default" data-divisao><i class="animaliaicon animaliaicon-divide icon-xl" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-default divisao" data-divisao><i class="animaliaicon animaliaicon-divide icon-xl" aria-hidden="true"></i></button>
                 </div>
             </div>
-            <button type="button" class="btn btn-success" data-confirmar>Confirmar</button>
+            <button type="button" class="btn btn-success" data-confirmar><i class="animaliaicon animaliaicon-equals icon-xl" aria-hidden="true"></i></button>
         </div>
     </div>
 </div>
