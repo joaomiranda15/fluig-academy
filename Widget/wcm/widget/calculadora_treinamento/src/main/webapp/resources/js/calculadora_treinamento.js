@@ -62,7 +62,15 @@ var MyWidget = SuperWidget.extend({
             message: 'A operação selecionada foi a divisão por 0. Por favor troque o número antes de concluir a operação.',
             type: 'warning'
         });
-    }
+    },
 
+    valorVazio: function (message) {
+        if ($("#valor1").val() == '') {
+            $("#valor1").val(0);
+
+        } else if ($("#valor2") == '') {
+            $("#valor2").val(0)
+        }
+    }
 });
 
