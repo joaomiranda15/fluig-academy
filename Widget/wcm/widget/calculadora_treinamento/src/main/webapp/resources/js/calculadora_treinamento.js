@@ -1,3 +1,4 @@
+"use strict"
 var MyWidget = SuperWidget.extend({
     //variáveis da widget
     variavelNumerica: null,
@@ -9,6 +10,10 @@ var MyWidget = SuperWidget.extend({
         this.criarTemplate();
         this.criarObjeto();
         this.spreadOperator();
+        this.restOperator();
+        this.gerarObjeto("aleatorio");
+        // this.metodoAleatorio();
+        this.jQuery();
     },
 
     //BIND de eventos
@@ -95,6 +100,37 @@ var MyWidget = SuperWidget.extend({
         const novosNumeros = [...numeros,4,5,6,7]; // A nova Array vai receber os valores da primeira Array, com os novos números que foram adicionados ("4,...,7")
 
         console.log(novosNumeros);
+    },
+
+    restOperator() {
+        function soma(...numeros) {
+            return numeros.reduce((total, n) => total + n, 0)
+        }
+        console.log(soma(1,2,3,4));
+    },
+
+    gerarObjeto(aleatorio) {
+        const campo = "email";
+        const usuario = {
+            nome: "Brunalha",
+            [campo]: "brunera@email.com",
+            [aleatorio]: "Aleatório"
+        };
+        console.log(campo, usuario)
+    },
+
+    // metodoAleatorio() {
+    //     valor = 10;
+    //     console.log(valor)
+    // },
+
+    jQuery() {
+        $('.mensagem').css('color', 'blue');
+
+        // Usando js moderno
+
+        this.DOM.querySelector('.mensagem').style.backgroundColor = 'green'; 
+        // DOM serve para mostrar para o js que só se quer realizar a alteração na Widget.
     }
 });
 

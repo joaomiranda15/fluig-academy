@@ -2,7 +2,7 @@
     <h2>Estou usando o view.ftl</h2>
     <div class="panel panel-danger">
         <div class="panel-heading">
-            <h3 class="panel-title">Calculadora Academy Aluno</h3>
+            <h3 class="panel-title mensagem">Calculadora Academy Aluno</h3>
         </div>
         <div class="panel-body">
             <div class="row">
