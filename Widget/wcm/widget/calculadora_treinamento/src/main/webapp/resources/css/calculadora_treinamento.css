@@ -1,10 +1,10 @@
 /* Coloque aqui seu codigo CSS */
-#resultado {
+.resultado {
     border: none;
     background: transparent;
     box-shadow: none;
 }
 
-#resultado:focus {
+.resultado:focus {
     outline: none;
 }
