@@ -12,11 +12,19 @@
                 </div>
             </div>
             <hr>
+            <div class="row">
+                <div class ="form-group">
+                    <p style="color: ${par!'green'}">Cor do número par</p>
+                    <p style="color: ${impar!'red'}">Cor do número ímpar</p>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="form-group">
                     <button type="button" class="btn btn-success" data-enviar>Enviar</button>
                 </div>
+                <button type="button" class="btn btn-info" data-salvarDados>Salvar dados</button>
+                <button type="button" class="btn btn-info" data-verificarParImpar>Verificar</button>
             </div>
         </div>
     </div>
