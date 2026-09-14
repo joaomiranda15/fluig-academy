@@ -7,12 +7,16 @@
         <div class="panel-body">
             <div class="row">
                 <div class ="form-group">
-                    <label for="valor1">primeiro número:</label>
-                    <input type="number" id="valor1" name="valor1">
-                    <label for="valor2">Segundo número:</label>
-                    <input type="number" id="valor2" name="valor2">
-                    <label for="resultado">Resultado:</label>
-                    <input type="number" readonly id="resultado" name="resultado">
+                    <label for="valor1_${instanceId}">primeiro número:</label>
+                    <input type="number" id="valor1_${instanceId}" name="valor1">
+                    <label for="valor2_${instanceId}">Segundo número:</label>
+                    <input type="number" id="valor2_${instanceId}" name="valor2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="resultado_${instanceId}">Resultado:</label>
+                    <input type="number" readonly id="resultado_${instanceId}" name="resultado" class="resultado">
                 </div>
             </div>
             <hr>
