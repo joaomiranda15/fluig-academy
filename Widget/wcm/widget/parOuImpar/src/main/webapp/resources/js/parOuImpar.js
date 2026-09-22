@@ -2,10 +2,13 @@ var MyWidget = SuperWidget.extend({
     //variáveis da widget
     variavelNumerica: null,
     variavelCaracter: null,
+    prop1 : null,
 
     //método iniciado quando a widget é carregada
     init: function() {
         this.iniciarColorPicker();
+        console.log("Ler valores das propriedades")
+        console.log("prop1: " + this.prop1)
     },
   
     //BIND de eventos
@@ -13,7 +16,7 @@ var MyWidget = SuperWidget.extend({
         local: {
             'enviar': ['click_enviar'],
             'salvarDados': ['click_salvarDadosParImpar'],
-            'verificarParImpar': ['click_verificarParImpar'],
+            'verificarParImpar': ['click_pintarCampoParImpar'],
         },
         global: {}
     },
@@ -21,9 +24,9 @@ var MyWidget = SuperWidget.extend({
     pintarCampoParImpar: function () {
         var numero = $("#numero_" + this.instanceId).val();
         if (numero % 2 == 0) {
-            console.log("O número " + numero + " é par")
+            console.log("O número " + numero + " é par ${par}")
         } else {
-            console.log("O número " + numero + " é ímpar.")
+            console.log("O número " + numero + " é ímpar ${impar}")
         }
     },
 
