@@ -1,4 +1,4 @@
-<div id="MyWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="MyWidget.instance({'prop1': 'valor1'})">
+<div id="MyWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="MyWidget.instance({'prop1': 'valor1', 'modo': 'Estou na edit'})">
     <h2>Estou usando o view.ftl</h2>
     <div class="panel panel-danger">
         <div class="panel-heading">
