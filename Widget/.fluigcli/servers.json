@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "servers": [
+    {
+      "name": "lab-fluig",
+      "host": "lab.fluig.com",
+      "port": 443,
+      "ssl": true,
+      "companyId": 1,
+      "env": "dev"
+    }
+  ]
+}
