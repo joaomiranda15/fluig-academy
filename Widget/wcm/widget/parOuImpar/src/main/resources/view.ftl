@@ -1,3 +1,5 @@
+<#assign parametros = "{'prop1': 'valor 1', 'modo': 'estou na view'}">
+
 <div id="MyWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="MyWidget.instance(${parametros})">
     <h2>Estou usando o view.ftl</h2>
     <div class="panel panel-danger">

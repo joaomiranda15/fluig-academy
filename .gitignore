@@ -1,2 +1,6 @@
 /.metadata/
 **/.vscode/
+# Credenciais do MCP Fluig
+.kiro/settings/mcp.json
+.kiro/mcp/fluig-mcp/node_modules/
+.kiro/mcp/fluig-mcp/.env
