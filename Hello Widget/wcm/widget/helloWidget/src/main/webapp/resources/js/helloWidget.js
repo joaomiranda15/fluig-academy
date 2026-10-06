@@ -28,23 +28,25 @@ var MyWidget = SuperWidget.extend({
 		var nota2 = $("#nota2_"+this.instanceId).val();
 		var nota3 = $("#nota3_"+this.instanceId).val();
 
-		$("#media_"+this.instanceId).val((nota1+nota2+nota3)/ 3);
+		var media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3.00;
 
-    	var numero = $("#media_"+this.instanceId).val();
-    	
-    	if(numero >= 7){
+    	var numero = media.toString().replace(".", ",");
+		$("#media_"+this.instanceId).val(numero);
+
+		
+    	if(media >= 7.00){
     		console.log("A média " + numero + " é superior ");
     		
     		$("#media_"+this.instanceId).css({
-    			"color": this.superior,
-    			"border-color": this.superior
+    			"color": "green",
+    			"border-color": "green"
     		});
     	} else{
     		console.log("A média " + numero + " é inferior ");
     		
     		$("#media_"+this.instanceId).css({
-    			"color": this.inferior,
-    			"border-color": this.inferior
+    			"color": "red",
+    			"border-color": "red"
     		});
     	}
     },
