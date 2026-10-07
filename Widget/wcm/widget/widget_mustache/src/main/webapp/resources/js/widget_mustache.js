@@ -5,6 +5,7 @@ var HelloWorld = SuperWidget.extend({
     init: function () {
         this.exemploMustache();
         this.exemploMustache1();
+        this.exemploMustache2();
     },
 
     bindings: {
@@ -25,6 +26,17 @@ var HelloWorld = SuperWidget.extend({
         var template = document.getElementById("pessoasTemplate").innerHTML
         const output = Mustache.render(template, view);
         $("[data-pessoasTemplate]").append(output);
+    },
+
+    exemploMustache2: function () {
+        const view = {
+        produtos: [
+            {"nome": "Produto A",
+            "descricao": "alguma descrição do produto aqui",
+            "preco": "R$ 112,00",
+            }
+        ]
+        };
     },
 
     exemploMustache: function () {
