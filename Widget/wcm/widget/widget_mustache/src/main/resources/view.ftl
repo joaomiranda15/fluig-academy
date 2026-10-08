@@ -1,4 +1,4 @@
-<div id="MyWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="MyWidget.instance()">
+<div id="myWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="myWidget.instance({})">
     <script id="meuPrimeiroTemplate" type="text/template">
         <div class="row">
             <div class="col-md-3">
@@ -20,21 +20,34 @@
     <script id="produtosTemplate" type="text/template">
 
     <div class="row">
+
+    {{#produtos}}
     <div class="col-md-4">
         <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="{{icone}}" alt="{{alt}}">
             <div class="card-body">
-                <h3 class="card-title">Card title</h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h3 class="card-title">{{nome}}</h3>
+                <p class="card-text">{{descricao}}</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
+                {{#avaliacao}}
+                    <p class="card-text">Avaliação feita por {{autor}}: {{conteudo}}</p>
+                {{/avaliacao}}
+
+                {{^avaliacao}}
+                    <p class="card-text">Não tem avaliações</p>
+                {{/avaliacao}}
+
             </div>
         </div>
        </div>
+    {{/produtos}}
     </div>
 
     </script>
 
-    <div data-pessoasTemplate></div>
+    <div data-pessoasTemplate>Exemplo 1</div>
 
-    <div data-meuPrimeiroTemplate></div>
+    <div data-meuPrimeiroTemplate>Exxemplo 2</div>
+
+    <div data-produtosTemplate>Exemplo 3</div>
 </div>
